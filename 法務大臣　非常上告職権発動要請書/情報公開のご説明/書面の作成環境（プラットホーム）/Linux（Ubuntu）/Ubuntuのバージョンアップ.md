@@ -347,3 +347,57 @@ h-youtube-get-title-list.rb 'https://www.youtube.com/channel/UCsOOWxvk4fJaIXsgXV
  - 2019年12月05日23時17分の登録： REGEXP：”（@hirono_hideki｜@kk_hirono｜@s_hirono）”／モトケン（@motoken_tw）の検索（2010-10-25〜2015-12-20／2019年12月05日23時17分の記録62件） http://hirono2014sk.blogspot.com/2019/12/regexphironohidekikkhironoshironomotoke.html
 ```
 
+## VSCodeのインストールと設定（2020年5月16日）
+
+:CATEGORIES: Ubuntu
+
+　時刻は2020年5月16日23時11分になります。朝からVSCodeのインストールと設定に取り組んでいたのですが，思いの外，手間取り，時間を費やしてしまいました。結果として目的通りのことが実現できたのですが，それ以上に副作用として役立つ勉強が出来たとも思います。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（再捜査要請書＿警察庁・石川県警察御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-05-16 23:17／2020/05/16 08:36 URL： https://twitter.com/kk_hirono/status/1261662059726385152 https://twitter.com/hirono_hideki/status/1261440359684378624  
+
+> 大河も朝ドラも、新型コロナの感染拡大を受けて4月1日から収録を休止していた。  今秋スタートする後期の連続テレビ小説「おちょやん」の収録も見合わせている。 https://t.co/YrC8cT5yAD  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（再捜査要請書＿警察庁・石川県警察御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-05-16 23:17／2020/05/16 08:37 URL： https://twitter.com/kk_hirono/status/1261662086255370240 https://twitter.com/hirono_hideki/status/1261440474235076616  
+
+> 2020年度後期 連続テレビ小説「おちょやん」新たな出演者発表！ | 連続テレビ小説 | NHKドラマ https://t.co/qgSb5NsxQZ  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（再捜査要請書＿警察庁・石川県警察御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-05-16 23:17／2020/05/16 08:44 URL： https://twitter.com/kk_hirono/status/1261662122859061249 https://twitter.com/hirono_hideki/status/1261442264657608704  
+
+> 杉咲花主演の朝ドラ「おちょやん」モデル浪花千栄子とは？ - シネマトゥデイ https://t.co/Xb3O8CEkVb  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（再捜査要請書＿警察庁・石川県警察御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-05-16 23:17／2020/05/16 10:14 URL： https://twitter.com/kk_hirono/status/1261662151720067072 https://twitter.com/hirono_hideki/status/1261465077057638400  
+
+> UbuntuにVSCodeをインストールする3つの方法 - Qiita https://t.co/npA9V9och3  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（再捜査要請書＿警察庁・石川県警察御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-05-16 23:18／2020/05/16 21:25 URL： https://twitter.com/kk_hirono/status/1261662415583764486 https://twitter.com/hirono_hideki/status/1261633767539568640  
+
+> レンジで簡単！大根の葉を茹でよう by 500k 【クックパッド】 簡単おいしいみんなのレシピが329万品 https://t.co/VHnEAj3kCq  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（再捜査要請書＿警察庁・石川県警察御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-05-16 23:20／2020/05/16 23:03 URL： https://twitter.com/kk_hirono/status/1261662753778876416 https://twitter.com/hirono_hideki/status/1261658518110625793  
+
+> 2020年05月16日23時02分の登録： ＼えきなんローヤー?　@ekinan_lawyer＼検察庁法の改正案なんて、これまでなら、マイナーな議論だったんだろうけどさ。  コロナのご時世になって、引きこもらなきゃ https://t.co/VkO4zxmVoE  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（再捜査要請書＿警察庁・石川県警察御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-05-16 23:21／2020/05/16 21:24 URL： https://twitter.com/kk_hirono/status/1261662958846791685 https://twitter.com/s_hirono/status/1261633517391187968  
+
+> 2020-05-16-111937_金沢西警察署の対応，珠洲警察署能登庁舎での聴取。md　-　Visual　Studio　Code.jpg https://t.co/vtaTGL57KI  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（再捜査要請書＿警察庁・石川県警察御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-05-16 23:21／2020/05/16 21:24 URL： https://twitter.com/kk_hirono/status/1261663001343479808 https://twitter.com/s_hirono/status/1261633590661537793  
+
+> 2020-05-16-211956_package。json　-　k2020vs　-　Visual　Studio　Code.jpg https://t.co/I7qcGuyDIz  
+
