@@ -2,6 +2,14 @@
 #+AUTHOR: 廣野秀樹
 #+EMAIL:  hirono2013k@gmail.com
 #+DATE: 2020-06-25 20:19:37 +0900
+#+OPTIONS:  H:4  num:t  toc:t  \n:nil  @:t  ::t  |:t  ^:t  *:nil  TeX:t LaTeX:t
+#+CATEGORY: 資料
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 FILE_NAME: 2020-06-25-201937_告発状・参考資料.org
 CATEGORY: 金沢地方検察庁御中
 tags:  金沢地方検察庁
@@ -573,7 +581,216 @@ REGEXP：”女性専用車両”／小倉秀夫（@Hideo_Ogura）の検索（20
 
 　小倉秀夫弁護士のTwitterアカウントは，次のリツイートを最後に停止しています。当時の小倉秀夫弁護士のTwitterとは別の発言によれば，Twitter社から新規投稿ができない凍結を受けたようです。指摘されたツイートを削除すれば，すぐに復活したような感じでありました。
 
-RT Hideo_Ogura（小倉秀夫）｜Yukishige190102（かになべ(抑える@自戒)） 日時：2019-06-08 07:09／2019-06-07 23:53 URL： https://twitter.com/Hideo_Ogura/status/1137119368846798848 https://twitter.com/Yukishige190102/status/1137009600782192640
+RT Hideo_Ogura（小倉秀夫）｜Yukishige190102（かになべ(抑える@自戒)） 日時：2019-06-08 07:09／2019-06-07 23:53 URL： https://twitter.com/Hideo_Ogura/status/1137119368846798848 https://twitter.com/Yukishige190102/status/1137009600782192640  
 > [名古屋地裁岡崎支部平成31年3月26日準強制性交罪無罪判決、分析してみました。] https://t.co/3tElQHuCze \n  \n 読むのは大変辛いけれども \n 裁判とは、かくも理性的でなくてはならぬと同時に \n 理性的すぎる事は実に気… https://t.co/o2hPnQQSM6
 
+
+* パソコン
+** Linux
+*** MarkdownとEmacsのorg-modeとの違い，org-modeを使うメリット
+
+:CATEGORIES: Emacs
+
+〉〉〉：Emacs： 2020-06-28（日曜日）12：12　 〉〉〉
+
+```
+Markdown（マークダウン）は、文書を記述するための軽量マークアップ言語のひとつである。本来はプレーンテキスト形式で手軽に書いた文書からHTMLを生成するために開発されたものである。しかし、現在ではHTMLのほかパワーポイント形式やLATEX形式のファイルへ変換するソフトウェア（コンバータ）も開発されている。各コンバータの開発者によって多様な拡張が施されるため、各種の方言が存在する。
+
+［source：］Markdown - Wikipedia https://ja.wikipedia.org/wiki/Markdown
+```
+
+```
+org-mode（オーグモード　/ˈɔːrɡ moʊd/）とは、テキストエディタであるEmacsの標準添付のモードである。Emacsの利用者のからは幅広い支持がある。EmacsのOutline-modeをもとにして作られた。［2］主な機能として、アウトライン、TODO、表などがあり、Org-modeで作った物をLaTeXやHTML、PDFなどに変える機能がある。
+
+［source：］Org-mode - Wikipedia https://ja.wikipedia.org/wiki/Org-mode
+```
+
+　org-modeは2003年に誕生とあります。平成15年というのはLinuxで大きな動きがあった年として記憶にあります。商用で箱入りのパッケージが4千円程度だったRedHatLinux9が廃止となり，UTF-8を標準の文字コードとしたFedoraが誕生したと記憶にあります。
+
+```
+Fedora（フェドラ - 国際発音記号 ［ˈfɨˈdɒr.ə］）は、レッドハットが支援するコミュニティー「Fedora Project」によって開発されているRPM系Linuxディストリビューションである。バージョン6まではFedora Coreと呼ばれていた。特定のバージョンを指す場合は「Fedora 9」のように、バージョン番号を添えて呼ばれることもある。
+
+［source：］Fedora - Wikipedia https://ja.wikipedia.org/wiki/Fedora
+```
+
+　Fedoraは初版が2003年11月16日とありました。5月の連休の時にインストールしたものを使っていたように記憶にあったのですが，その時使っていたのはRedHatLinux9だったようです。Emacsは日本語で1,2ページ分も書けば，すぐに落ちたりしていました。
+
+ - » Wnn - Wikipedia https://t.co/oMNZ8Bc9sz
+
+　日本語変換にRedHatLinux9の箱入りパッケージに同梱されたWnnを使っていたこともよく憶えています。
+
+　平成18年頃にはATOKのLinux版を使うようになっていたと思います。平成19年かもしれません。インターネットで購入したダウンロード版だったと思います。このATOKのLinux版はずっと前になくなっているようです。
+
+ - » Amazon | ATOK X3 for Linux | Linux | ソフトウェア https://t.co/tKkyjfddkY この商品は現在お取り扱いできません。 在庫状況について
+
+ - » Ubuntu 20.04でATOK X3を使う | https://t.co/Y6JgVzWUcw https://t.co/AKsSplrSpf Ubuntu 20.04でATOK X3を利用する方法を紹介します。(2020/4/24 検証済み)。
+
+　Ubuntuの最新版でもATOK X3 for Linuxが使えるという情報をみつけましたが，他にインストール時にライセンスの入力を求められるという情報を見かけました。インストールのファイルは古いノートパソコンの中にありそうな気がします。
+
+　EmacsのOutline-modeをorg-modeより先に使ったという記憶も少し残っています。CVSをよく使った時代でもあったように思います。しばらくしてSVN，そしてgitを使うようになりました。これも2009年より前のことだと思います。
+
+　org-modeはEmacsに標準で入るパッケージですが，Emacs以外での使用というのは聞いたことがありません。Emacs-Lispというプログラムになるので，そのままEmacs以外で使うことは無理とも思われます。
+
+　しかし，org-modeで扱うファイルはMarkdownと同じテキストファイルなので，通常のテキストファイルと同じく，文字コードと改行コードの問題さえクリアできれば，どのパソコンでも使えるはずです。
+
+　まだやったことはないですが，Linuxの文字コードがUTF-8，改行コードがUNIXのテキストファイルを，今度，Windows10のWordで開いてみたいと思います。数年前にやったことがあるように思うのですが，問題はなかったと思います。
+
+　pandocというコマンドを使えば，org-modeのファイルをWordのファイル形式に変換することも出来ます。
+
+```
+Pandocとは、 文書作成ツール (特に研究者による)［2］［3］［4］や出版作業の基礎的なツール［5］［6］［7］［8］［9］［10］として用いられるフリーかつオープンソースのドキュメント・コンバータ（英語版）である。 カリフォルニア大学バークレー校の哲学の教授であるジョン・マクファーレイン(英： John MacFarlane)により開発された［11］。
+
+［source：］Pandoc - Wikipedia https://ja.wikipedia.org/wiki/Pandoc
+```
+
+　「Office Open XML（Microsoft Word .docxファイル）」とあります。2016年7月に提出した告訴状もorg-modeからdocxに変換したもので印刷をしたように思います。当時のスタイルに戻ったことになります。
+
+　org-modeからPDFファイルをエクスポートする方法もありますが，Tex環境の整備が必要で，昨日やったみましたが，Texのファイルまでは作成されるもののPDFファイルは作成されていませんでした。
+
+　昨日は気が付かなかったのですが，EmacsのメッセージにTexのコンパイルエラーが出ていました。日本語の変換エラーで，コンパイルに使うコマンドを別のものに変更する必要がありそうです。昨日少し調べたのですが，余り情報が見当たりませんでした。
+
+ - » org-modeのBeamerクラスでlualatexを使用してPDFファイルを作成する – My備忘録 https://t.co/sYaPQQZZBc
+
+　上記のページを参考に設定し，org-modeからPDFファイルのエクスポートを実行したところ，有効そうなサムネイル画像のdviファイルがあったので，「dvipdfmx 2020-06-25-201937_告発状・参考資料.dvi」とやってみると，PDFファイルが出来上がりました。
+
+　URLの長い文字列が折り返しされないという不具合がありますが，これは前にも対処したことのある問題であったように思います。最近になって使うようになったlualatexコマンドでは，Texファイルから直接PDFファイルを生成していました。
+
+　以前はTexファイルからdviファイル，dviファイルからPDFファイルという手順でやっていたように思います。
+
+　Texファイルのプリアンブルを，次のように変更したところ，まだ少し問題が残っているもののPDFファイルが出来ました。残っている問題は特殊記号の処理だと思います。以前作成したMarkdownからPDFファイルを作成するスクリプト内で処理をしていました。
+
+　「md-to-tex-to-pdf-kk.rb」という自作のスクリプトで，ここのプリアンブルの部分をorg-modeから生成したTexファイルに使ったのですが，いくつか手当の処理をする必要がありそうです。
+
+>|tex|
+\documentclass[]{ltjarticle}
+\usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=20truemm]{geometry}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage[colorlinks,linkcolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+||<
+
+　プリアンブルでの「\usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=20truemm]{geometry}」の部分がページの余白の設定になります。
+
+　こういうのは一度，雛形を作ってしまえば使い回しが楽になります。WordでもLibreOfficeでもPDFファイルのエクスポートは出来ますが，割と出来上がりの見栄えに不満があったりします。アプリを立ち上げるのも手間です。自動化は難しいでしょう。
+
+　テキストファイルだと，次のようにコマンドで，レベル3のみのorg-modeファイルの見出しを抽出することが出来ます。これは一例ですが，あらゆる応用が出来ることになり，内容をメールで送信することも出来ます。すべてはUNIXの作法と基本操作です。
+
+```
+[7517]  % sed -E -n '/^\*\*\* .+/p' 2020-06-25-201937_告発状・参考資料.org 
+　*** 秋重実弁護士（京都弁護士会）のTwitterタイムラインで見かけた「鳥獣人物戯画」の問題
+　*** TODO MarkdownとEmacsのorg-modeとの違い，org-modeを使うメリット
+```
+
+　フォルダ内のすべてのファイルを対象に，次のように検索をすることも簡単です。
+
+```
+[7406]  % grep -r '汗かき地蔵' ./*
+./2020-06-07_告発状/告発の事実/平成4年5月28日から平成4年8月3日までの事実（拘置所・一審）/岡田進弁護士/2020-06-14-103608_被告訴人岡田進弁護士の犯罪性と法テラス，国選刑事弁護の問題.md: - » 「2019-07」の写真 - Google フォト https://t.co/bwHK7qNVTV 2019-07-17_151714＿.jpg \n 　鳳林寺汗かき地蔵前の道路。能登町上町地内。
+./金沢西警察署/2020-05-15-ブロクの削除を求められた金沢西警察署の対応，珠洲警察署能登庁舎での聴取.md:　昨夜は，青竹のことで意外な発見がありました。忘れていたことが２つあり，忘れていたのも不思議でした。１つは中止になった柳田大祭のたぶんお旅所のことで燃えなかった松明の御幣が青竹の先にあったことです。もう一つも旧柳田村ですが，汗かき地蔵の鳳林寺でも青竹の写真があったことです。
+./金沢西警察署/ブロクの削除を求められた金沢西警察署の対応，珠洲警察署能登庁舎での聴取/金沢西警察署.md:#### 2018年6月2日の「輪島市民まつり」花火大会の帰り道，ポケモンGOで知った鳳林寺の汗かき地蔵と，6月5日の溜池に男女遺体，輪島市金蔵のニュース記事
+./金沢西警察署/ブロクの削除を求められた金沢西警察署の対応，珠洲警察署能登庁舎での聴取/金沢西警察署.md:　中ノ又お旅所とありますが，町野線の道路沿いにある中ノ又のバス停でバイクを停め，ポケモンGOをやり，そのときに汗かき地蔵のスポットを見て向かったと記憶にあるのですが，鳳林寺付近の写真はスマホのスクリーンショットを含めありませんでした。
+```
+
+　Markdownの一番の不満はトピックのコピーや移動が出来ないことでした。かなりの数のアプリやAtom，Sublime Text，VSCodeという高機能エディタのプラグインを試しましたが，見つけることが出来ませんでした。
+
+　これも一応出来たのはorg-modeと同じEmacsのMarkdownモードでした。しかしトピックの先頭行でC-kというキー操作で一度，トピックを切り取る必要がありました。すぐにアンドゥしますが，それも面倒な作業です。
+
+　org-modeだとカーソルがどこにあろうと，C-cC-xM-wでトピックのコピーが出来，C-cC-xC-wだとトピックの切り取りになります。切り取りの後の貼り付けは移動になります。
+
+　面倒なキー操作になりますが，Emacsだとキーに割り当てられたコマンドというか関数を確認することが出来ます。次がその実行結果になります。
+
+```
+C-c C-x M-w runs the command org-copy-special (found in org-mode-map),
+which is an interactive compiled Lisp function in ‘org.el’.
+
+It is bound to C-c C-x M-w, <menu-bar> <Org> <Edit Structure> <Copy
+Subtree>, <menu-bar> <Tbl> <Rectangle> <Copy Rectangle>.
+
+(org-copy-special)
+
+Copy region in table or copy current subtree.
+Calls ‘org-table-copy-region’ or ‘org-copy-subtree’, depending on
+context.  See the individual commands for more information.
+```
+
+　「org-copy-special」が実行される関数名になります。M-xに続いて関数を実行することも出来ますし，キーに割り当てることも出来ます。そのキーの割り当てというのもEmacsの場合は，プレフィックスキーを割り当てることで無限に近いようなことが出来ます。
+
+```
+[7409]  % grep f12 ~/.emacs
+(global-set-key (kbd "<S-f12>") 'goto-line)
+(global-set-key (kbd "<C-S-f12>")  'delete-other-windows)
+(global-set-key (kbd "<S-f12>") 'goto-line)
+(global-set-key (kbd "<f12>") 'h-ruby-twit)
+```
+
+　上記が実際のEmacsの設定です。他の設定ファイルを読み込ませることもできますが，「~/.emacs」が基本の１つになります。この関数名から情報を探し出すことも出来ます。さきほどのキーの指定はC-h kでしたが，関数名の指定はC-h fになります。
+
+```
+h-ruby-twit is an interactive Lisp function in ‘h-elisp.el’.
+
+It is bound to <f12>, <f9>.
+
+(h-ruby-twit)
+
+RubyのスクリプトでTwitterに投稿
+```
+
+　「h-elisp.el」が関数のあるファイル名ですが，実際はこれがリンクになっていて，開くとファイルの関数の定義の位置にジャンプします。この場合はすべて自作の関数があるファイルになります。これも中身はただのテキストファイルです。
+
+　Emacsは日本語変換をミニバッファによるインラインで行うことが出来，これに慣れてしまうと，他のアプリでの日本語変換が見づらく苦痛にも感じてしまいます。日本語変換はMOZCで，変換効率はATOKより格段に落ちると思いますが，余りATOKを使う気にならない理由がここにあります。
+
+　BPOパソコンのためWindows10の最低限のインストールのためと考えているのですが，Windows10自体にフォントの見づらさを感じています。富士通など大手メーカーのWindows10パソコンだと違和感を感じることがありません。設定をしてもちぐはぐな部分があります。
+
+　時刻は17時30分です。今日はこのあとWindows10を起動してみるつもりです。データベースの変更点をノートパソコンに同期させるのが先になります。
+
+〈〈〈：Linux Emacs： 2020-06-28（日曜日）17：33 　〈〈〈
 
