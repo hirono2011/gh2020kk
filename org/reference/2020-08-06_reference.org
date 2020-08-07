@@ -220,5 +220,428 @@
 
 〈〈〈：Emacs： 2020-08-06（木曜日）11：57 　〈〈〈
 
-* 
+* 「げんしばくだんがおちると　ひるがよるになって　ひとはおばけになる」という深澤諭史弁護士のリツイートに感じた弁護士爆弾の危険性
+
+:CATEGORIES: 深澤諭史弁護士
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-08-06 20:55／2020/08/06 20:53 URL： https://twitter.com/kk_hirono/status/1291342113934696454 https://twitter.com/s_hirono/status/1291341615110348801  
+
+> 2020-08-06-202852_深澤諭史さんがリツイートBuzzFeed　Japan　News@BFJNews·10時間「げんしばくだんがおちると　ひるがよるになって　ひと.jpg https://t.co/Mgpo3r7rBl  
+
+　Windows10で作業をしているとき見かけたのですが，すぐにWindows10を終了し，起動したUbuntuで記録の作成を行いました。それが上記の2020-08-06-202852として記録されているスクリーンショットになります。
+
+(py37_env) a66@a66-XTe:~$ tu fukazawas 4
+RT fukazawas（深澤諭史）｜fukazawas（深澤諭史） 日時：2020-08-06 20:56／2020-08-06 18:00 URL： https://twitter.com/fukazawas/status/1291342422425735168 https://twitter.com/fukazawas/status/1291297969287831552
+> 財産の調べ方と強制執行：ネット上の表現トラブル（とその誤解）Ｑ＆Ａを更新２５ - 弁護士 深澤諭史のブログ https://t.co/iBYvnFS759  \n 差し押さえは大変だし、肝心なことはなかなか言えないという話。
+
+RT fukazawas（深澤諭史）｜fukazawas（深澤諭史） 日時：2020-08-06 20:56／2020-08-06 10:08 URL： https://twitter.com/fukazawas/status/1291342318268645378 https://twitter.com/fukazawas/status/1291179302365601792
+> 恐ろしいほど，最初の電話での態度って，その人の本質が出ますよね。良くも悪くも。 \n 「敷居」の高低の問題というより，「防犯フェンス」の問題ですね。 https://t.co/Hf6lSC9Mll
+
+RT fukazawas（深澤諭史）｜fukazawas（深澤諭史） 日時：2020-08-06 20:56／2020-08-06 19:48 URL： https://twitter.com/fukazawas/status/1291342258327805952 https://twitter.com/fukazawas/status/1291325280875720704
+> 弁護士ドットコムコミュニティ「受任に慎重さを要する人たち」非常に，興味深い。 \n 弁護士限定匿名掲示板というだけあって，率直な話が聞ける。 \n （・∀・）（＾ω＾）
+
+RT fukazawas（深澤諭史）｜BFJNews（BuzzFeed Japan News） 日時：2020-08-06 20:13／2020-08-06 10:15 URL： https://twitter.com/fukazawas/status/1291331481667690496 https://twitter.com/BFJNews/status/1291180944699908096
+> 「げんしばくだんがおちると　ひるがよるになって　ひとはおばけになる」 \n  \n これは、原爆を経験した小学生が書いた詩。残された言葉たちを読み継いできた朗読劇が、いま問いかけるものとは。（籏智広太 @togemaru_k） \n  \n 【New】「… https://t.co/cP7FNQ1hDS
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜BFJNews（BuzzFeed Japan News） 日時：2020-08-06 21:01／2020/08/06 10:15 URL： https://twitter.com/kk_hirono/status/1291343705387855874 https://twitter.com/BFJNews/status/1291180944699908096  
+
+> 「げんしばくだんがおちると　ひるがよるになって　ひとはおばけになる」  これは、原爆を経験した小学生が書いた詩。残された言葉たちを読み継いできた朗読劇が、いま問いかけるものとは。（籏智広太 @togemaru_k）  【New】「… https://t.co/cP7FNQ1hDS  
+
+　深澤諭史弁護士のタイムラインにはTwitterカードとして泣いている子供の写真が掲載されていました。原爆が広島に透過された昭和20年当時の写真なのかは不明ですが，訴求性の高い写真で，心打たれるものがありました。
+
+　これが深澤諭史弁護士のタイムライン，リツイートでみたことの衝撃を記録しないわけにはいきません。これまで数々の先の大戦に対する深澤諭史弁護士のツイート，その軽薄さと短慮には目を見張るものがあり，何かが取り憑いているのではと真剣に考えさせられるところです。
+
+　弁護士資格を持ってしゃぶり尽くそうという，狂った欲望を強く，強く感じてきたのが深澤諭史弁護士にTwitterタイムラインになりますが，他に専念するためもあり，ストレートに表現することは自重をしてきましたし，気に入らないことはすべて誹謗中傷とするのも弁護士頭の特徴です。
+
+　しかし，深澤諭史弁護士のリツイートのリンクにある記事を読んで，これは黙っていられないという衝動に駆られました。今まで溜め込んできたものの爆発もあったとは思いますが，たちまち頭に浮かんだのが深澤諭史弁護士の社会的危険性を表現する「弁護士爆弾」という言葉です。
+
+　こういう弁護士のツイート，リツイートを見かけると頭に浮かんで鳴り響くのが，次の曲で，歌詞が「弁護士バッド　狂った欲望　狂気の印」と聞こえてきます。
+
+黄金バット　オープニング - YouTube https://t.co/vVmjhrsTfV
+
+　これまでけっこうな期間，隠忍自重をしてきたことになりますが，まさに深澤諭史弁護士の「弁護士一代深澤稼業」だと思いました。全ては自己愛と自分の利益への我田引水，そこに尽きると思います。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中） 日時：2020-08-06 21:24／2020/05/28 23:05 URL： https://twitter.com/kk_hirono/status/1291349446152749056 https://twitter.com/kk_hirono/status/1266007623670751232  
+
+> あらためて法律のプロ，専門家という以前に，弁護士商売，弁護士一代深澤稼業という言葉以外に思い浮かぶものはない，歴史的にも貴重な資料の発見と思います。まさに社会を汚染する弁護士病の蔓延，拡散です。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中） 日時：2020-08-06 21:24／2019/11/20 22:34 URL： https://twitter.com/kk_hirono/status/1291349472358801413 https://twitter.com/kk_hirono/status/1197146081416503296  
+
+> 深澤諭史弁護士は、自身に不都合あるいは不利益と感じるネット上の反応について、単純に中傷などと決めつけておりますが、これも弁護士業界の消費者被害として、深刻重大なものを感じており、まさに弁護士脳の社会汚染としての公害であると捉えております。弁護士一代深澤稼業です。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中） 日時：2020-08-06 21:24／2019/08/12 21:39 URL： https://twitter.com/kk_hirono/status/1291349504478724096 https://twitter.com/kk_hirono/status/1160893453120655361  
+
+> 「弁護士一代深澤稼業」というのも、深澤諭史弁護士のツイートをみながらしばしば頭に浮かんできた言葉の一つです。それも表現の1つかと思います。非弁に強いこだわりで弁護士会での活動もしているという深澤諭史弁護士なので、正規版にも見えますが、その辺りを含めた印象です。  
+
+刑事告発・非常上告＿金沢地方検察庁御中(@kk_hirono)/「深澤稼業」の検索結果 - Twilog https://t.co/zZ9mxJEzLZ
+
+　深澤諭史弁護士の固執は弁護士という職業，資格への執着に尽きると思いますが，ここまで自分の職業に執着し，自己都合の良さだけに拘泥するというのも他のは見ないもので，弁護士としての執筆や表現力の高さというのもあるのかもしれないですが，超絶に凄まじい欲望の爆発です。
+
+　前にも書いたことですが，深澤諭史弁護士の出身の東京大学法科大学院と所属の第二東京弁護士会には，深澤諭史弁護士に対する製造物責任と社会に対する安全配慮義務違反を問いたいところで，深澤諭史弁護士の反応次第では，いつでも必要とされる権利を行使する用意があるつもりです。
+
+〈〈〈：Linux Emacs： 2020-08-06（木曜日）21：34 　〈〈〈
+
+* 「げんしばくだんがおちると　ひるがよるになって　ひとはおばけになる」という深澤諭史弁護士のリツイートで，改めて考えたハウス食品のテレビCM「おうちで食べよう。」のこと
+
+:CATEGORIES: 深澤諭史弁護士
+
+　ある意味，深澤諭史弁護士には感謝の念もあるのですが，弁護士の凄まじき独善税，異常性，危険性を思い知らせてくれていました。これは現在進行系でもあります。
+
+- RT fukazawas（深澤諭史）｜BFJNews（BuzzFeed Japan News） 日時：2020/08/06 20:13／2020/08/06 10:15 URL： https://twitter.com/fukazawas/status/1291331481667690496 https://twitter.com/BFJNews/status/1291180944699908096
+
+> RT @BFJNews: 「げんしばくだんがおちると　ひるがよるになって　ひとはおばけになる」  
+>   
+> これは、原爆を経験した小学生が書いた詩。残された言葉たちを読み継いできた朗読劇が、いま問いかけるものとは。（籏智広太 @togemaru_k）  
+>   
+> 【New】「おとうちゃん どうして…  
+
+　率直に，この世の中にこれほどの大馬鹿者がいるのかと，日々の更新で思い知らされてくれるのが深澤諭史弁護士であり，そのTwitterタイムラインになります。これは法務検察，石川県警察に対しても喫緊も問題性として伝えないわけにはいきません。改めて思い知らされました。
+
+　スマホでの写真撮影をしているもののまだ確認はしていないところですが，10日か2週間ほど前からテレビで，印象深いハウス食品のテレビCMが再開されました。前と全く同じかどうかも確認はできなかったのですが，TwitterやGoogleで検索をしました。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 21:54／2020/08/06 20:26 URL： https://twitter.com/kk_hirono/status/1291357061024890883 https://twitter.com/hirono_hideki/status/1291334954723323906  
+
+> 「おとうちゃん どうして…」子どもたちの残した原爆の詩が、いま問いかけるもの https://t.co/ktLFjarUSJ 「げんしばくだんがおちると　ひるがよるになって　ひとはおばけになる」（小学3年、坂本はつみ）  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 21:54／2020/08/06 20:33 URL： https://twitter.com/kk_hirono/status/1291357073108643842 https://twitter.com/hirono_hideki/status/1291336630020608000  
+
+> (1) ハウス食品　CM - Twitter検索 / Twitter https://t.co/FYZqmZxtdD トレンドではない検索。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜MaroYonebayashi（米林宏昌） 日時：2020-08-06 21:54／2020/08/04 08:09 URL： https://twitter.com/kk_hirono/status/1291357088556277766 https://twitter.com/MaroYonebayashi/status/1290424509095264257  
+
+> 2003年に作画を担当したハウスのCMが突然流れててビックリ。　 曲を変えてやってたのね。  https://t.co/zqykNSuzNc  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 21:55／2020/08/06 20:34 URL： https://twitter.com/kk_hirono/status/1291357104083628033 https://twitter.com/hirono_hideki/status/1291336738334359553  
+
+> ハウス食品グループ企業広告　おうちで食べよう。 | ハウス食品グループ本社 https://t.co/1y1eMnJeg3  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜70_90_hougaku（70〜90年代邦楽 ご紹介bot） 日時：2020-08-06 21:55／2020/08/02 20:09 URL： https://twitter.com/kk_hirono/status/1291357132525170689 https://twitter.com/70_90_hougaku/status/1289880942970990595  
+
+> No.222：♪ギンギラギンにさりげなく/近藤真彦 1981年にリリースされた近藤真彦さんの4枚目のシングル。 ハウス食品「ククレカレー」と富士フイルム「フジカラー写ルンです」のCMソングとしても起用された大ヒット楽曲であります(… https://t.co/0hEsL0yk0A  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜morino_wakaba（ハルカゼ） 日時：2020-08-06 21:55／2020/08/03 12:22 URL： https://twitter.com/kk_hirono/status/1291357190213652480 https://twitter.com/morino_wakaba/status/1290125849971187712  
+
+> ハウス食品「おうちで食べよう」のCM、 そうそう こうだったよね～と、見るたびほっこり。 母が作ってくれた夏服に下駄！ ゴザを敷いてままごと。 ウチにいた犬とブチの入り方まで似てる～😭  未曾有の夏が来ました。 できるだけ心安らぐ… https://t.co/Qa8100SKA2  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜RUNA60931938（RUNA） 日時：2020-08-06 21:55／2020/08/04 14:07 URL： https://twitter.com/kk_hirono/status/1291357230269308928 https://twitter.com/RUNA60931938/status/1290514653617909762  
+
+> ハウス食品「おうちで食べよう」シリーズCM「庭の千草」vrが普通に流れててびびった  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜yamada_azumi（山田安曇） 日時：2020-08-06 21:55／2017/12/12 22:32 URL： https://twitter.com/kk_hirono/status/1291357244127244289 https://twitter.com/yamada_azumi/status/940575081498951680  
+
+> いい歌だなあ、と思ってなんの曲だっけと記憶をたぐるとこの曲だってことがよくある。ハウス食品のCMとか "The Last Rose of Summer : Flute 庭の千草  - フルート演奏" を YouTube で見る - https://t.co/enNPJIPbeD  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜DRAKO1964（DRAKO） 日時：2020-08-06 21:55／2018/03/12 21:00 URL： https://twitter.com/kk_hirono/status/1291357272552009728 https://twitter.com/DRAKO1964/status/973166858265247744  
+
+> インドネシア出身の歌姫、シェリナ・ムナフさんがバックの歌「庭の千草」を担当したハウス食品の TV-CM「おうちで食べよう」シリーズ。(^_^)v↓ https://t.co/hmEmhZNkaW  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 21:55／2020/08/06 20:42 URL： https://twitter.com/kk_hirono/status/1291357293464784897 https://twitter.com/hirono_hideki/status/1291338870039048193  
+
+> インドネシアの歌手・Sherinaが歌う「庭の千草」はテレビＣＭ・ハウス食品のおうちで食べよう。 : exblog ガドガド https://t.co/xVbLOcEXPY 2017年 02月 20日  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 21:55／2020/08/06 21:35 URL： https://twitter.com/kk_hirono/status/1291357321675673600 https://twitter.com/hirono_hideki/status/1291352185414930437  
+
+> - 742：2020-08-06_21:35:19 ＊ 「げんしばくだんがおちると　ひるがよるになって　ひとはおばけになる」という深澤諭史弁護士のリツイートに感じた弁護士爆弾の危険性 https://t.co/nFv15U7aW2  
+
+　意外にGoogleの検索の情報は乏しく，声が違っているようにも感じたのですが，以前に見たインドネシア人歌手の歌声なのかも確認が出来ませんでした。私にはこの庭の千草という曲の歌詞が前から，「深澤諭史弁護士の・・・」と聞こえてしまいます。
+
+　Twilogで調べてみますが，庭の千草という曲のことを知ったのは，ハウス食品のテレビがきっかけだったと思います。一時，ネットでの情報が途絶えて，弁護士商売の介入なのかと想像をしていたのですが，つい最近になってテレビCMで復活を見たのは本当にありがたいことでした。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:03／2017/01/03 12:36 URL： https://twitter.com/kk_hirono/status/1291359248819998721 https://twitter.com/hirono_hideki/status/816125934172573697  
+
+> House(ハウス食品) 新CM「おうちで食べよう 」シリーズ編のCM曲はシェリナ・ムナフ『庭の千草』 https://t.co/1UyC7e69LP  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:03／2017/01/04 10:36 URL： https://twitter.com/kk_hirono/status/1291359325047283720 https://twitter.com/hirono_hideki/status/816458369233866752  
+
+> 2017年01月03日16時29分26秒の記録＿ストーカーをキーワードにした弁護士アカウントのの作業と庭の千草 https://t.co/edYlqHJrxF  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:04／2017/01/04 10:37 URL： https://twitter.com/kk_hirono/status/1291359392701362176 https://twitter.com/hirono_hideki/status/816458391555973120  
+
+> 2017年01月03日16時54分54秒の記録＿ストーカの弁護士アカウントのツイート検索をブログ投稿する作業と庭の千草 https://t.co/UTJ5KSvcEH  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:04／2017/02/28 23:07 URL： https://twitter.com/kk_hirono/status/1291359514206171137 https://twitter.com/hirono_hideki/status/836578630641848324  
+
+> 庭の千草 ／アイルランド民謡 編曲：名田綾子 https://t.co/qmHkuwRNaS  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:04／2017/04/09 20:14 URL： https://twitter.com/kk_hirono/status/1291359596527853571 https://twitter.com/hirono_hideki/status/851030454492844035  
+
+> ハウス食品グループのＣＭの「庭の千草」。昨日、昼に見た連続テレビ小説で、田んぼで合唱する場面があった。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:05／2017/06/27 23:11 URL： https://twitter.com/kk_hirono/status/1291359666702708736 https://twitter.com/hirono_hideki/status/879703684866875392  
+
+> zen-on piano solo 「庭の千草」 全音 絶対ハズさない！心に届く聴かせる名曲 https://t.co/uZVYHjC1Lz  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:05／2017/07/13 00:08 URL： https://twitter.com/kk_hirono/status/1291359701582651392 https://twitter.com/hirono_hideki/status/885153854320496641  
+
+> Shaylee - 庭の千草 - The last rose of summer ( Japanese and Alphabet lyrics) https://t.co/Gk4MGWZpAe  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:05／2017/08/05 22:37 URL： https://twitter.com/kk_hirono/status/1291359733815730176 https://twitter.com/hirono_hideki/status/893828313873096704  
+
+> 庭の千草 関屋敏子 https://t.co/TnTVvK1MdZ  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:05／2017/12/12 22:29 URL： https://twitter.com/kk_hirono/status/1291359814870683650 https://twitter.com/hirono_hideki/status/940574345016963072  
+
+> 庭の千草のメロディが流れている。報道ステーション。「女たちの飲ん兵衛横丁」という。鐵の町釜石で愛され続けてきたとも。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:06／2018/05/17 23:12 URL： https://twitter.com/kk_hirono/status/1291359891165048833 https://twitter.com/hirono_hideki/status/997117704803729408  
+
+> バーモンドカレーのＣＭは、「庭の千草」を思い出す。ＣＭで知ってすごく懐かしい気がしたが、実際には過去に聞いた覚えのない曲だった。同じ頃、海蔵院末観音堂へ。竹林も発見。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:06／2019/02/07 23:56 URL： https://twitter.com/kk_hirono/status/1291359937344319488 https://twitter.com/hirono_hideki/status/1093524020044025856  
+
+> Shaylee - 庭の千草 (Niwa no chigusa) 歌詞付/ アイルランド民謡 The last rose of summer(Japanease) - YouTube https://t.co/7sn4eK54Mg  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:06／2019/02/08 00:16 URL： https://twitter.com/kk_hirono/status/1291359976305246209 https://twitter.com/hirono_hideki/status/1093528980139868162  
+
+> Shaylee - 庭の千草(アイルランド民謡) / The last rose of summer (Japanese lyrics) - YouTube https://t.co/qruWU51tJD  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:06／2019/02/08 00:22 URL： https://twitter.com/kk_hirono/status/1291360012468498432 https://twitter.com/hirono_hideki/status/1093530382228586497  
+
+> 関屋敏子 Toshiko Sekiya - 庭の千草 The last rose of summer (1934) - YouTube https://t.co/gFaI0hWvRQ  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:06／2019/02/08 00:29 URL： https://twitter.com/kk_hirono/status/1291360045519663104 https://twitter.com/hirono_hideki/status/1093532088089731073  
+
+> THE NORMAN CANDLER ORCHESTRA - THE LAST ROSE OF SUMMER　　庭の千草 - YouTube https://t.co/iSvcG30LA8  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:06／2019/02/08 00:40 URL： https://twitter.com/kk_hirono/status/1291360085151584257 https://twitter.com/hirono_hideki/status/1093534947724255232  
+
+> House(ハウス食品) 新CM「おうちで食べよう 」シリーズ編のCM曲はシェリナ・ムナフ『庭の千草』 - CMの曲名 https://t.co/9slFrSX8VZ  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:07／2019/12/29 20:29 URL： https://twitter.com/kk_hirono/status/1291360128982061062 https://twitter.com/hirono_hideki/status/1211247842993426432  
+
+> ままごと : あなざ～まいんど https://t.co/cVzMrPqnHP ‘庭の千草’　という曲もこのＣＭにすごくマッチしてる。 　　　　　少し調べてみました。 　　　　　歌ってるのは、インドネシア生まれで現在は日本を拠点に… https://t.co/EseM6G4SuR  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:07／2019/12/29 20:31 URL： https://twitter.com/kk_hirono/status/1291360167326441473 https://twitter.com/hirono_hideki/status/1211248459715510272  
+
+> 唱歌　庭の千草 - YouTube https://t.co/aQkeFkM08N 『小学唱歌集 第三編』明治17年（1884年）3月発行 作詞 里見義　原曲はアイルランド民謡 The Last Rose of Summer  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:07／2019/12/29 20:35 URL： https://twitter.com/kk_hirono/status/1291360222234083328 https://twitter.com/hirono_hideki/status/1211249268494721024  
+
+> 庭の千草　歌詞の意味 https://t.co/tb3TYQn0pF 先立たれ一人残されても　白菊のように力強く生きていきたい  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-06 22:07／2019/12/29 21:16 URL： https://twitter.com/kk_hirono/status/1291360290055962624 https://twitter.com/hirono_hideki/status/1211259715407077377  
+
+> 庭の千草 - YouTube https://t.co/VlYFDnWUOd  
+
+奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)/「庭の千草」の検索結果 - Twilog https://t.co/rr3EPRYAVE
+
+　白菊という花のことがよくわからなかったのですが，過去のリンクを見ると，昭和40年代によく目にした花で，最近になってまた見かける機会が増えた花だと思いました。花と言っても草に近いようです。
+
+```
+歌詞（原文に近い仮名表記）
+庭の千草も　むしのねも
+かれてさびしく　なりにけり
+あゝしらぎく　嗚呼白菊
+ひとりおくれて　さきにけり
+
+露もたわむや　菊の花
+しもにおごるや　きくの花
+あゝあはれあはれ　あゝ白菊
+人のみさおも　かくてこそ
+
+［source：］庭の千草　歌詞の意味 http://www.worldfolksong.com/songbook/ireland/niwano-chigusa.html
+```
+
+```
+「露もたわむ」については、先立たれ一人残されて涙に暮れる様子が目に浮かぶ。
+
+「しもにおごる」は古い漢文に由来する表現で、漢字では「霜に傲る」と表記される。
+
+「傲る」とは、霜に負けずに力強く咲く菊の花の様子を表しており、ここでは悲しみに対して力強く生きていこうとする人物の気丈な様子が暗示されていると考えられる。
+
+なお、寒さに耐える菊を表す「傲霜（ごうそう）」という言葉もある。
+
+［source：］庭の千草　歌詞の意味 http://www.worldfolksong.com/songbook/ireland/niwano-chigusa.html
+```
+
+```
+「あはれ」は、寂しさや悲しさを表す古語の感動詞。「みさお（操）」は、不変の意思・節操、伴侶への貞節などの意味がある。
+
+庭に咲いた周りの草花（庭の千草）が皆枯れてしまった中、秋冬の厳しい寒さを一人耐え忍ぶ菊の花のように、人間も強く生きていきたいものだというメッセージが込められているように感じられる。
+
+原曲のアイルランド民謡『夏の名残のバラ（夏の最後のバラ）』の歌詞に通じるものがあるが、原曲では、愛する人に先立たれて一人残される悲しみがより強調されている。両曲の歌詞を比較してみると面白い発見があるかもしれない。
+
+［source：］庭の千草　歌詞の意味 http://www.worldfolksong.com/songbook/ireland/niwano-chigusa.html
+```
+
+　上記に引用をしましたが，「「あはれ」は、寂しさや悲しさを表す古語の感動詞。「みさお（操）」は、不変の意思・節操、伴侶への貞節などの意味がある。」などとあります。
+
+```
+昭和42年4月1日～昭和43年3月23日　よみうりテレビ系で放映。
+戦前、紙芝居大人気を呼んだヒーローが高らかな笑いもそのままにアニメとなってやってきた。世界征服を企む謎の生命体、ナゾーが次々に送り込んでくる超兵器や怪獣をアトランティス大陸の守護神黄金バットが粉砕する。
+
+［source：］黄金バット　オープニング - YouTube https://www.youtube.com/watch?v=jzeR2Te60hc
+```
+
+　「昭和42年4月1日～昭和43年3月23日　よみうりテレビ系で放映。」と上記の引用にありますが，昭和39年11月26日生まれの私には，実際にみているのか記憶が微妙な境界線が，このテレビ放送の黄金バッドになります。再放送などあまりなかった時代が続くので記憶は間違いないはずです。
+
+　最近は特にことある場面で，この黄金バットのテーマ曲があたまに浮かび，鳴り響いていました。バットとバッドの違いもありますが，物心ついた頃の記憶が，現在の弁護士不信，危険性のハザードに結びついています。
+
+　「黄金バット　オープニング」という上記のYouTube動画は何度みてもカラーで映像がきれいすぎるのですが，昭和50年の4月以降に宇出津の小棚木の家に引っ越すまで，私の家のテレビは白黒テレビでした。カラーになってからもそれほど画質に改善はなかったと思います。
+
+響けチンドン！あなたの心に～絆その１２チンドン芸能社(東京) - YouTube https://t.co/PZ0WulJkiJ
+
+《戦時歌謡》暁に祈る（"Akatsuki Ni Inoru"）with Eng/Sub - YouTube https://t.co/IVtn56ga0j
+
+出征兵士を送る歌 - YouTube https://t.co/xtCFZ89W7P
+
+父よあなたは強かった　霧島昇・伊藤久男・松原操・二葉あき子 - YouTube https://t.co/HZTW0jiwGJ
+
+【軍歌】軍歌聞き比べ　出征兵士を送る歌　林伊佐緒　伊藤久男 - YouTube https://t.co/nCF8CTA1d9
+
+出征兵士を送る歌 - YouTube https://t.co/Bhplr8qao1
+
+出征兵士を送る歌 - YouTube https://t.co/3CLEaz8ruK
+
+月月火水木金金 - YouTube https://t.co/ICdQdNnrto
+
+【ドリフの軍歌】月月火水木金金 - YouTube https://t.co/GPGhdIpYns
+
+《軍歌》軍艦マーチ（"Gunkan māchi "～March "Man-of-War"～）with Eng/Sub - YouTube https://t.co/Vxwr8LoQT7
+
+日本軍歌「出征兵士を送る歌」（歌詞付き） - YouTube https://t.co/bDcVth8qHL
+
+ああ紅の血は燃ゆる - YouTube https://t.co/a5Z64sOEpf
+
+何をすさぶか　小夜嵐 - Google 検索 https://t.co/IEUXAioGQv
+
+あゝ紅の血は燃ゆる - YouTube https://t.co/GNZwoRYAjz
+
+鶴田浩二 あゝ紅の血は燃ゆる 歌詞&amp;動画視聴 - 歌ネット https://t.co/80b9BUY73U
+
+鶴田浩二　神風特攻　軍歌　ラバウル航空隊　紅の血は燃ゆる　夢飛行 - YouTube https://t.co/g72mKJ1iCu
+
+《軍歌》歩兵の本領("Hohei no Honryō"- Specialty of Infantry)with Eng/Sub - YouTube https://t.co/sOd6orJygK
+
+歩兵の本領 - YouTube https://t.co/7pUXudUbiu
+
+步兵の本領 - YouTube https://t.co/JKOM1r8dFK
+
+父よあなたは強かった - YouTube https://t.co/MYMRcr3QJK
+
+海軍小唄（ズンドコ節） - YouTube https://t.co/WL6WoIhUFh
+
+ダンチョネ節 - YouTube https://t.co/mpII7lWvWp
+
+可愛いスーちゃん - YouTube https://t.co/s6qbhn9HaY
+
+可愛いスーチャン - YouTube https://t.co/HPWUr5hZnx
+
+南洋航路 - YouTube https://t.co/3yBu5alDQN
+
+ラバウル小唄 - ばんくガールズ - YouTube https://t.co/2mubHfV4sS
+
+ドンパン節 - YouTube https://t.co/MBlDJNeXp3
+
+どんぱん節 - YouTube https://t.co/ikv28n7Orb
+
+どんぱん節 「秋田県民謡」 - YouTube https://t.co/dvq2w7vV2x
+
+どんぱん節（はげ頭） - 平馬 秋田民謡 - YouTube https://t.co/qG5wMLDUgP
+
+必殺仕事人 Ⅰ エンディング 「浜千鳥情話」 Full　金沢明子 - YouTube https://t.co/iZHNKYndfs
+
+宮さん宮さん(トンヤレ節) - YouTube https://t.co/4GqB58vFUG
+
+出征兵士を送る歌 - YouTube https://t.co/5y0qLSCXJI 2,170,640 回視聴•2013/08/14 \n ￼ \n 5964 \n ￼ \n 532 \n ￼ \n 共有 \n ￼ \n 保存 \n ￼
+
+月月火水木金金 - YouTube https://t.co/jmnq1swCAV
+
+グッド・ナイト・ベイビー　ザ・キングトーンズ　ＵＰＣ‐０１０３ - YouTube https://t.co/xe7mbH2oZA
+
+グッド・ナイト・ベイビー　ザ・キングトーンズ　ＵＰＣ‐０１０３ - YouTube https://t.co/xe7mbH2oZA 4,200,755 回視聴•2012/01/16 \n ￼ \n 8905 \n ￼ \n 639 \n ￼ \n 共有 \n ￼ \n 保存 \n ￼
+
+鉄道唱歌 (明治・大正・昭和初期の唱歌） - YouTube https://t.co/RHBkvrmNcH
+
+どんぱん節 Folk Song of Japan 平野繁松 - YouTube https://t.co/b27WGy0FRI
+
+どんぱん節 - YouTube https://t.co/XlTIueSvo4
+
+ドンパン節 - YouTube https://t.co/WZb9dry40F
+
+ドンパン節／あや - YouTube https://t.co/DNRIJ3RnFo
+
+ドンパン節 - YouTube https://t.co/6OpWQ8zrJf
+
+平成２９年角館町観桜会舞台⑧ドンパン節 - YouTube https://t.co/sPWj1UCGta
+
+東京音頭 - YouTube https://t.co/KmwlTcK8R2
+
+ドンパン節　日本民謡同好会　第53回 南御堂盆おどり　2015.08.27 - YouTube https://t.co/taxDaOY7a8
+
+鶴見音頭・ドンパン節　青木 遥　緑・納涼盆踊り大会　2016.07.22 - YouTube https://t.co/mBrCKCukMN
+
+2019年東京丸の内盆踊り②　ドンパン節 - YouTube https://t.co/Rhp33mDEsz  \n ￼￼ \n 0:02 / 7:15￼￼￼￼ \n 2019年東京丸の内盆踊り②　ドンパン節 \n 350 回視聴•2019/08/09 \n ￼ \n 1 \n ￼ \n 0 \n ￼ \n 共有 \n ￼ \n 保存 \n ￼
+
+〈〈〈：Linux Emacs： 2020-08-07（金曜日）08：13 　〈〈〈
 
