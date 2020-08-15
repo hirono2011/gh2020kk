@@ -345,4 +345,312 @@ Executed in   13.58 secs   fish           external
 
 〈〈〈：Emacs： 2020-08-13（木曜日）12：13 　〈〈〈
 
+* 奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)でブロックされていた，赤木真也（弁護士・LEC専任講師）というTwitterアカウント
+  :LOGBOOK:
+  CLOCK: [2020-08-13 木 23:03]--[2020-08-13 木 23:38] =>  0:35
+  :END:
+
+:CATEGORIES: ブロック
+
+〉〉〉：Emacs： 2020-08-13（木曜日）23：03　 〉〉〉
+
+　Firefoxのブックマークに入れていたもののほとんど開くことなかったTwitterアカウントですが，ふとリンクを開いてみると奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)のアカウントでブロックされていることが確認されました。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:06／2015/06/14 22:47 URL： https://twitter.com/kk_hirono/status/1293911685955063810 https://twitter.com/akagilaw/status/610081198660947968  
+
+> 民事系が苦手な方へ。論点ではなく、訴訟物を踏まえて、ちゃんと当事者の立場で主張反論を考えようとしていますか。物権と債権の視点で分析していますか。条文、判例から要件確定はしていますか。要件は網羅しようとしていますか。  
+
+　再捜査要請書＿警察庁・石川県警察御中（@kk_hirono）のアカウントでは今のところブロックされていないようです。
+
+```
+赤木真也（弁護士・LEC専任講師）
+@akagilaw
+弁護士(58期)／00膳所、04京大法卒（佐久間ゼミ）／LEC梅田で論文を重視し法学７科目の入門～２年目論文を一貫指導／より良き実務家養成指導を／現場で書けるベスト／条文至上主義・当事者目線／暗記は最小限、答える過程を示す／旧司初受験合格／、汉语(ＨＳＫ５～６)、仁義礼智信／自己紹介なき乱数アカはブロック可能性有
+おおさか、夏は時々甲子園、冬は時々雪山。ameblo.jp/akagilaw/誕生年： 1981年2011年3月からTwitterを利用しています
+1,616 フォロー中
+4,485 フォロワー
+
+［source：］(12) 赤木真也（弁護士・LEC専任講師）（@akagilaw）さんの返信があるツイート / Twitter https://twitter.com/akagilaw/with_replies
+
+　あまりメンションを使うこともなかったアカウントと思うのですが，記録の方を確認してみます。
+
+```
+➜  ~ dp -p |grep akagilaw
+ - 2017年10月07日01時07分の登録： ＼赤木真也（弁護士・LEC専任講師）　@akagilaw＼ネット上であれこれ言っても、小池とか安部の盲信者の多数は非ネット民という…なんというか、あれやなあ http://hirono2014sk.blogspot.com/2017/10/lecakagilaw.html
+ - 2017年10月15日15時42分の登録： ＼赤木真也（弁護士・LEC専任講師）　@akagilaw＼やっぱり、ぐるっと一周したあげく、自民党は中世に戻った。よくいえば、形式的法治主義に戻っただけ。 http://hirono2014sk.blogspot.com/2017/10/lecakagilaw_15.html
+ - 2017年12月05日11時42分の登録： ％@akagilaw　赤木真也（弁護士・LEC専任講師）％何かと色々と口出しして同調しようとする勢いがこの国にはある。村八分・相互監視は極端な例ではあるが、全体主義的な要素は強いように思われる。 http://hirono2014sk.blogspot.com/2017/12/akagilawlec.html
+ - 2018年04月25日09時05分の登録： ＃赤木真也（弁護士・LEC専任講師）　@akagilaw＃のツイート／法務検察・石川県警察宛参考資料／記録作成措置実行日時：2018年04月25日09時05分 http://hirono2014sk.blogspot.com/2018/04/lecakagilaw201804250905.html
+ - 2019年07月12日12時51分の登録： ＼赤木真也（弁護士・LEC専任講師）　@akagilaw＼相手の出した証拠を逆手にとって切り込むの、快感。 http://hirono2014sk.blogspot.com/2019/07/lecakagilaw.html
+ - 2019年07月24日03時47分の登録： ＼赤木真也（弁護士・LEC専任講師）　@akagilaw＼想像力や発展力のない人の周りには、金とか権力での誘惑で集まる人しかいなくなるよね。弁護士でありながら日本会議の支 http://hirono2014sk.blogspot.com/2019/07/lecakagilaw_24.html
+ - 2019年08月04日14時46分の登録： ＼赤木真也（弁護士・LEC専任講師）　@akagilaw＼中止したことで、皮肉にもこの国がいかに「表現の不自由」国家（＝表現内容を理由に、権力によって表現が弾圧、禁止、迫 http://hirono2014sk.blogspot.com/2019/08/lecakagilaw.html
+```
+
+　記録を見ると思った以上に記録の数が少なかったですが，奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)でブロックされていたようです。
+
+　余り見ることもなかったアカウントと思うので，Twilogの方も確認をしておきたいと思います
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:15／2011/06/17 14:22 URL： https://twitter.com/kk_hirono/status/1293914068969897985 https://twitter.com/akagilaw/status/81592601463107585  
+
+> 弁護士：平均所得１４７１万円　１０年で２３０万円減少－－昨年 - 毎日ｊｐ(毎日新聞) http://t.co/fVrJP3D via @mainichijpnews  １事務所あたりの平均所属人数が22人？調査対象に、大手事務所が多く含まれ、個人事務所が少ないことを示す。  
+
+奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)/「@akagilaw」の検索結果 - Twilog https://t.co/s1GO3lhsQV
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:15／2011/06/17 14:22 URL： https://twitter.com/kk_hirono/status/1293914068969897985 https://twitter.com/akagilaw/status/81592601463107585  
+
+> 弁護士：平均所得１４７１万円　１０年で２３０万円減少－－昨年 - 毎日ｊｐ(毎日新聞) http://t.co/fVrJP3D via @mainichijpnews  １事務所あたりの平均所属人数が22人？調査対象に、大手事務所が多く含まれ、個人事務所が少ないことを示す。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:15／2011/06/17 14:22 URL： https://twitter.com/kk_hirono/status/1293914068969897985 https://twitter.com/akagilaw/status/81592601463107585  
+
+> 弁護士：平均所得１４７１万円　１０年で２３０万円減少－－昨年 - 毎日ｊｐ(毎日新聞) http://t.co/fVrJP3D via @mainichijpnews  １事務所あたりの平均所属人数が22人？調査対象に、大手事務所が多く含まれ、個人事務所が少ないことを示す。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:15／2011/06/17 14:22 URL： https://twitter.com/kk_hirono/status/1293914068969897985 https://twitter.com/akagilaw/status/81592601463107585  
+
+> 弁護士：平均所得１４７１万円　１０年で２３０万円減少－－昨年 - 毎日ｊｐ(毎日新聞) http://t.co/fVrJP3D via @mainichijpnews  １事務所あたりの平均所属人数が22人？調査対象に、大手事務所が多く含まれ、個人事務所が少ないことを示す。  
+
+```
+赤木真也（弁護士・LEC専任講師）@akagilaw
+
+地裁なう。二件続けて弁論準備。相手の嘘を暴く証拠を提出した。相手と裁判官の反応が楽しみ(ｾｲｶｸﾜﾙｲｶﾓ)
+
+Retweeted by 奉納＼さらば弁護士鉄道・泥棒神社の物語
+
+retweeted at 16：36：16
+
+［source：］奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)/「@akagilaw」の検索結果 - Twilog https://twilog.org/hirono_hideki/search?word=%40akagilaw&ao=a&order=allasc
+```
+　という上記の「地裁なう。二件続けて弁論準備。相手の嘘を暴く証拠を提出した。相手と裁判官の反応が楽しみ(ｾｲｶｸﾜﾙｲｶﾓ)」というツイートのURLでツイートの取得をしたはずのあのですが，違ったツイートがAPIで収録されるという現象が出ているようです。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:19／2011/06/17 14:35 URL： https://twitter.com/kk_hirono/status/1293915184138862592 https://twitter.com/hirono_hideki/status/81595751653847040  
+
+> @akagilaw 記事読むと新人弁護士のみが、大幅に割を食っているという印象ですね。まだまだ余裕がありそうです。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:20／2011/06/17 15:14 URL： https://twitter.com/kk_hirono/status/1293915208147116035 https://twitter.com/hirono_hideki/status/81605581210779648  
+
+> @akagilaw なるほどです。確かに不正確であやふやな感じがします。１０年に一回なのだから、詳細で具体的な情報が、一般市民としては欲しいところです。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:20／2011/06/17 15:43 URL： https://twitter.com/kk_hirono/status/1293915305425563650 https://twitter.com/hirono_hideki/status/81612868226785281  
+
+> @akagilaw ありがとうございます。一般市民には入手が困難な雑誌みたいですが、大部に公開されているだけ、少し安心しました。ほんとうの丼勘定かと思っていましたが、そうでもなさそうです。マスコミも恣意的な紹介をしているような気がしました。なんでも会計不明朗は不安なものです。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:20／2011/06/17 15:32 URL： https://twitter.com/kk_hirono/status/1293915326640353288 https://twitter.com/akagilaw/status/81610109851152384  
+
+> @hirono_hideki 原典は、自由と正義臨時増刊号vol.62です。かなり大部ですが。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:20／2011/06/17 15:49 URL： https://twitter.com/kk_hirono/status/1293915360463216649 https://twitter.com/hirono_hideki/status/81614510569435136  
+
+> @akagilaw 調べてみましたが「「自由と正義」臨時増刊号－弁護士業務の経済的基盤に関する実態調査報告書2010」、一般でも入手可能みたいです。価格も思ったより安いです。→　http://www.nichibenren.or.jp/ja/updates/110606.html  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:21／2011/07/15 10:21 URL： https://twitter.com/kk_hirono/status/1293915501324689409 https://twitter.com/hirono_hideki/status/91678633562877952  
+
+> @akagilaw http://youtu.be/yZ1Nk8FzVpk ご紹介しておきます。検察の問題です。検察の口から金沢弁護士会のことも出ています。弁護士により大きな問題があると検察は、考えているのかもしれないです。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:21／2011/07/15 10:12 URL： https://twitter.com/kk_hirono/status/1293915519184072705 https://twitter.com/akagilaw/status/91676416751570944  
+
+> 国家権力にとって必要不可欠な存在。刑事においては憲法が予定する存在であり（３４条）、民事においても裁判を受ける権利（３２条）の観点から不可欠な存在。国家のシステムに不可欠だからこそ、修習生に給費制があったのではないのか？収入の多寡なんて、はっきり言って場外の話ではないのか？  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:21／2011/07/15 10:47 URL： https://twitter.com/kk_hirono/status/1293915562943242244 https://twitter.com/hirono_hideki/status/91685365244633088  
+
+> 近いうちにやります。読んでいただけるとありがたいです。 RT @akagilaw: @hirono_hideki できれば文章で要約して頂けると助かります・・・  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:21／2011/08/02 17:20 URL： https://twitter.com/kk_hirono/status/1293915644929257474 https://twitter.com/akagilaw/status/98307217446539264  
+
+> 日本では嘘つきは泥棒の始まりといって、強く諫められるのに。ましてや信義則の強く要請される取引の場面で。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:21／2011/08/02 17:30 URL： https://twitter.com/kk_hirono/status/1293915679700090881 https://twitter.com/hirono_hideki/status/98309670569115648  
+
+> こういうのはどうでしょう。本当に記憶にないとも考えにくいです。弁護士倫理というのもあるはずですが。http://ow.ly/5SQwh  RT @akagilaw: 日本では嘘つきは泥棒の始まりといって、強く諫められるのに。ましてや信義則の強く要請される取引の場面で。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:22／2011/08/10 11:33 URL： https://twitter.com/kk_hirono/status/1293915726613364738 https://twitter.com/akagilaw/status/101119066042937345  
+
+> 「普通こうなるはず」という理詰めをするときの「普通」も、自分の体験範囲が狭ければ、それは「普通」でないことも多々ある。それぞれ、行動を基礎づける動機は、一様ではない。だから、事情聴取するとき、まずは先入観なく聞いてみないと始まらない。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:22／2011/09/03 22:14 URL： https://twitter.com/kk_hirono/status/1293915790345789440 https://twitter.com/akagilaw/status/109977588889419776  
+
+> 自分を客観視できず、困難からはすぐ逃げ、指示がなければ動けない、頭でっかちですぐ愚痴を垂れる人間を、いっちょまえの普通の社会人に育てるにはどうしたらいいのだろう。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:22／2011/09/05 12:12 URL： https://twitter.com/kk_hirono/status/1293915845500919808 https://twitter.com/akagilaw/status/110550756364533760  
+
+> 弁護士に求められるのは「どうなるか」「どうしたらいいか」という具体的な解決策。解釈が問題になることを示して、自説を論ずることではありませんわね。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:22／2011/11/10 21:19 URL： https://twitter.com/kk_hirono/status/1293915917093486592 https://twitter.com/akagilaw/status/134606077403738112  
+
+> http://t.co/xem5cFIE　なるほどね。弁護士がよく使う術だ。自分の土俵に引き込む。譲歩しているよう見せかける。合法的脅し。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:23／2012/03/14 19:42 URL： https://twitter.com/kk_hirono/status/1293915966456225797 https://twitter.com/akagilaw/status/179880117089206273  
+
+> 過去の栄光や経験だけで言われてもね。現状分析と本質的要素の検討がなければ、何を言っても空虚になる  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:23／2012/05/02 20:48 URL： https://twitter.com/kk_hirono/status/1293916046479392768 https://twitter.com/akagilaw/status/197653675617951744  
+
+> 「感情司法」はびこらせるな　強制起訴の運用に問題(産経新聞) - goo ニュース http://t.co/mTJUWzQd ツッコミどころ満載やな。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:23／2012/08/08 23:36 URL： https://twitter.com/kk_hirono/status/1293916100304842754 https://twitter.com/hirono_hideki/status/233210168169611264  
+
+> @akagilaw  多少進展がありましたのでお知らせ、あるいはご紹介させて頂きます。　https://t.co/re51DR7a  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:23／2012/08/08 23:29 URL： https://twitter.com/kk_hirono/status/1293916118801723396 https://twitter.com/akagilaw/status/233208297031880704  
+
+> 文章作成訓練は、意識してやらないと伸びない。「読み手を意識する」というのは、実地なくして観念論だけでは無理。実際に書いたことがどう受け取られるか、という客観的な視点は、他人から評価されて初めてわかるもの。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:23／2012/08/11 22:29 URL： https://twitter.com/kk_hirono/status/1293916178616786953 https://twitter.com/hirono_hideki/status/234280392293765120  
+
+> @akagilaw 社会問題としてご案内させて頂きます。2012-08-11_珠洲警察署への電話相談2回目・実名公開と告発について - YouTube http://t.co/d0N8ODt4  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:23／2012/08/11 22:25 URL： https://twitter.com/kk_hirono/status/1293916204852113409 https://twitter.com/akagilaw/status/234279449275805698  
+
+> ブログを更新しました。 『損害賠償論に関して』 http://t.co/NOT4eNmA  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:24／2013/04/23 12:23 URL： https://twitter.com/kk_hirono/status/1293916452425101317 https://twitter.com/akagilaw/status/326536788258734082  
+
+> 法曹に必要な能力の最低限は、とすべきだったかな。必要な能力といえば経理把握力や洞察力、包容力、語学力、心理的ケア力、瞬発力、機動力、営業力等々、ほんと多種多様な能力いるから…。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:25／2013/08/13 00:08 URL： https://twitter.com/kk_hirono/status/1293916528383946758 https://twitter.com/akagilaw/status/366939286018326528  
+
+> @hirono_hideki えらいすんませんなあ  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:25／2013/08/13 00:06 URL： https://twitter.com/kk_hirono/status/1293916559597899776 https://twitter.com/hirono_hideki/status/366938676132974594  
+
+> この国のかたち、から弁護士は除外して欲しいものです。歴史的にも世界的にもあまりにも恥さらしなので。まずは。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:25／2013/09/10 23:37 URL： https://twitter.com/kk_hirono/status/1293916628120297475 https://twitter.com/hirono_hideki/status/377440795865124864  
+
+> @akagilaw なぜフォローを外されたのですかね？　お答えいただけるなら聞いておきたいです。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜akagilaw（赤木真也（弁護士・LEC専任講師）） 日時：2020-08-13 23:25／2013/09/10 23:35 URL： https://twitter.com/kk_hirono/status/1293916657723686912 https://twitter.com/akagilaw/status/377440073836687361  
+
+> 自分の足で立って生きることをかんがえれば、実は自由度もある。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:26／2017/10/07 01:12 URL： https://twitter.com/kk_hirono/status/1293916909503578114 https://twitter.com/hirono_hideki/status/916335375865364481  
+
+> 奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中: ＼赤木真也（弁護士・LEC専任講師）　@akagilaw＼ネット上であれこれ言っても、小池とか安部の盲信者の多数は非ネット民という…なんというか、あれやなあ https://t.co/gtB4a0MIQ0  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:27／2019/07/24 12:30 URL： https://twitter.com/kk_hirono/status/1293916985357557763 https://twitter.com/hirono_hideki/status/1153870049158975488  
+
+> 2019年07月24日03時47分の登録： ＼赤木真也（弁護士・LEC専任講師）　@akagilaw＼想像力や発展力のない人の周りには、金とか権力での誘惑で集まる人しかいなくなるよね。弁護士でありながら日本会議の支 https://t.co/9NTV75gZGz  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-08-13 23:27／2019/08/05 00:08 URL： https://twitter.com/kk_hirono/status/1293917022481346563 https://twitter.com/hirono_hideki/status/1158031976068046848  
+
+> 2019年08月04日14時46分の登録： ＼赤木真也（弁護士・LEC専任講師）　@akagilaw＼中止したことで、皮肉にもこの国がいかに「表現の不自由」国家（＝表現内容を理由に、権力によって表現が弾圧、禁止、迫 https://t.co/PEJBAgGgcX  
+
+奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)/「@akagilaw」の検索結果 - Twilog https://t.co/s1GO3lhsQV モトケン@motoken_tw \n  \n 赤木先生 @akagilaw のツイートにはいつも触発される。
+
+奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)/「@akagilaw」の検索結果/Page 2 - Twilog https://t.co/N0fp97rSlv
+
+　リツイートをしているうちに，再捜査要請書＿警察庁・石川県警察御中（@kk_hirono）のアカウントでもブロックされたようです。途中まではリツイートが出来ていたように思います。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-08-13 23:33／2020/08/13 23:32 URL： https://twitter.com/kk_hirono/status/1293918653038002179 https://twitter.com/s_hirono/status/1293918356966236167  
+
+> 2020-08-13-233116_赤木真也（弁護士・LEC専任講師）@akagilawブロックされています@akagilawさんのフォローやツイートの表示はできません。詳細は.jpg https://t.co/1LvZkdmlJc  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-08-13 23:33／2020/08/13 23:32 URL： https://twitter.com/kk_hirono/status/1293918672273068034 https://twitter.com/s_hirono/status/1293918284044148832  
+
+> 2020-08-13-233036_赤木真也（弁護士・LEC専任講師）@akagilawブロックされています@akagilawさんのフォローやツイートの表示はできません。詳細は.jpg https://t.co/VR1ZWaku3h  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-08-13 23:33／2020/08/13 23:29 URL： https://twitter.com/kk_hirono/status/1293918687695519745 https://twitter.com/s_hirono/status/1293917701786570754  
+
+> 2020-08-13-232753_赤木真也（弁護士・LEC専任講師）@akagilawブロックされています@akagilawさんのフォローやツイートの表示はできません。詳細は.jpg https://t.co/Z902FlQ7Yb  
+
+```
+赤木真也（弁護士・LEC専任講師）
+@akagilaw
+弁護士(58期)／00膳所、04京大法卒（佐久間ゼミ）／LEC梅田で論文を重視し法学７科目の入門～２年目論文を一貫指導／より良き実務家養成指導を／現場で書けるベスト／条文至上主義・当事者目線／暗記は最小限、答える過程を示す／旧司初受験合格／、汉语(ＨＳＫ５～６)、仁義礼智信／自己紹介なき乱数アカはブロック可能性有
+おおさか、夏は時々甲子園、冬は時々雪山。ameblo.jp/akagilaw/誕生年： 1981年2011年3月からTwitterを利用しています
+1,616 フォロー中
+4,485 フォロワー
+
+［source：］赤木真也（弁護士・LEC専任講師）さん (@akagilaw) / Twitter https://twitter.com/akagilaw
+```
+
+　記録作成です。思わぬ発見でした。
+
 * iphoneのATOK，一昨日の8月11日火曜日にAppStoreで購入
+  :LOGBOOK:
+  CLOCK: [2020-08-13 木 23:38]--[2020-08-13 木 23:46] =>  0:08
+  :END:
+
+:CATEGORIES: パソコン,一太郎
+
+〉〉〉：Emacs： 2020-08-13（木曜日）23：38　 〉〉〉
+
+　夕方，iTunesを使ってWindows10で作成した単語の登録ファイルを，iphoneで登録しました。どうも追記となるようですが，少し前に半角英数字の多かった単語ファイルをインポートしていて，それを削除するところからやり直しました。
+
+　辞書ファイルの削除が簡単にできそうなので気になっていたのですが，登録単語にやり直しには気の利いた機能だと思いました。パソコンだと半角英数字は簡単に扱えますが，スマホのiphoneだと切り替えが必要でかなり面倒な手間に感じていました。
+
+　AppStoreで購入で購入したのは1700円ちょっとで，ネットの情報より若干高めでした。ジャストシステムの登録アカウントでの割引もないようですが，それでもこの1700円ちょっとの価値は大きいように思われ，今まで使っていなかったのが大損に思えました。
+
+　Windows10のATOKでは，新たに辞書ファイルを作成しましたが，簡単に単語登録が連続で出来て，それをiphoneでも使えるように出来るのは日本語入力環境の効率化がとても大きいと思います。8月11日は図書館に行ったのもきっかけでした。
+
+〈〈〈：Emacs： 2020-08-13（木曜日）23：46 　〈〈〈
+
