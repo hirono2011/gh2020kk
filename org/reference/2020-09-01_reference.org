@@ -1,0 +1,151 @@
+* さくらインターネットのレンタルサーバーにpython3.6.9をインストール
+  :LOGBOOK:
+  CLOCK: [2020-09-01 火 10:18]--[2020-09-01 火 10:49] =>  0:31
+  :END:
+
+〉〉〉：Emacs： 2020-09-01（火曜日）10：18　 〉〉〉
+
+　昨日，3.7.1とかのインストールに失敗していました。python3.6.9ならばいけるという情報を見かけていたので，今朝になってやってみたところ，すんなりmake installができました。
+
+　「make」の段階でのエラーは，いくらでも経験してきましたが，「make install」でエラーが出たのは初めてのことかもしれません。さくらインターネットのレンタルサーバーでのmakeも久しぶりではあります。
+
+　「FreeBSD 9.1-RELEASE-p24 (SAKURA17) #0: Thu Feb  5 10:03:29 JST 2015」がsshでのログイン時のメッセージになります。改めてFreeBSDなのだと思いますが，シェルにbashを使っているので，Linuxと同じ感覚です。
+
+```
+wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
+cd Python-3.6.9
+./configure --prefix=$HOME/local/python CPPFLAGS="-I$HOME/local/include" LDFLAGS="-L$HOME/local/lib"
+make
+make install
+```
+
+　あと，.bashrcへの設定の追加です。
+
+```
+export PATH=$HOME/local/python/bin:$PATH
+export PYTHON=$HOME/local/python/lib
+export PYTHONPATH=/home/hirono-hideki-01/local/python/lib/python3.6/site-packages
+```
+
+　環境による制約で3.7以上のpythonはインストールできないみたいですが，出来る範囲で最新のものをインストールしました。なお，「make install」のメッセージの最後が次になります。「Successfully」は成功を意味すると理解しています。
+
+```
+Collecting setuptools
+Collecting pip
+Installing collected packages: setuptools, pip
+Successfully installed pip-18.1 setuptools-40.6.2
+```
+
+* さくらインターネットのレンタルサーバーに自前でインストールしたRubyで，バージョンの古さゆえの問題を発見
+  :LOGBOOK:
+  CLOCK: [2020-09-01 火 10:49]--[2020-09-01 火 11:57] =>  1:08
+  :END:
+
+〉〉〉：Emacs： 2020-09-01（火曜日）10：49　 〉〉〉
+
+　これも昨日の発見になります。次が問題のコマンドの実行結果になります。
+
+```
+[sakura ~] % tun_full fukazawas 4
+RT fukazawas（深澤諭史）｜TGN54（TｰTAKA） 日時：2020-09-01 10:37／2020-09-01 10:30 URL： https://twitter.com/fukazawas/status/1300608659894841345 https://twitter.com/TGN54/status/1300606863122161671
+
+
+RT fukazawas（深澤諭史）｜seijimatsuyama（松山 せいじ Seiji Matsuyama 10月から秋田書店でギャル漫画を新連載！） 日時：2020-09-01 10:37／2020-09-01 10:32 URL： https://twitter.com/fukazawas/status/1300608645118394369 https://twitter.com/seijimatsuyama/status/1300607346293444608
+
+
+RT fukazawas（深澤諭史）｜sigekun（くりたしげたか（Re）：ニコニコ代表の人） 日時：2020-09-01 10:37／2020-09-01 10:33 URL： https://twitter.com/fukazawas/status/1300608614416089090 https://twitter.com/sigekun/status/1300607580457164800
+
+
+RT fukazawas（深澤諭史）｜k_sawmen（泥濘大魔王サイケ） 日時：2020-09-01 10:36／2020-09-01 10:34 URL： https://twitter.com/fukazawas/status/1300608422023294976 https://twitter.com/k_sawmen/status/1300608055311175681
+```
+　TwitterAPIでfull_textという変数の値，これが取得できてきません。「tweet_text = tweet.full_text」が，スクリプトでの処理になります。「:tweet_mode =>"extended"」という連想配列でのオプションを追加しています。
+
+　次が，「tweet.full_text」ではなく，従来の「tweet.text」の値を使った処理になります。
+
+```
+[sakura ~] % tun fukazawas 4           
+RT fukazawas（深澤諭史）｜TGN54（TｰTAKA） 日時：2020-09-01 10:37／2020-09-01 10:30 URL： https://twitter.com/fukazawas/status/1300608659894841345 https://twitter.com/TGN54/status/1300606863122161671
+
+ 今気づいたけど、資格スクエアって、資格と四角をかけてる？
+
+RT fukazawas（深澤諭史）｜seijimatsuyama（松山 せいじ Seiji Matsuyama 10月から秋田書店でギャル漫画を新連載！） 日時：2020-09-01 10:37／2020-09-01 10:32 URL： https://twitter.com/fukazawas/status/1300608645118394369 https://twitter.com/seijimatsuyama/status/1300607346293444608
+
+ 新連載の告知だよ。 https://t.co/cGumgxB5FM
+
+RT fukazawas（深澤諭史）｜sigekun（くりたしげたか（Re）：ニコニコ代表の人） 日時：2020-09-01 10:37／2020-09-01 10:33 URL： https://twitter.com/fukazawas/status/1300608614416089090 https://twitter.com/sigekun/status/1300607580457164800
+
+ これでギフトがさらにはかどる！！！
+ 
+ 【期間限定】PayPayキャンペーン同時開催!?ニコニコポイントがお得に買える!! https://t.co/GHQU1Rgz6J
+
+RT fukazawas（深澤諭史）｜k_sawmen（泥濘大魔王サイケ） 日時：2020-09-01 10:36／2020-09-01 10:34 URL： https://twitter.com/fukazawas/status/1300608422023294976 https://twitter.com/k_sawmen/status/1300608055311175681
+
+ 「聞きたくないことについて、普通の人は耳をふさぐけど左翼は相手の口をふさぐ」みたいな話が最近出てきてるが、遊☆戯☆王の高橋先生とかきゃりーぱみゅぱみゅ氏の件とかはもう忘れたんですかね？？？
+```
+
+　一見問題はなさそうですが，長いツイートを取得すると，末尾が切り取られます。実際にこのツイートで試してみたいと思います。全角文字ばかりで１４０文字一杯のツイートにします。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+
+TW kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中） 日時： 2020-09-01 11:06 URL： https://twitter.com/kk_hirono/status/1300616057657290754
+
+ 一見問題はなさそうですが，長いツイートを取得すると，末尾が切り取られます。実際にこのツイートで試してみたいと思います。全角文字ばかりで１４０文字一杯のツイートにします。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+
+　末尾がカットされずにツイートの取得が出来たようです。TwitterAPIでは投稿時に行頭の全角スペースがカットされますが，ちょうど１４０文字で投稿しました。取得したツイートに行頭の全角スペースはないですが，同じく１４０文字で取得されているようです。
+
+　次が従来，さくらインターネットのレンタルサーバーで，実行したかったスクリプトの実行結果になります。
+
+```
+(py37_env) a66@a66-XTe:~$ tun fukazawas 4
+RT fukazawas（深澤諭史）｜TGN54（TｰTAKA） 日時：2020-09-01 10:37／2020-09-01 10:30 URL： https://twitter.com/fukazawas/status/1300608659894841345 https://twitter.com/TGN54/status/1300606863122161671
+> 今気づいたけど、資格スクエアって、資格と四角をかけてる？
+
+RT fukazawas（深澤諭史）｜seijimatsuyama（松山 せいじ Seiji Matsuyama 10月から秋田書店でギャル漫画を新連載！） 日時：2020-09-01 10:37／2020-09-01 10:32 URL： https://twitter.com/fukazawas/status/1300608645118394369 https://twitter.com/seijimatsuyama/status/1300607346293444608
+> 新連載の告知だよ。 https://t.co/cGumgxB5FM
+
+RT fukazawas（深澤諭史）｜sigekun（くりたしげたか（Re）：ニコニコ代表の人） 日時：2020-09-01 10:37／2020-09-01 10:33 URL： https://twitter.com/fukazawas/status/1300608614416089090 https://twitter.com/sigekun/status/1300607580457164800
+> これでギフトがさらにはかどる！！！
+> 
+> 【期間限定】PayPayキャンペーン同時開催!?ニコニコポイントがお得に買える!! https://t.co/GHQU1Rgz6J
+
+RT fukazawas（深澤諭史）｜k_sawmen（泥濘大魔王サイケ） 日時：2020-09-01 10:36／2020-09-01 10:34 URL： https://twitter.com/fukazawas/status/1300608422023294976 https://twitter.com/k_sawmen/status/1300608055311175681
+> 「聞きたくないことについて、普通の人は耳をふさぐけど左翼は相手の口をふさぐ」みたいな話が最近出てきてるが、遊☆戯☆王の高橋先生とかきゃりーぱみゅぱみゅ氏の件とかはもう忘れたんですかね？？？
+```
+
+　最近になってTwitterAPIに仕様変更があったとしか考えられないのですが，もしかすると，さくらインターネットのレンタルサーバーにインストールしたTwitterのパッケージは，バージョンが古いゆえに，カットをしていないのかもしれません。
+
+TW kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中） 日時： 2020-09-01 10:25 URL： https://twitter.com/kk_hirono/status/1300605771357413381
+
+> 「FreeBSD 9.1-RELEASE-p24 (SAKURA17) #0: Thu Feb  5 10:03:29 JST 2015」がsshでのログイン時のメッセージになります。改めてFreeBSDなのだと思いますが，シェル… https://t.co/LfpxKG1jvg
+
+　さくらインターネットのレンタルサーバーで実行したのと同じスクリプトをUbuntuで実行したところ，「シェル…」と文字列のカットが確認されました。次が同じツイートのさくらインターネットでの取得です。
+
+TW kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中） 日時： 2020-09-01 10:25 URL： https://twitter.com/kk_hirono/status/1300605771357413381
+
+> 「FreeBSD 9.1-RELEASE-p24 (SAKURA17) #0: Thu Feb  5 10:03:29 JST 2015」がsshでのログイン時のメッセージになります。改めてFreeBSDなのだと思いますが，シェル… https://t.co/LfpxKG1jvg
+
+　やはり文字列がカットされ，「シェル…」となっています。このツイートは半角文字が多いのが特徴で，半角が多いと140文字の制限を超えてツイート出来るというのが，数年前からのTwitterの仕様となっています。
+
+　次が，さくらインターネットのレンタルサーバーで，実行し取得したかったツイートのデータになります。やはりここにはRubyのバージョンの壁があるようです。Rubyのバージョン以外にも問題があるのかもしれません。
+
+TW kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中） 日時： 2020-09-01 10:25 URL： https://twitter.com/kk_hirono/status/1300605771357413381
+> 「FreeBSD 9.1-RELEASE-p24 (SAKURA17) #0: Thu Feb  5 10:03:29 JST 2015」がsshでのログイン時のメッセージになります。改めてFreeBSDなのだと思いますが，シェルにbashを使っているので，Linuxと同じ感覚です。
+
+ruby 2.6.1p33 (2019-01-30 revision 66950) [x86_64-freebsd9.1]
+
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
+
+　Rubyの最新バージョンはもっと進んでいるはずですが，今のところ最新バージョンを使う必要もないので，Ubuntuにインストールされたものをそのまま使っています。いわゆる安定バージョンになるのかと思います。
+
+　このRubyのバージョンの違いが，twitter (6.2.0)とtwitter (7.0.0)という違いが出ていて，さくらインターネットでバージョンアップを試みると，gemでエラーが起こります。
+
+　「gcc: No input files specified」，「*** [libffi.map] Error code 1」といったコンパイルのエラーです。
+
+さくらインターネット ruby バージョン - Google 検索 https://t.co/9nH7ai817G
+
+トラブル：さくらのレンタルサーバでRuby 2.6.1がビルドできない - ひかえん２の日記 https://t.co/ItI2Aks1n6
+
+　情報自体が少ないのですが，今回の検索では見当たらなかった別のページでも，2.6.1より新しいRubyのインストールに成功したという情報はないようです。
+
+〈〈〈：Emacs： 2020-09-01（火曜日）11：57 　〈〈〈
+
+* 
+
