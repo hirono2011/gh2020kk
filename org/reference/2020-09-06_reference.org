@@ -1,0 +1,198 @@
+* Emacsのメールソフト，Mewの設定
+
+:CATEGORIES: パソコン,Emacs
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:08／2020/09/06 11:45 URL： https://twitter.com/kk_hirono/status/1302579454812647424 https://twitter.com/hirono_hideki/status/1302437643204980739  
+
+> - Dan Project - mew-search https://t.co/CIg4SOt2r1  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:08／2020/09/05 17:13 URL： https://twitter.com/kk_hirono/status/1302579477558427648 https://twitter.com/hirono_hideki/status/1302157871606448129  
+
+> Mew 主要キー操作 https://t.co/6vKu5t7EIp  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:09／2020/07/27 23:19 URL： https://twitter.com/kk_hirono/status/1302579626489778176 https://twitter.com/hirono_hideki/status/1287754595360337921  
+
+> 2020年07月27日23時18分の登録： ＼そらまめ　@sollamame＼裁判所からWeb会議用のメールアドレスをFaxでお送りしますという連絡が電話で来た。 https://t.co/NZCMRrmimp  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:09／2015/06/03 23:40 URL： https://twitter.com/kk_hirono/status/1302579739530420231 https://twitter.com/hirono_hideki/status/606108091885744128  
+
+> Mewで閲覧中のhtmlメールをewwで表示する - @peccul is peccu http://t.co/UiROaI7CwS  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:09／2015/06/02 07:13 URL： https://twitter.com/kk_hirono/status/1302579771365142528 https://twitter.com/hirono_hideki/status/605497391991672833  
+
+> Emacs/Mew のページ：JAIST 情報科学センター http://t.co/LKJCoxFfBY  
+
+奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)/「mew」の検索結果 - Twilog https://t.co/RrXJDwZvIe
+
+　Twilogでみたところ，新しいパソコンでmewの設定をしたのは，昨日の9月5日になりそうです。今日も前半の時間帯に，いくつか設定などしていました。一通り使えるようになった感じです。
+
+* さくらインターネットでも使えるようになった，半日分ぐらいの時間を掛けて作成した，ツイートの全文を取得するpython3のスクリプト
+
+:CATEGORIES: パソコン,python,TwitterAPI
+
+>|python|
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import json, config
+from requests_oauthlib import OAuth1Session
+import re
+import sys
+from datetime import datetime
+from datetime import timezone  
+
+args = sys.argv
+if len(sys.argv) == 1:
+    user = 'kk_hirono'
+else:
+    user = args[1]
+
+if not len(sys.argv) == 2:
+    offset = 1
+else:
+    offset = args[2]
+
+#def convert_to_datetime(datetime_str):
+  #tweet_datetime = datetime.strptime(datetime_str,'%a %b %d %H:%M:%S %z %Y')
+  #return(tweet_datetime)
+
+CK="Consumer Key"
+CS="Consumer Secret"
+AT="Access Token"
+ATS="Access Token Secret"
+twitter = OAuth1Session(CK, CS, AT, ATS)
+url = "https://api.twitter.com/1.1/statuses/user_timeline.json" #タイムライン取得エンドポイント
+
+params ={
+  'count' : 200, # 取得数
+  'page' : {offset},
+ # 'trim_user' : True, # ユーザー情報を除く
+  #'exclude_replies' : True, # リプライを除く
+  'tweet_mode' : 'extended', # 拡張モード
+  'screen_name' : {user}
+}
+res = twitter.get(url, params = params)
+
+if res.status_code == 200:
+    timelines = json.loads(res.text)
+    #timelines = timelines.reverse()
+    for line in reversed(timelines): #JSONの並び替え（逆順）
+        if  line['retweeted'] or re.compile("^RT @").search(line['full_text']):
+            user = line['user']['screen_name']
+            name = line['user']['name']
+            #org_text = re.sub('\A', '> ', line['full_text'])
+            org_text = re.sub("^", '> ',  line['full_text'], flags=re.MULTILINE) #すべての行頭を置換
+            #org_text = line['full_text'].replace("^", "> ")
+            rt_user = line['retweeted_status']['user']['screen_name']
+            rt_name = line['retweeted_status']['user']['name']
+            tw_date = datetime.strptime(line['created_at'], '%a %b %d %H:%M:%S %z %Y').replace(tzinfo=timezone.utc).astimezone(tz=None).strftime('%Y-%m-%d %H:%M:%S')
+            rt_date = datetime.strptime(line['retweeted_status']['created_at'], '%a %b %d %H:%M:%S %z %Y').replace(tzinfo=timezone.utc).astimezone(tz=None).strftime('%Y-%m-%d %H:%M:%S')
+            tw_url =  "https://twitter.com/%s/status/#%s" % (user, line['id_str'])
+            rt_url =  "https://twitter.com/%s/status/#%s" % (rt_user, line['retweeted_status']['id_str'])
+            
+            print("RT %s（%s）｜%s（%s） 日時：%s／%s URL： %s %s\n%s\n" % (user, name, rt_user, rt_name,tw_date, rt_date, tw_url, rt_url, org_text))
+            #print("RT {user}（{name}）｜{rt_user}（{rt_name}） 日時：{tw_date}／{rt_date} URL： {tw_url} {rt_url}\n> {org_tweet}\n\n")
+            #print(line)
+        else:    
+            if not re.compile("^( - |- |> |［source：］|RT |TW )").search(line['full_text']):
+                print("　", end="")
+            print(re.sub('&gt;', '>', line['full_text'])) # ツイートの最初の行を見出しにして、 Markdown で良い感じにマークアップ
+            print("")
+            if 'media' in line['entities'].keys():
+                for media in line['entities']['media']:
+                    print("![image]("+media['media_url_https']+')' + "\n") # 画像URLをMarkdownの埋め込み形式に
+                #print("\n")
+else:
+    print("Failed: %d" % res.status_code)
+||<
+
+　次が参考にしたページですが，手間取って時間も掛かりました。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:19／2020/09/06 20:25 URL： https://twitter.com/kk_hirono/status/1302582217697234944 https://twitter.com/hirono_hideki/status/1302568715867664385  
+
+> Python入門｜re.sub を使用して正規表現で「行頭」「行末」を置換する｜dot blog https://t.co/0pjrNHMDLy text_new = re.sub('^', '「', text, flags=re.MULTILINE)  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:19／2020/09/06 20:08 URL： https://twitter.com/kk_hirono/status/1302582229357404160 https://twitter.com/hirono_hideki/status/1302564297109696518  
+
+> 文字列操作の比較表: Ruby, Python, JavaScript, Perl, C++ - bkブログ https://t.co/5ob5vHj65w  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:19／2020/09/06 19:17 URL： https://twitter.com/kk_hirono/status/1302582244150706177 https://twitter.com/hirono_hideki/status/1302551523373662209  
+
+> python — Twitterの日付からPython datetime date https://t.co/HQBSadBoaz   from datetime import timezone      datetime.strptime(mydata["created_at"], '%a %b %d %H:%M:%S %z %Y').replace(             tzinfo=timezone.utc).astimezone(tz=None).strftime('%Y-%m-%d %H:%M:%S'))  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:19／2020/09/06 19:03 URL： https://twitter.com/kk_hirono/status/1302582258868432897 https://twitter.com/hirono_hideki/status/1302548023092760576  
+
+> #Twitter Timeline #API で得られる created_at の時刻を元に unixtimestamp 基準で絞り込む #python スクリプトの例 - Qiita https://t.co/qsFR7O0C21  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:19／2020/09/06 17:26 URL： https://twitter.com/kk_hirono/status/1302582274928467969 https://twitter.com/hirono_hideki/status/1302523491665625089  
+
+> Twitterでいいね(かRT)した画像をひたすら保存する - Qiita https://t.co/4JuPf3bqQd  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:19／2020/09/06 16:18 URL： https://twitter.com/kk_hirono/status/1302582291802202115 https://twitter.com/hirono_hideki/status/1302506319975309313  
+
+> 文字列中の変数展開（およびヒア・ドキュメント） - Qiita https://t.co/Buaxc4smv5  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:19／2020/09/06 16:08 URL： https://twitter.com/kk_hirono/status/1302582306578731009 https://twitter.com/hirono_hideki/status/1302503988638527488  
+
+> Pythonの文字列における変数展開を現役エンジニアが解説【初心者向け】 | TechAcademyマガジン https://t.co/1rbndFF0yE  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:20／2020/09/06 15:55 URL： https://twitter.com/kk_hirono/status/1302582322349236226 https://twitter.com/hirono_hideki/status/1302500751969677313  
+
+> 正規表現でif文を書くとき - Qiita https://t.co/OdaFvnJf8L  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:20／2020/09/06 15:51 URL： https://twitter.com/kk_hirono/status/1302582341550792705 https://twitter.com/hirono_hideki/status/1302499681629474818  
+
+> Python3のprintで改行しない方法を現役エンジニアが解説【初心者向け】 | TechAcademyマガジン https://t.co/2nF7c0dLeN  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:20／2020/09/06 15:50 URL： https://twitter.com/kk_hirono/status/1302582359796056064 https://twitter.com/hirono_hideki/status/1302499349167964160  
+
+> Python リストの逆順 - Qiita https://t.co/p7xspAvoxV reversedメソッドの使用  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:20／2020/09/06 15:28 URL： https://twitter.com/kk_hirono/status/1302582384693452800 https://twitter.com/hirono_hideki/status/1302493917024141313  
+
+> 【Twitter API】タイムライン取得に使えるパラメータ集 | 無能投資家の苦悩 https://t.co/ZOQfwL6Pxd  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:20／2020/09/06 15:07 URL： https://twitter.com/kk_hirono/status/1302582403202871297 https://twitter.com/hirono_hideki/status/1302488503297609728  
+
+> Pythonで文字列を置換（replace, translate, re.sub, re.subn） | https://t.co/y8h83ipByj https://t.co/Bf9Z2bOJHO  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-06 21:20／2020/09/06 15:02 URL： https://twitter.com/kk_hirono/status/1302582418583379969 https://twitter.com/hirono_hideki/status/1302487405526622208  
+
+> twitter APIで遊んでみる #2(ユーザータイムラインの取得) - Qiita https://t.co/BqgzL6OF00  
+

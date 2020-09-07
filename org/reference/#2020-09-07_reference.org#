@@ -1,0 +1,231 @@
+* たぶん初めて知った，「日本コンピューティングシステム（JCS)」という会社，値段の出ていない商品のことから，Ubuntu，ホリエモンこと堀江貴文氏の回想
+
+@SATOMasako ===> You have been blocked from retweeting this user's tweets at their request.  
+▷▷▷　次のツイートのアカウント（@SATOMasako）は，@kk_hironoをブロックしています。リツイートできませんでした。 ▷▷▷  
+
+- TW SATOMasako（佐藤正子） 日時：2020/09/06 21:45 URL： https://twitter.com/SATOMasako/status/1302588702112137216  
+
+> はじめてのゴーヤチャンプルも土井善晴先生のレシピなら大成功。  
+>   
+> https://t.co/UbB7bWTnPUゴーヤーチャンプルー.html  
+
+　上記のツイートがきっかけでした。リンクの「ゴーヤーチャンプルー レシピ 土井 善晴さん｜【みんなのきょうの料理】おいしいレシピや献立を探そう」というページを開いたところ，そこに広告があり，Xeon搭載とGPU×4というのが気になり，リンクを開きました。
+
+　平成10年代の初め頃，情報処理の勉強によく出てきたワークステーションですが，夢のような高性能パソコンになります。値段は見積書の発行となっていますが，値段の目安もわからず，気になって調べたところ次のページが出てきました。投稿済みツイートのリツイートでご紹介します。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-07 09:42／2020/09/07 09:03 URL： https://twitter.com/kk_hirono/status/1302769110397284352 https://twitter.com/hirono_hideki/status/1302759297999282176  
+
+> - https://t.co/JcEebm7MVW：【特別企画】HPCで新たなマーケットを開拓するJCSのサーバビジネス (1/4) https://t.co/S2X2GyuUz9  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-07 09:42／2020/09/07 08:55 URL： https://twitter.com/kk_hirono/status/1302769119922593792 https://twitter.com/hirono_hideki/status/1302757266823639040  
+
+> - JCS VCX-WA010 インテル® Xeon® スケーラブル・プロセッサー搭載 GPU最大4基搭載 静音型ワークステーション https://t.co/6mQbyzyVWR  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-07 09:42／2020/09/07 08:53 URL： https://twitter.com/kk_hirono/status/1302769146229174272 https://twitter.com/hirono_hideki/status/1302756820788809728  
+
+> - ゴーヤーチャンプルー レシピ 土井 善晴さん｜【みんなのきょうの料理】おいしいレシピや献立を探そう https://t.co/g09lny8B6b  
+
+```
+インターネット用途のサーバを主力製品とする
+1992年から1993年にかけて、営業の中心を高機能マシンへと移した同社は、その後の1995年ごろから始まるインターネット時代の幕開けにより、さらにWebフロントエンドで使用されるサーバ分野に進んでいく。
+
+［source：］ASCII.jp：【特別企画】HPCで新たなマーケットを開拓するJCSのサーバビジネス (1/4) https://ascii.jp/elem/000/000/341/341527/
+```
+
+```
+ライブドアは、昨年LindowsOSを国内発売したことでご存じの方も多いだろう。しかし、LindowsOSは同社の営業品目の一部にすぎない。ライブドアの事業の中心は、社名ともなっている無料インターネットアクセスサービスLivedoorや、サーバホスティングサービスのデータホテル、企業のイントラネット提供までを含む総合ITビジネスとでもいうべきものだ。そのライブドアで、JCSのIAサーバが使われている。
+
+［source：］ASCII.jp：【特別企画】HPCで新たなマーケットを開拓するJCSのサーバビジネス (2/4) https://ascii.jp/elem/000/000/341/341527/2/
+```
+
+　上記2つ目の引用部分に，「ライブドアは、昨年LindowsOSを国内発売したことでご存じの方も多いだろう。」と出てきました。最近の記事という思い込みで読んでいたので，これはおかしいと感じました。Lindowsは，完全に眠った記憶となっていましたが，2009年3月より前に，使ったという記憶でした。
+
+　Lindowsがライブドアと関係があったというのも意外に感じましたが，国内販売とあるものの，商品として買ったものをインストールしたという記憶はありません。記事は「2004年02月07日 00時00分更新」となっています。
+
+　平成16年の前年であれば，平成15年になります。その平成15年の5月の連休の頃に，金沢市若宮のパソコンの館で，4千円ほどの箱入りパッケージになっていたレッドハットLinux９をインストールし，設定をやっていたという記憶があります。日本語変換にWnnがついていました。
+
+```
+米国時間19日に当局に提出された文書によると、MicrosoftはLindowsとの間で長く争っていた商標をめぐる訴訟で、同社に2000万ドルの和解金を支払うことになったという。
+
+　Lindowsが米証券取引委員会（SEC）に提出した書類には、この和解金と引き換えに、Lindowsは「Lindows」の名称を放棄し、関連するウェブドメインをMicrosoftに引き渡すと記されている。Lindowsは先ごろ、欧州での商標訴訟の結果を受け、同社製品のほとんどを「Linspire」に名称変更していた。
+
+［source：］「Lindows」が消滅へ--マイクロソフト、2000万ドルでリンドウズと和解 - CNET Japan https://japan.cnet.com/article/20069901/
+```
+
+　そういえばという気もしないではないですが，記憶になかったニュースになります。２０００万ドルで和解とありますが，日本円だと２０億円以上になりそうです。記事は２００４年７月２０日となっていて，「「Lindows」が消滅へ」とあります。
+
+```
+LindowsOSは、エッジ（現在のライブドア）が2003年5月に国内独占販売権を取得し、日本語化して販売してきた。通常のパッケージ製品やCDブート版をリリース。マウスコンピュータなどの低価格PCのプリインストール販売も行っており、2003年から3年間で100万本の販売を目標としていた。
+
+［source：］ライブドア、「Lindows」販売終了 - ITmedia NEWS https://www.itmedia.co.jp/news/articles/0508/10/news022.html
+```
+
+　上記は，「2005年08月10日 12時30分 公開」という記事です。ライブドアといえば，社長がホリエモンこと堀江貴文氏の頃に有名になりましたが，知名度が急上昇する前に，「Lindows」の販売をしていたと思えてきました。
+
+　また，「Lindows」の販売中に，レッドハットLinux9が，Fedora coreに変わり，Ubuntuの誕生があったとも考えられます。
+
+```
+歴史［編集］
+Ubuntuは、2004年10月20日［34］にDebian GNU/Linuxから派生したOSである［35］。
+
+現在、Ubuntuコミュニティはカノニカルから資金提供をうけている。2005年7月8日、マーク・シャトルワースとカノニカルはUbuntu財団を創設し、初期投資として1000万USドルを提供したと発表した。財団の目的は今後公開されるバージョンも含めたUbuntuのサポートと開発を保証することである。2006年現在財団は休眠状態にある。この不透明な状況をマーク・シャトルワースは、財団はCanonicalに不測の事態が起きたときの緊急財源であると説明している［36］。
+
+［source：］Ubuntu - Wikipedia https://ja.wikipedia.org/wiki/Ubuntu
+```
+
+　平成16年10月がUbuntuの始まりだと確認しました。バージョンは1610になるはずです。1604が存在しないというのは意外に感じますが，年に2回，4月と10月に新バージョンが出るのもUbuntuの特徴で，現時点のリリースは2004が最新版のはずです。
+
+```
+球団買収計画と失敗［編集］
+2004年に経営難でオリックス・ブルーウェーブ（現：オリックス・バファローズ）との合併が決定されたプロ野球球団、大阪近鉄バファローズ買収を申し出た。買収の申し出を拒否されると、今度はそれまで球団のなかった東北に新球団を設立する計画を発表。球団名を「仙台ライブドアフェニックス」とし、監督としてトーマス・オマリーを招聘すると発表した。本業の競合他社でもある楽天と参入を競い合うが経営体力の不足等が指摘され、審査の結果、楽天（東北楽天ゴールデンイーグルス）の参入が決定。ライブドアの参入は実現しなかった。
+
+［source：］堀江貴文 - Wikipedia https://ja.wikipedia.org/wiki/%E5%A0%80%E6%B1%9F%E8%B2%B4%E6%96%87
+```
+
+　「球団買収計画と失敗」が平成16年となっているので，その頃にはライブドアの社名も堀江貴文氏とともに知られていたと思います。私は2005年の11月に初めてgooでブログを始めたのですが，それ以前より著名人だったとは意外でした。
+
+　Wikipediaには，ライブドア事件での逮捕が2006年1月23日ともあります。私は2009年3月15日まで羽咋市のアパートに住んでいたので，その生活のかなりの部分が，ライブドア事件の報道とともにあったことになります。収監が2011年6月20日とあるので，刑事裁判もずいぶん長かったようです。
+
+　検察庁に対して，強い不信感と不満を募らせた人物としても印象に強い，ホリエモンこと堀江貴文氏です。しらずに影響を受けたところもあったように思えます。マスコミの取り上げもあるとは思いますが，それだけ社会に影響を与えた人物ともいえるでしょう。
+
+* 告発状の見出しを一覧としてCSVファイルに書き出しするWordのVBAマクロ
+
+　作成したのは昨日の午前中だったと思います。Linuxで作成した告発状本文のテキストをWindows10の一太郎に貼り付けるのが目的でした。
+
+>|vba|
+Sub エントリーの見出しをCSVファイルに書き出し()
+  Dim lv1 As String
+  Dim lv2 As String
+  Dim lv3 As String
+  Dim lv4 As String
+  Dim lv5 As String
+  Dim i As Integer
+  i = 1
+    Dim datFile As String
+    Const F_PATH = "C:\Users\hirono\OneDrive\list.csv"  ' 出力ファイルのフルパス
+    Dim f_num As Integer  ' ファイル番号
+
+    f_num = FreeFile
+    Open F_PATH For Output As f_num
+
+  For Each par In ActiveDocument.Paragraphs
+    If par.OutlineLevel <> wdOutlineLevelBodyText Then
+    Select Case par.OutlineLevel
+        Case 1
+            'MsgBox "小学生です"
+        Case 2
+            'MsgBox "中学生です"
+        Case 3
+            'MsgBox "高校生です"
+        Case 4
+            i = i + 1
+        Case 5
+            i = i + 1
+        Case Else
+            'MsgBox "入力が不正です"
+    End Select
+    End If
+    Next par
+
+
+Dim max As Integer
+max = i
+i = 0
+Dim entryies() As String
+ReDim entryies(max)
+
+  For Each par In ActiveDocument.Paragraphs
+    If par.OutlineLevel <> wdOutlineLevelBodyText Then
+     title = Replace(par.Range.Text, vbCr, "")
+
+     If par.OutlineLevel = 1 Then
+        lv1 = title
+     End If
+
+     If par.OutlineLevel = 2 Then
+        lv2 = title
+     End If
+
+     If par.OutlineLevel = 3 Then
+        lv3 = title
+     End If
+
+     If par.OutlineLevel = 4 Then
+        lv4 = title
+     End If
+
+     If par.OutlineLevel = 5 Then
+        lv5 = title
+     End If
+
+    Select Case par.OutlineLevel
+        Case 1
+            'MsgBox "小学生です"
+        Case 2
+            'MsgBox "中学生です"
+        Case 3
+            'MsgBox "高校生です"
+        Case 4
+            i = i + 1
+            entryies(i) = lv1 & "," & lv2 & "," & lv3 & "," & lv4
+        Case 5
+            i = i + 1
+            entryies(i) = lv1 & "," & lv2 & "," & lv3 & "," & lv4 & "," & lv5
+        Case Else
+            'MsgBox "入力が不正です"
+    End Select
+
+     'Selection.TypeText par.OutlineLevel & title & vbCr
+    End If
+  Next par
+
+
+    For i = 0 To max
+        'Selection.TypeText Var
+
+        Print #f_num, entryies(i)
+        Debug.Print entryies(i)
+        Selection.TypeText entryies(i) & vbCr
+
+    Next i
+
+    Close #f_num
+End Sub
+
+||<
+
+　以前作成したものに手を加えていますが，カンマ区切りのCSVファイルとしました。これをExcelで開き，xlsxという拡張子のExcel形式で保存しました。これはそのままLinuxのLibreOfficeで扱えます。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-09-07 11:47／2020/09/06 09:25 URL： https://twitter.com/kk_hirono/status/1302800705799954433 https://twitter.com/s_hirono/status/1302402602953367552  
+
+> 2020-09-06-091949_Wordマクロで作成した見出しの一覧CSVファイル.jpg https://t.co/PmDz6fpQLF  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-09-07 11:47／2020/09/06 09:37 URL： https://twitter.com/kk_hirono/status/1302800715677540353 https://twitter.com/s_hirono/status/1302405430337966082  
+
+> 2020-09-06-093612_告発状項目一覧エクセルファイル.jpg https://t.co/3wR9voT7an  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-09-07 11:48／2020/09/06 11:03 URL： https://twitter.com/kk_hirono/status/1302800771214311424 https://twitter.com/s_hirono/status/1302427294745554946  
+
+> 2020-09-06-095821_LibreOfficeの告発状項目一覧エクセルデータ.jpg https://t.co/FfMFnNtRnv  
+
+　LibreOfficeのワープロソフトWriteのマクロで不具合が出たのが思案の始まりになります。段落をツイートするマクロですが，ファイルサイズが大きくなるのが原因なのか，その場で処理されなくなり，アプリの終了時にまとめて実行されるという問題です。
+
+　告発状本文の作成は，LinuxのEmacsをメインに，Mewというメールソフトの活用を考えています。gmailの送受信になります。このあと，Windows10のWSL2でもMewを使えるようにやってみたいと考えています。
+
+* 
+
+
+
+
