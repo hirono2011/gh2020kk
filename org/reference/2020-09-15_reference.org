@@ -1,0 +1,80 @@
+* pythonのリスト内包表記を使ったイテレータの処理
+
+:CATEGORIES: python
+
+>|python|
+fn = "twitter-users-list.list"
+f = open(fn)
+data = f.read()
+f.close()
+data_list = data.splitlines()
+
+print(['{0}: {1}'.format(i + 1, data_list[i])  for i in range(len(data_list))])
+
+for name in ['{0}: @{1}'.format(i, data_list[i-1])  for i in range(len(data_list)) if int(i) % 100 == 0]:
+    print(name)
+||<
+
+実行結果：
+```
+In [35]: for name in ['{0}: @{1}'.format(i, data_list[i-1])  for i in range(len(data_list)) if int(i) % 100 == 0]: 
+    ...:     print(name) 
+    ...:
+
+0: @to_pamyu
+100: @K_masafumi
+200: @s_hirono
+300: @63s244
+400: @prejurist
+500: @sato__michiko
+600: @omlawyer
+700: @frroots
+800: @lUfIH2iuEvC6AdU
+900: @asahi_Sugihara
+1000: @hutitaka
+1100: @ymnmsyk
+1200: @nhk_shutoken
+1300: @chopitarou
+1400: @RAKUEN0826
+1500: @kokusai_rikon
+1600: @morimasakosangi
+1700: @kenzo_morimi
+1800: @kawano_lawyer
+1900: @LAW70487714
+```
+
+参考：
+ - リスト内包表記の活用と悪用 - Qiita https://qiita.com/KTakahiro1729/items/c9cb757473de50652374
+
+　一週間ほど前，図書館に行ったとき，pythonの本が一冊置いてあって，前にも軽く目を通した本でしたが，リスト内包表記のことを思い出し，名前がリスト内包表記とは思い出せなかったのですが，調べて勉強をしました。色々と応用ができそうです。
+
+* 「ディスりリプをせずにはおられない方々もおいでのようで、そういう方々がこれ以上拙ツイートでご不快な思いをされることがないよう、ブロック機能を活用」というジャーナリストの江川紹子氏のツイート
+
+:CATEGORIES: ジャーナリストの江川紹子氏,ブロック
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜amneris84（Shoko Egawa） 日時：2020-09-15 23:35／2020/09/14 17:57 URL： https://twitter.com/kk_hirono/status/1305877860951834624 https://twitter.com/amneris84/status/1305430468695789569  
+
+> 今まであんまりブロック機能は使ってきませんでしたが、拙ツイートがいちいち勘に触ってディスりリプをせずにはおられない方々もおいでのようで、そういう方々がこれ以上拙ツイートでご不快な思いをされることがないよう、ブロック機能を活用していくことにしました。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜amneris84（Shoko Egawa） 日時：2020-09-15 23:35／2020/09/14 23:15 URL： https://twitter.com/kk_hirono/status/1305877873920602114 https://twitter.com/amneris84/status/1305510390495731713  
+
+> 訂正　勘　→ 癇  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜amneris84（Shoko Egawa） 日時：2020-09-15 23:35／2020/09/14 23:48 URL： https://twitter.com/kk_hirono/status/1305877911765831680 https://twitter.com/amneris84/status/1305518794618466305  
+
+> @Saisyoh はい。ミュートは活用しています。  
+
+　このところ再審請求に関するツイートが見当たらず，それも気になっているジャーナリストの江川紹子氏です。ジャーナリストの江川紹子氏のこれまでの再審請求に関する発言はいったいなんであったのかという今日この頃です。
+
+ - 2020年09月15日23時26分の登録： ＼Shoko Egawa　@amneris84＼今まであんまりブロック機能は使ってきませんでしたが、拙ツイートがいちいち勘に触ってディスりリプをせずにはおられない方々もお http://hirono2014sk.blogspot.com/2020/09/shoko-egawaamneris84_15.html
+ - 2020年09月15日23時27分の登録： ＼Shoko Egawa　@amneris84＼はい。ミュートは活用しています。 http://hirono2014sk.blogspot.com/2020/09/shoko-egawaamneris84_27.html
+ - 2020年09月15日23時31分の登録： REGEXP：”江川紹子”／データベース登録済みツイートの検索：2020-09-09〜2020-09-15／2020年09月15日23時31分の記録：ユーザ・投稿：4／12件 http://hirono2014sk.blogspot.com/2020/09/regexp2020-09-092020-09_56.html
+ - 2020年09月15日23時40分の登録： @amneris84（Shoko　Egawa）のツイート　”再審”　10／3241：2020-03-21_2046〜2020-09-15_2226　2020年09月15日23時40分の記録　：embed http://hirono2014sk.blogspot.com/2020/09/amneris84shokoegawa1032412020-03.html
+ - 2020年09月15日23時41分の登録： @amneris84（Shoko　Egawa）のツイート　”検察”　72／3241：2020-03-21_2046〜2020-09-15_2226　2020年09月15日23時41分の記録　：embed http://hirono2014sk.blogspot.com/2020/09/amneris84shokoegawa7232412020-03.html
+
