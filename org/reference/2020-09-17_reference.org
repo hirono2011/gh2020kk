@@ -1,0 +1,404 @@
+* pythonの「リスト(list), 辞書(dict), setのソート(sorted)」
+
+:CATEGORIES: python
+
+```
+In [1]: users =  {'a1', 'b1', 'fukazawas', 'lawks', 'lawks2', 'motoken_tw', 'uwaaa'}
+
+
+In [2]: users
+
+Out[2]: {'a1', 'b1', 'fukazawas', 'lawks', 'lawks2', 'motoken_tw', 'uwaaa'}
+
+In [3]: users.add('z1')
+
+
+In [4]: users
+
+Out[4]: {'a1', 'b1', 'fukazawas', 'lawks', 'lawks2', 'motoken_tw', 'uwaaa', 'z1'}
+
+In [5]: sorted(users)
+
+Out[5]: ['a1', 'b1', 'fukazawas', 'lawks', 'lawks2', 'motoken_tw', 'uwaaa', 'z1']
+
+In [6]: sorted(users, reverse=True)
+
+Out[6]: ['z1', 'uwaaa', 'motoken_tw', 'lawks2', 'lawks', 'fukazawas', 'b1', 'a1']
+
+```
+
+ - リスト(list), 辞書(dict), setのソート(sorted) | Python Snippets https://python.civic-apps.com/sort-sorted/
+
+　少しずつpythonの勉強。
+
+* pythonの「objectをeval()で再び元のオブジェクトに戻せる文字列に変換して返す。」というrepr(object)関数
+
+:CATEGORIES: python
+
+ - Pythonのstr( )とrepr( )の使い分け | ガンマソフト株式会社 https://gammasoft.jp/blog/use-diffence-str-and-repr-python/  
+
+```
+In [7]: repr(users)                                                                                                                                            
+Out[7]: "{'a1', 'motoken_tw', 'uwaaa', 'fukazawas', 'z1', 'lawks', 'lawks2', 'b1'}"
+
+In [8]: print(users)                                                                                                                                           
+{'a1', 'motoken_tw', 'uwaaa', 'fukazawas', 'z1', 'lawks', 'lawks2', 'b1'}
+
+In [9]: import datetime                                                                                                                                        
+
+In [10]: today = datetime.date.today()                                                                                                                         
+
+In [11]: print(today)                                                                                                                                          
+2020-09-17
+
+In [12]: repr(today)                                                                                                                                           
+Out[12]: 'datetime.date(2020, 9, 17)'
+
+In [13]: today.type                                                                                                                                            
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-13-cda7e6df293a> in <module>
+----> 1 today.type
+
+AttributeError: 'datetime.date' object has no attribute 'type'
+
+In [14]: type(tody)                                                                                                                                            
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-14-4d1e6db892fa> in <module>
+----> 1 type(tody)
+
+NameError: name 'tody' is not defined
+
+In [15]: today.type
+
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-15-cda7e6df293a> in <module>
+----> 1 today.type
+
+AttributeError: 'datetime.date' object has no attribute 'type'
+
+In [16]: type(today)
+
+Out[16]: datetime.date
+
+In [17]: day = datetime.date(2020, 9, 17)
+
+In [18]: day
+
+Out[18]: datetime.date(2020, 9, 17)
+
+In [19]: print(day)
+
+2020-09-17
+
+In [20]: type(day)
+
+Out[20]: datetime.date
+```
+
+* Emacsでカーソール以降の連続した半角スペースを削除するEmacs-Lisp
+
+:CATEGORIES: Emacs,Emacs-Lisp
+
+ - カーソル以降の連続するスペースを削除する - syohex’s diary https://syohex.hatenablog.com/entry/20111017/1318857029  
+
+　上記を参考に，改行が削除されていたので，改行を追加し直すように手を入れました。
+
+```
+(defun kill-following-spaces ()
+  (interactive)
+  (let ((orig-point (point)))
+    (save-excursion
+      (skip-chars-forward " \t")
+      (delete-region orig-point (point))
+      (insert "\n"))))
+
+(global-set-key (kbd "M-k") 'kill-following-spaces)
+```
+
+　問題の半角スペースは，ipythonの実行画面のコピペで起きていました。普通なら気が付かない連続した半角スペースですが，Emacsで可視化の表示をしているため，とても目立つことになっていました。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-09-17 05:52／2020/09/17 05:51 URL： https://twitter.com/kk_hirono/status/1306335085369503744 https://twitter.com/s_hirono/status/1306334978767163392  
+
+> 2020-09-17-054047_削除した連続した半角スペース.jpg https://t.co/dAOxV0NSBq  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-09-17 05:52／2020/09/17 05:51 URL： https://twitter.com/kk_hirono/status/1306335098808066048 https://twitter.com/s_hirono/status/1306334906134351873  
+
+> 2020-09-17-053639_連続した半角スペース.jpg https://t.co/C4KqbCenOe  
+
+* pythonで，独自に作成したclassのオブジェクトを配列にして，それぞれの要素でソート
+
+:CATEGORIES: python
+
+ - リスト(list), 辞書(dict), setのソート(sorted) | Python Snippets https://python.civic-apps.com/sort-sorted/  
+
+　これも上記のページを参考にしています。pythonでのclassの定義も勉強がまだこれからですが，これは参考になりました。
+
+```
+class Hoge:
+  def __init__(self, i, name):
+    self.i = i
+    self.name = name
+  def __repr__(self):
+    return "%d:%s" % (self.i, self.name)
+```
+
+```
+In [21]: class Hoge: 
+    ...:   def __init__(self, i, name): 
+    ...:     self.i = i 
+    ...:     self.name = name 
+    ...:   def __repr__(self): 
+    ...:     return "%d:%s" % (self.i, self.name) 
+    ...:
+
+
+In [22]: l2 = [Hoge(2, 'c'), Hoge(3, 'a'), Hoge(1, 'b')]
+
+
+In [23]: l2
+
+Out[23]: [2:c, 3:a, 1:b]
+
+In [24]: sorted(l2, key=lambda h: h.name) #name属性を返す
+
+Out[24]: [3:a, 1:b, 2:c]
+
+In [25]: sorted(l2, key=lambda h: h.i) #name属性を返す
+
+Out[25]: [1:b, 2:c, 3:a]
+```
+
+　ソートのキーの指定にラムダ式を使っているのが特に参考になりました。
+
+　operatorモジュールのattrgetter関数を使う方法も紹介されています。無名関数ともいわれるラムダ式を使うより，可読性がよい気もします。
+
+```
+In [26]: import operator
+
+
+In [27]: sorted(l2, key=operator.attrgetter('name'))
+
+Out[27]: [3:a, 1:b, 2:c]
+
+```
+
+* pythonのoperatorモジュールで，独自定義のデータリストから要素の値を取り出す
+
+:CATEGORIES: python
+
+ - operator --- 関数形式の標準演算子 — Python 3.8.6rc1 ドキュメント https://docs.python.org/ja/3/library/operator.html  
+
+　上記のページを参考にやってみました。
+
+```
+>|python|
+class Lawyeries:
+  def __init__(self, user, name):
+    self.user = user
+    self.name = name
+  def __repr__(self):
+    return "%s:%s" % (self.user, self.name)
+
+list = [Lawyeries('fukazawas','深澤諭史'), Lawyeries('motoken_tw', 'モトケン')]
+list.append(Lawyeries('uwaaaa', '刑裁サイ太'))
+
+for x in list:
+    key=operator.attrgetter('name')
+    print(key(x))
+
+for x in list:
+    key=operator.attrgetter('user')
+    print(key(x))
+||<
+
+
+
+```
+    >>> import operator
+    >>> class Lawyeries:
+    ...   def __init__(self, user, name):
+    ...     self.user = user
+    ...     self.name = name
+    ...   def __repr__(self):
+    ...     return "%s:%s" % (self.user, self.name)
+    ... 
+    >>> list = [Lawyeries('fukazawas','深澤諭史'), Lawyeries('motoken_tw', 'モトケン')]
+    >>> list.append(Lawyeries('uwaaaa', '刑裁サイ太'))
+    >>> 
+    >>> for x in list:
+    ...     key=operator.attrgetter('name')
+    ...     print(key(x))
+    ... 
+    深澤諭史
+    モトケン
+    刑裁サイ太
+    >>> for x in list:
+    ...     key=operator.attrgetter('user')
+    ...     print(key(x))
+    ... 
+    fukazawas
+    motoken_tw
+    uwaaaa
+    >>> 
+```
+
+* Ubuntuにpythonの「jupyter　notebook」をインストール
+
+:CATEGORIES: python
+
+　ipythonを便利に思って使っていたのですが，コピペで大量の半角スペースが含まれるという問題がありました。これまでに何度か使っているjupyter notebookのことを思い出し，Ubuntu20.04にインストールしました。
+
+　最初，pipでインストールしたのですが，コードの実行結果が表示されなかったので，いったん削除し，Anacondaのコマンドでインストールし直しました。ネットの情報では同梱され最初からインストールされているという話もありますが，Windowsの話かもしれません。
+
+% conda install jupyter
+
+　上記のコマンドでインストールが始まったので，最初から入っていたことはなさそうです。これだけでjupyter notebookが使えるようになりました。pythonのコードが残せておけるのもipythonとの違いかと思います。
+
+* ein（Emacs　IPython　Notebook）を使ったみた，「jupyter　notebook」と連動，ファイルも保存できる
+
+:CATEGORIES: python,Emacs
+
+```
+key	説明
+C-c C-c	現在のcellを評価する
+C-c C-a	現在のcellの上に新しいcellを作る
+C-c C-b	現在のcellの下に新しいcellを作る
+C-c C-k	現在のcellを削除する
+詳しいkey-bindingはこのあたりに
+
+変更の保存はもちろん C-x C-s。
+
+［source：］EIN(Emacs IPython Notebook)を試してみる - podhmo's diary https://pod.hatenablog.com/entry/2017/08/06/220817
+```
+```
+tab (worksheet)
+ちょっとした作業にworksheetを行き来するのが楽なので便利。これは以下の様にして使う。
+
+key	説明
+C-c +	新しいworksheetの作成
+C-c 1	worksheet1に移動
+C-c 2	worksheet2に移動
+C-c 3	worksheet3に移動
+..	..
+C-c	worksheetに移動
+C-c -	worksheetの削除
+
+［source：］EIN(Emacs IPython Notebook)を試してみる - podhmo's diary https://pod.hatenablog.com/entry/2017/08/06/220817
+```
+
+　ログインまでの手順が少し面倒ですが，Emacsだと略語展開も使えます。ただ試したところ，pythonの関数名の補完は出来ず，JUPYTERでのファイルの変更が，バッファへの再読込で反映されることもなかったです。ただトークンが有効な間は，再度，トークンの指定が必要なさそうでした。
+
+* スマホのiphoneで，python3のスクリプトが実行できるようになった
+
+:CATEGORIES: python,iphone
+
+　昨日，9月16日の朝になりますが，iphoneでUNIXのコマンドが実行できないものかと思い調べてみました。MacのパソコンであればベースがBSD-UNIXであり，ターミナルでコマンドの実行が出来るらしいことは知っていました。
+
+　まず，a-Shellというiphoneのアプリを見つけ，そのあとだったと思いますが，ターミナルからpython3が実行できることを知り，pipでモジュールというかパッケージのインストールも出来ました。
+
+　昨日のうちに1200円ほどで，pythonのコマンドが実行できるようにするアプリの存在を知ったのですが，今のところそんなに使う予定はなかったので，購入は躊躇しました。今朝になってやってみたところ，pythonのコマンドの引数にスクリプトファイルを渡すことで，実行が出来ました。
+
+　ツイートの取得をするpythonのスクリプトで，取得したツイートの文字列が途中で途切れるものがあったのですが，pbcopyでメールの下書きに貼り付けてみたところ，文字情報は失われておらず，ターミナルでの表示がおかしかっただけらしいと思いました。
+
+　あと，スクリプトの実行でワーニングのエラーが出ていたので，その一部をコピーしてiphoneで調べたところ，解決方法があって，そのままやってみたところ，ワーニングが消えました。
+
+```
+import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
+［source：］Python - InsecureRequestWarning を消したい｜teratail https://teratail.com/questions/144250
+```
+
+「Pythonista 3」をApp Storeで https://t.co/DvltsI8RKS omz:software \n 「仕事効率化」内3位 \n  4.5 • 295件の評価 \n ¥1,220
+
+　そういえば，iPhoneの標準Webブラウザ「Safari」ですが，数年前は，Linuxにもインストールできて使えていたのですが，今はWindowsパソコンでも，配布はされていないようです。4,5日前に調べて知ったことです。
+
+ - 無料でiPhoneやiPad上でコマンドやプログラムを実行できるターミナルアプリ「a-shell」 - GIGAZINE https://gigazine.net/news/20200503-a-shell/  
+
+　Vimエディタが最初から使えるという情報で，実際使えました。余り試していないですが，今のところコマンドの場所を調べる，whoisコマンドが使えませんでした。
+
+
+* 午後，夕方までの時間を使い，繰り返しいろいろやってみたが，結局，うまくいかなかったMobileOrg
+
+:CATEGORIES: Emacs,iphone
+
+ - ドキュメント-MobileOrg https://mobileorg.github.io/documentation/  
+
+　上記は最新バージョンの新しい情報のようですが，古い情報の設定方法とあわせ，いろいろやってみたのですが，push，pullともにうまく行きませんでした。何年か前は，簡単に使えていました。
+
+* 久しぶりにハウスバーモンドカレーを作りながら，頭に「ああ上野駅」のメロディーにのせて浮かんできた，深澤諭史弁護士のTwitterタイムラインの弁護士列車
+
+** 深澤諭史弁護士のTwitterタイムラインの弁護士列車を頭に浮かべながら，最初に思い出したのが，「リトル・ダーリン」という古い時代のアメリカの曲
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-17 19:59／2020/09/17 18:22 URL： https://twitter.com/kk_hirono/status/1306548250355183616 https://twitter.com/hirono_hideki/status/1306523980111642630  
+
+> クールス 行ってしまったあの娘 - YouTube https://t.co/GP4QKENMDX  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hosakanobuto（保坂展人） 日時：2020-09-17 19:59／2020/09/17 18:21 URL： https://twitter.com/kk_hirono/status/1306548260127911937 https://twitter.com/hosakanobuto/status/1306523720383569920  
+
+> 「菅氏と安倍首相は共犯関係」公文書管理めぐる”壊れたブレーキ” 新政権はどう対峙するのか https://t.co/6KItiPkmxn 森友、加計学園問題や自衛隊PKO日報、桜を見る会…。改ざんや破棄、そして隠蔽など、安倍政権では、公文書管理をめぐる様々な問題が取り沙汰された。専門家が危惧する菅義偉新政権  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-17 19:59／2020/09/17 18:27 URL： https://twitter.com/kk_hirono/status/1306548277702062080 https://twitter.com/hirono_hideki/status/1306525177442754560  
+
+> Diamonds - Little Darlin' （リトルダーリン - ダイアモンズ） - YouTube https://t.co/szjjhcIQzN  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-17 19:59／2020/09/17 18:35 URL： https://twitter.com/kk_hirono/status/1306548292491198465 https://twitter.com/hirono_hideki/status/1306527162233626626  
+
+> 【対訳】リトル・ダーリン(Little Darlin') by ダイヤモンズ(The Diamonds) https://t.co/lqRaIdCkGS  
+
+　奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)のタイムラインを見て思い出したのですが，深澤諭史弁護士のタイムラインと菅首相の新内閣発足のTwitterトレンドで，頭に浮かんだのが「あの娘は夜汽車に乗って」という歌いだしのあるクールスの曲でした。
+
+　曲名がわからなかったのですが，「あの娘は夜汽車に乗って」という歌いだしでGoogle検索をすると，すぐに曲名とYouTube動画が出てきました。
+
+　「クールス 行ってしまったあの娘 - YouTube」を聴いていて，思い出したのが「リトル・ダーリン」という曲です。YouTubeの動画にアルバムの紹介のテキストがあって，そこに曲名があったことを思い出しました。
+
+```
+アルバム 歌詞付
+
+01 紫のハイウェイ
+02 愛しているなら
+03 のっぽのサリー
+04 行ってしまったあの娘
+05 リトルダーリン
+06 サマー・レディ
+07 ワン・デイ
+08 恋の終わり
+09 ロックン・ロール・タイム
+10 涙のダイアリー
+11 彼女はダイナマイト
+12 あの娘はステディ・ガール
+13 ドント・ゲット・ホット・クールス
+14 ミスター・ハーレー・ダビッドソン
+15 シンデレラ
+16 セカンド・イズ・ユー
+17 甘い暴力
+18 恋のテディー・ボーイ
+19 言えなかったんだ
+20 セイ・ママ
+一部を表示
+
+
+［source：］クールス 行ってしまったあの娘 - YouTube https://www.youtube.com/watch?v=gsvfyAEA1Po
+```
+
+　ダーリンという言葉は，ここ数年，見かけることがないと思いましたが，それとともに思い出したのが「うる星やつら」という漫画のことです。昭和の終わり頃，テレビのアニメでもやっていたと思いますが，忍者ハットリくんや怪物くんと同様，数回しか視聴していませんでした。
+
+　「Diamonds - Little Darlin' （リトルダーリン - ダイアモンズ） - YouTube」を繰り返しの再生で視聴していると，オンリーユーという英語が聴き取れます。日本語でいえが，「あなた一筋」という意味なのかと理解しています。
+

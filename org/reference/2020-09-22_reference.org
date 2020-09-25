@@ -1,0 +1,228 @@
+* pythonの「pandasでExcelファイル（xlsx, xls）の書き込み（to_excel）」
+
+:CATEGORIES: python
+
+ - pandasでExcelファイル（xlsx, xls）の書き込み（to_excel） | note.nkmk.me https://note.nkmk.me/python-pandas-to-excel/  
+
+　上記のページを参考に次の2つのパッケージをpipでインストールしたところすぐに使えました。
+
+pip install xlwt
+pip install openpyxl
+
+　「xlwtは.xlsファイル（Excel2003までのフォーマット）の書き込み、openpyxlは.xlsx（Excel2007以降のフォーマット）の書き込みに使われる。」という説明があります。
+
+　シート名の指定や，インデックス名，カラム名のなしを指定できるとのことです。
+
+```
+引数sheet_nameにはシート名を指定する。省略するとSheet1という名前になる。
+
+df.to_excel('data/dst/pandas_to_excel.xlsx', sheet_name='new_sheet_name')
+source： pandas_to_excel.py
+index（行名）, columns（列名）を書き出す必要がない場合は、引数index, columnsをFalseとする。
+
+df.to_excel('data/dst/pandas_to_excel_no_index_header.xlsx', index=False, header=False)
+
+［source：］pandasでExcelファイル（xlsx, xls）の書き込み（to_excel） | note.nkmk.me https://note.nkmk.me/python-pandas-to-excel/
+```
+
+```
+ExcelWriterオブジェクトのbook属性にopenpyxlで読み込んだWorkbookオブジェクトを指定すると、既存のExcelファイルの新たなシートとしてpandas.DataFrameを追加することができる。
+
+openpyxlを使った処理なので.xlsxファイルのみが対象。
+
+path = 'data/dst/pandas_to_excel.xlsx'
+
+with pd.ExcelWriter(path) as writer：
+    writer.book = openpyxl.load_workbook(path)
+    df.to_excel(writer, sheet_name='new_sheet1')
+    df2.to_excel(writer, sheet_name='new_sheet2')
+
+［source：］pandasでExcelファイル（xlsx, xls）の書き込み（to_excel） | note.nkmk.me https://note.nkmk.me/python-pandas-to-excel/
+```
+
+　既存のExcelファイルを指定して，ワークシートの追加が出来るとのことです。同じワークシートに追加する方法は，別のリンクで紹介されているようです。
+
+ - PythonでExcelファイル（xlsx）を読み書きするopenpyxlの使い方 | note.nkmk.me https://note.nkmk.me/python-openpyxl-usage/  
+
+　上記のページをみながら，ipythonでいろいろ試してみました。
+
+```
+In [22]: import openpyxl
+    ...: import pprint
+
+In [23]: wb = openpyxl.load_workbook('sample.xlsx')
+
+In [24]: print(tpye(wb))
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-24-baf74c17219e> in <module>
+----> 1 print(tpye(wb))
+
+NameError: name 'tpye' is not defined
+
+In [25]: print(type(wb))
+<class 'openpyxl.workbook.workbook.Workbook'>
+
+In [26]: print(wb.sheetnames)
+['Sheet1']
+
+In [27]: sheet = wb['sheet1']
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+<ipython-input-27-f97a4d06120a> in <module>
+----> 1 sheet = wb['sheet1']
+
+~/anaconda3/envs/py37_env/lib/python3.7/site-packages/openpyxl/workbook/workbook.py in __getitem__(self, key)
+    271             if sheet.title == key:
+    272                 return sheet
+--> 273         raise KeyError("Worksheet {0} does not exist.".format(key))
+    274 
+    275     def __delitem__(self, key):
+
+KeyError: 'Worksheet sheet1 does not exist.'
+
+In [28]: sheet = wb['Sheet1']
+
+In [29]: cell = sheet['A1']
+
+In [30]: print(cell.value)
+None
+
+In [31]: cell = sheet.cell(row=2, column=1)
+
+In [32]: print(cell.value)
+one
+
+In [33]: pprint.pprint(sheet['A2:C4'])
+((<Cell 'Sheet1'.A2>, <Cell 'Sheet1'.B2>, <Cell 'Sheet1'.C2>),
+ (<Cell 'Sheet1'.A3>, <Cell 'Sheet1'.B3>, <Cell 'Sheet1'.C3>),
+ (<Cell 'Sheet1'.A4>, <Cell 'Sheet1'.B4>, <Cell 'Sheet1'.C4>))
+
+In [34]: sheet['E1'] = 'new'
+
+In [35]: sheet['E2'] = 'new'
+
+In [36]: sheet['F2'] = 'new'
+
+In [37]: def write_list_2d(sheet, l_2d, start_row, start_col):
+    ...:     for y, row in enumerate(l_2d):
+    ...:         for x, cell in enumerate(row):
+    ...:             sheet.cell(row=start_row + y,
+    ...:                        column=start_col + x,
+    ...:                        value=l_2d[y][x])
+    ...: 
+    ...: l_2d = [['four', 41, 42, 43], ['five', 51, 52, 53]]
+    ...: 
+    ...: write_list_2d(sheet, l_2d, 5, 1)
+
+In [38]: wb.save('sample.xlsx')
+
+In [39]: write_list_2d(sheet, l_2d, 7, 1)
+
+In [40]: wb.save('sample.xlsx')
+
+In [41]: write_list_2d(sheet, l_2d, 13, 1)
+
+In [42]: wb.save('sample.xlsx')
+
+In [43]: 
+```
+
+* pythonのenumerate関数の開始数値の指定と，format関数での数値のゼロ埋め
+
+:CATEGORIES: python
+
+```
+for i, name in enumerate(l, 1)：
+    print('{：03}_{}'.format(i, name))
+# 001_Alice
+# 002_Bob
+# 003_Charlie
+
+［source：］Python, enumerateの使い方： リストの要素とインデックスを取得 | note.nkmk.me https://note.nkmk.me/python-enumerate-start/
+```
+
+```
+In [48]: for i, item in enumerate(t, 1):
+    ...:     print("{:04}_{}".format(i, item))
+    ...: 
+    ...: 
+0001_aaa
+0002_bbb
+0003_ccc
+0004_ddd
+
+```
+
+* 「Pythonのpprintの使い方（リストや辞書を整形して出力）」というページ
+
+:CATEGORIES: python
+
+```
+pprintの基本的な使い方
+出力幅（文字数）を指定： 引数width
+出力する要素の深さを指定： 引数depth
+インデント幅を指定： 引数indent
+改行を最小限にする： 引数compact
+文字列に変換： pprint.pformat()
+例： 二次元配列（リストのリスト）を整形して表示
+
+［source：］Pythonのpprintの使い方（リストや辞書を整形して出力） | note.nkmk.me https://note.nkmk.me/python-pprint-pretty-print/
+```
+
+```
+In [59]: l = [{'Name': 'Alice XXX', 'Age': 40, 'Points': [80, 20]},
+    ...:      {'Name': 'Bob YYY', 'Age': 20, 'Points': [90, 10]},
+    ...:      {'Name': 'Charlie ZZZ', 'Age': 30, 'Points': [70, 30]}]
+
+In [60]: print(l)
+[{'Name': 'Alice XXX', 'Age': 40, 'Points': [80, 20]}, {'Name': 'Bob YYY', 'Age': 20, 'Points': [90, 10]}, {'Name': 'Charlie ZZZ', 'Age': 30, 'Points': [70, 30]}]
+
+In [61]: pprint.pprint(l)
+[{'Age': 40, 'Name': 'Alice XXX', 'Points': [80, 20]},
+ {'Age': 20, 'Name': 'Bob YYY', 'Points': [90, 10]},
+ {'Age': 30, 'Name': 'Charlie ZZZ', 'Points': [70, 30]}]
+
+In [62]: pprint.pprint(l, width=40)
+[{'Age': 40,
+  'Name': 'Alice XXX',
+  'Points': [80, 20]},
+ {'Age': 20,
+  'Name': 'Bob YYY',
+  'Points': [90, 10]},
+ {'Age': 30,
+  'Name': 'Charlie ZZZ',
+  'Points': [70, 30]}]
+
+In [63]: pprint.pprint(l, width=400)
+[{'Age': 40, 'Name': 'Alice XXX', 'Points': [80, 20]}, {'Age': 20, 'Name': 'Bob YYY', 'Points': [90, 10]}, {'Age': 30, 'Name': 'Charlie ZZZ', 'Points': [70, 30]}]
+
+In [64]: pprint.pprint(l, depth=1)
+[{...}, {...}, {...}]
+
+In [65]: pprint.pprint(l, depth=2)
+[{'Age': 40, 'Name': 'Alice XXX', 'Points': [...]},
+ {'Age': 20, 'Name': 'Bob YYY', 'Points': [...]},
+ {'Age': 30, 'Name': 'Charlie ZZZ', 'Points': [...]}]
+
+In [66]: pprint.pprint(l, indent=4)
+[   {'Age': 40, 'Name': 'Alice XXX', 'Points': [80, 20]},
+    {'Age': 20, 'Name': 'Bob YYY', 'Points': [90, 10]},
+    {'Age': 30, 'Name': 'Charlie ZZZ', 'Points': [70, 30]}]
+
+In [67]: pprint.pprint(l, indent=12)
+[           {'Age': 40, 'Name': 'Alice XXX', 'Points': [80, 20]},
+            {'Age': 20, 'Name': 'Bob YYY', 'Points': [90, 10]},
+            {'Age': 30, 'Name': 'Charlie ZZZ', 'Points': [70, 30]}]
+
+In [68]: s_pp = pprint.pformat(l)
+    ...: print(s_pp)
+[{'Age': 40, 'Name': 'Alice XXX', 'Points': [80, 20]},
+ {'Age': 20, 'Name': 'Bob YYY', 'Points': [90, 10]},
+ {'Age': 30, 'Name': 'Charlie ZZZ', 'Points': [70, 30]}]
+
+In [69]: print(type(s_pp))
+<class 'str'>
+```
+
+* 

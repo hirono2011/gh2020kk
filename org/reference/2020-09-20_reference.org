@@ -1,0 +1,172 @@
+* pythonのbeautifulsoup4でBloggerの最新記事のURLとタイトルをスクレイピング
+
+:CATEGORIES: python,スクレイピング
+
+```
+import re
+from bs4 import BeautifulSoup
+import requests
+load_url = "https://kk2020-09.blogspot.com/"
+html = requests.get(load_url)
+soup = BeautifulSoup(html.content, "html.parser")
+t = str(soup.find("h3", attrs={"class", "post-title"}))
+url = re.findall('<h3 .+\n<a href="(https.+)">(.+)<.+', t)[0][0]
+title = re.findall('<h3 .+\n<a href="(https.+)">(.+)<.+', t)[0][1].replace('\n', '').replace('\u3000', '')
+print("{0} {1}".format(url, title))
+```
+
+```
+print("{0} {1}".format(url, title))
+https://kk2020-09.blogspot.com/2020/09/keitaadachi.html ＼弁護士足立敬太 @アレクサ 六甲おろしかけて@keita_adachi＼接見報酬ですか・・・とはいえ前はカジュアルに再逮捕してたのに今はしなくなったのは人権要請ではな
+```
+
+　Webページのスクレイピングは，これまでRubyのnokogiriでやってきたのですが，今回はpythonでやってみました。nokogiriに比べると使い勝手がよくない上に，文字列に変換すると\u3000などという妙な記号が含まれていました。
+
+　文字列の操作もRubyに比較すると，ずいぶん面倒が多くなります。面倒ですが，プログラムの理解も深まるような気もしています。
+
+　Bloggerでは最新の記事１件しかまともにタイトルが取得できない感じです。サイドバーにあるリンク集は，「soup.find(class_="posts")」取得が出来ましたが，タイトルの文字列が短く切り詰められていました。
+
+* 昨夜，異変に気が付き，早朝から調べたところ10件しか取得できなくなっていたBloggerの「Blogger API v3」，その他，スクリプトの修正
+
+　最新の記事のデータが10件取得できるのならよいのですが，古いものがそれもおかしな順番で取得されるようです。pythonのコードをトレースしたところ10件の配列要素しか取得されていないことがわかったのですが，次のページにあるphpのコードも実行し，結果は同じでした。
+
+```
+PHP版
+<?php
+$google_api_key = '<Google API Key (Server key)>';
+$blog_id = '<BloggerのブログID>';
+$fields_param = 'items(content%2CcustomMetaData%2Cid%2Cimages%2Ckind%2Clabels%2Cpublished%2Cstatus%2Ctitle%2CtitleLink%2Cupdated%2Curl)';
+$api_request = sprintf("https：//www.googleapis.com/blogger/v3/blogs/%s/posts?maxResults=10&orderBy=published&fields=%s&key=%s", $blog_id, $fields_param, $google_api_key);
+
+$response = file_get_contents($api_request);
+$r = json_decode($response);
+$blogger_posts = array();
+$i = 0;
+foreach ($r as $items) {
+    foreach ($items as $item) {
+        foreach ($item as $key => $val) {
+            $blogger_posts［$i］［$key］ = $val;
+        }
+        $i++;
+    }
+}
+
+var_dump($blogger_posts);
+
+［source：］Bloggerに投稿された記事をAPIを使って取得してWordPressに登録する – Monaural Sound https://ka2.org/import-to-wordpress-from-blogger-posts-by-api/
+```
+
+　次が実行結果になります。余分な情報が多いので，カットしてあります。
+
+```
+➜  google grep -A 1 '\["title"\]' t|grep string
+
+    string(161) "2020-09-19の投稿一覧＼検察・石川県警察宛記録資料＼奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中：1件"
+    string(175) "REGEXP：”総本山”／データベース登録済みツイートの検索：2020-09-19〜2020-09-19／2020年09月20日07時20分の記録：ユーザ・投稿：3／6件"
+    string(211) "＼弁護士落合洋司🌸高輪ゲートウェイ駅徒歩5分🌸泉岳寺駅徒歩1分　@yjochi＼月曜プレミア８　０．１％の奇跡！逆転無罪ミステリー(テレビ東京、2020/9/21 20:"
+    string(182) "REGEXP：”法テラス”／データベース登録済みツイートの検索：2020-09-11〜2020-09-19／2020年09月19日23時35分の記録：ユーザ・投稿：163／426件"
+    string(223) "＼はち（弁護士モード）　@chronostasis_8＼僕「これ明らかに違法な身柄拘束じゃん。準抗告！」P「準抗告するのは先生のご判断に任せますけど…まぁ、釈放しますね。"
+    string(233) "＼TｰTAKA　@TGN54＼法テラスがこんな柔軟な考えをとる組織でないことは存じております。「規則にないことはできない」が、金を出さない根拠として悪用されてるように個人"
+    string(173) "* pythonの「Google Blogger API」でエラーが出るようになったので，新規にBloggerのブログを作成し，OAuth認証のプロジェクトを作り直す"
+    string(223) "＼ピピピーッ　@O59K2dPQH59QEJx＼法テラスとかで、格安離婚交渉をやると、うまくいかなかったら、「弁護士が入ったからダメになった」とか言われるんだぜ。離婚など"
+    string(103) "＼深澤諭史　@fukazawas＼「それはさておき，法テラスは滅ぼすべきである。」"
+    string(103) "＼深澤諭史　@fukazawas＼「それはさておき，法テラスは滅ぼすべきである。」"
+```
+
+　次が，実際のBloggerの投稿記事の一覧で，新しいものが上に並んでいます。
+
+```
+＼弁護士足立敬太 @アレクサ 六甲おろしかけて　@keita_adachi＼接見報酬ですか・・・とは...
+2020-09-19の投稿一覧＼検察・石川県警察宛記録資料＼奉納＼危険生物・弁護士脳汚染除去装置＼金...
+REGEXP：”総本山”／データベース登録済みツイートの検索：2020-09-19〜2020-09-...
+＼弁護士落合洋司🌸高輪ゲートウェイ駅徒歩5分🌸泉岳寺駅徒歩1分　@yjochi＼月曜プレミア８　...
+REGEXP：”法テラス”／データベース登録済みツイートの検索：2020-09-11〜2020-09...
+＼はち（弁護士モード）　@chronostasis_8＼僕「これ明らかに違法な身柄拘束じゃん。準抗告...
+＼TｰTAKA　@TGN54＼法テラスがこんな柔軟な考えをとる組織でないことは存じております。「規則...
+　* pythonの「Google Blogger API」でエラーが出るようになったので，新規にBl...
+＼ピピピーッ　@O59K2dPQH59QEJx＼法テラスとかで、格安離婚交渉をやると、うまくいかなか...
+＼深澤諭史　@fukazawas＼「それはさておき，法テラスは滅ぼすべきである。」
+＼深澤諭史　@fukazawas＼「それはさておき，法テラスは滅ぼすべきである。」
+＼深澤諭史　@fukazawas＼ｎｏｔｅ，もっと早くに始めれば良かったな。スゴイ直感的に使えるし，...
+　* 深澤諭史弁護士の「自己紹介（弁護士 深澤諭史）｜深澤諭史｜note」
+＼芝原章吾　@shogoshibahara＼証拠になり得ない又は証明力不十分である確率はほぼ100%...
+2020-09-18の投稿一覧＼検察・石川県警察宛記録資料＼奉納＼危険生物・弁護士脳汚染除去装置＼金...
+ツイートの記録資料：＼法務検察・石川県警察宛＼／深澤諭史（@fukazawas）／”2020年09月...
+＼芝原章吾　@shogoshibahara＼証拠になり得ない又は証明力不十分である確率はほぼ100%...
+証拠になり得ない又は証明力不十分である確率はほぼ100%。証拠評価は訓練され経験ある法曹にしかできな...
+資料が証拠になり得ない又は証明力不十分である確率はほぼ100%。証拠評価は訓練され経験ある法曹にしか...
+REGEXP：”＃深澤本”／データベース登録済みツイート：2020年09月19日14時47分の記録：...
+REGEXP：”総本山”／データベース登録済みツイートの検索：2020-09-18〜2020-09-...
+3これもテスト3
+3これもテスト
+これもテスト
+REGEXP：”総本山”／データベース登録済みツイートの検索：2020-09-18〜2020-09-...
+
+［source：］奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中_2020 https://kk2020-09.blogspot.com/
+```
+
+　よく見ると，APIで取得したものも順番通りには並んでいるようです。
+
+　時刻は12時18分です。今になって最新の記事2件が，データベース未登録としてスクリプトで取得できました。
+
+cd;time ./api-blogger_kk202009.py > bl.txt; ./insert-blogger_kk202009.rb bl.txt && htf ~/t
+
+　最新のBloggerの記事を取得し，未登録のものをデータベースに追加登録し，それをTwitterにツイートするスクリプトの実行です。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-20 12:23／2020/09/20 12:18 URL： https://twitter.com/kk_hirono/status/1307520763126112256 https://twitter.com/hirono_hideki/status/1307519371762216960  
+
+> 2020年09月19日14時37分の登録： APIの投稿が出来なくなった。 https://t.co/YGQykIUTCy  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-20 12:23／2020/09/20 12:17 URL： https://twitter.com/kk_hirono/status/1307520776669552640 https://twitter.com/hirono_hideki/status/1307519345455579136  
+
+> 2020年09月18日22時01分の登録： ＼弁護士神原元　@kambara7＼「差別心は誰にもある」という言い方は、科学的根拠がないだけでなく、差別主義者を相対化し免責する恐れがある。  さらに、この言い方は差別 https://t.co/LpAdHosGck  
+
+　うまく行ったと思ったのですが，前のブログの最新2件が，Twitterに投稿されていました。「 APIの投稿が出来なくなった。」という投稿は，APIではなく，ブラウザの編集画面から投稿したものです。異変が起きたのは神原元弁護士のツイートの内容を記事にしたものを投稿したときです。
+
+　データベースには追加の2件がうまく登録されたのを確認したと思ったのですが，登録日時が昨日となっています。
+
+```
+ - 2020年09月19日15時20分の登録： REGEXP：”総本山”／データベース登録済みツイートの検索：2020-09-19〜2020-09-19／2020年09月20日07時20分の記録：ユーザ・投稿：3／6件 http://kk2020-09.blogspot.com/2020/09/regexp2020-09-192020-09-1920200920072036.html
+ - 2020年09月19日15時32分の登録： 2020-09-19の投稿一覧＼検察・石川県警察宛記録資料＼奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中：1件 http://kk2020-09.blogspot.com/2020/09/2020-09-191.html
+ - 2020年09月19日17時57分の登録： ＼弁護士足立敬太 @アレクサ 六甲おろしかけて　@keita_adachi＼接見報酬ですか・・・とはいえ前はカジュアルに再逮捕してたのに今はしなくなったのは人権要請ではな http://kk2020-09.blogspot.com/2020/09/keitaadachi.html
+ - 2020年09月19日19時50分の登録： * pythonのbeautifulsoup4でBloggerの最新記事のURLとタイトルをスクレイピング http://kk2020-09.blogspot.com/2020/09/pythonbeautifulsoup4bloggerurl.html
+```
+
+@keita_adachi ===> You have been blocked from retweeting this user's tweets at their request.  
+▷▷▷　次のツイートのアカウント（@keita_adachi）は，@kk_hironoをブロックしています。リツイートできませんでした。 ▷▷▷  
+
+- TW keita_adachi（弁護士足立敬太 @アレクサ 六甲おろしかけて） 日時：2020/09/20 09:36 URL： https://twitter.com/keita_adachi/status/1307478819331141632?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1307478819331141632%7Ctwgr%5Eshare_3&ref_url=https%3A%2F%2Fkk2020-09.blogspot.com%2F2020%2F09%2Fkeitaadachi.html  
+
+> 接見報酬ですか・・・  
+> とはいえ前はカジュアルに再逮捕してたのに今はしなくなったのは人権要請ではなく財務省から「再逮捕はコストがかかるんだよ！」クレームが入ったんじゃないかという邪推も https://t.co/Tp8dVcIhCT  
+
+　リンクにある足立啓太弁護士のツイートは，本日9月20日の午前9時36分の投稿となっているので，それを掲載したブログ記事が「2020年09月19日17時57分の登録」となっているのは，あり得ないことかと思います。
+
+　「2020年09月19日14時37分の登録： APIの投稿が出来なくなった。」というのを見ると，Bloggerがアメリカ時間でタイムスタンプを行っているようです。
+
+　しかし，「2020年09月18日22時01分の登録： ＼弁護士神原元　@kambara7＼「差別心は誰にもある」という言い方は」という前のブログでの最後の記録は，正しい日本時間だと思います。
+
+　新しいBloggerのブログの設定を見直すと，タイムゾーンが「(GMT-07:00) アメリカ太平洋時間 – ロサンゼルス」となっていました。ブログの言語が日本語になっていたので油断していました。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-20 13:05／2020/09/20 13:01 URL： https://twitter.com/kk_hirono/status/1307531187577999360 https://twitter.com/hirono_hideki/status/1307530309856968705  
+
+> - 2020年09月19日17時57分の登録： ＼弁護士足立敬太 @アレクサ 六甲おろしかけて　@keita_adachi＼接見報酬ですか・・・とはいえ前はカジュアルに再逮捕してたのに今はしなくなったのは人権要請ではな https://t.co/RDADQtmac5  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-20 13:05／2020/09/20 13:01 URL： https://twitter.com/kk_hirono/status/1307531195673059329 https://twitter.com/hirono_hideki/status/1307530337111560192  
+
+> - 2020年09月20日12時45分の登録： ＼深澤諭史　@fukazawas＼画像あり：こういうテーマのセミナーをやる予定です。スライド準備中。なお１００枚を超える模様・・・！費用対効果とか，問い合わせを受任につな https://t.co/cXrIkYS5c6  
+
+　もう一つの問題も解決出来ました。同じスクリプトを編集していたのですが，オプションで処理を切り替え，その切り替えたオプション付きのものを他のスクリプトで使っていたことを忘れていました。
+
+　昨日は，新規ブログの作成，レイアウトの変更作業の他に，python2.7だったスクリプトのpython3の書き直しをやって，これも思いの外，エラーが出て手間取ることがありました。いずれはやらなければいかないことを，片付けたことになります。
+
+* 
+
