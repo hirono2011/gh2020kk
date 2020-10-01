@@ -1,0 +1,138 @@
+* LinuxのMySQLのデータベースとWindows10のWSL2のMySQLのデータベースを同期（同じ状態）にするため自作したRubyのスクリプト
+
+:CATEGORIES: MySQL,Windows10
+
+>|ruby|
+#!/usr/bin/ruby
+# coding:utf-8
+require "date"
+require "open3"
+require "fileutils"
+
+date = DateTime.now.strftime("%Y-%m-%d_%H%M")
+#@u = "./ubuntu-last-cmd_#{date}.txt"
+@u = "./ubuntu-last-cmd.txt"
+`rm "#{@u}"`
+@w = "./sql-cmd.txt"
+`rm "#{@u}"
+
+def db_export(d, t)
+    
+    db = d
+    table = t
+    
+
+    db_last_id = `mysql -u hirono-hideki-01  #{db} -e 'select max(id) from #{table};'`.to_s.split(/\n/)[1].to_i
+    ucmd = "mysqldump -u hirono-hideki-01  -t #{db} #{table} --where 'id>#{db_last_id}'  > #{db}-#{table}.sql"
+        puts ucmd
+    File.open(@u, mode = "a"){|f|
+    f.write(ucmd + "\n")  # ファイルに書き込む
+    }
+    
+    wcmd =  "mysql -u hirono-hideki-01  -t #{db} < #{db}-#{table}.sql"
+    File.open(@w, mode = "a"){|f|
+        f.write(wcmd + "\n")  # ファイルに書き込む
+    }    
+    puts "##{db}-#{table} max_id = #{db_last_id}"
+    
+end
+
+db_export("benngosi_twitter", "tw_user_tweet")
+db_export("benngosi_twitter", "tw_hirono_tweet")
+db_export("benngosi_twitter", "tw_user_tweet_MOF")
+
+blog = %w(blogger2016k blogger_hirono2014sk cocolog hatena youtubes blogger_hirono2017kk hatena201912 blogger_hironokk2020)
+
+blog.each do |x|
+    db_export("blog", x)
+end
+
+db_export("hirono2016k_wpcom", "wp_posts")
+#db_export("wp2016s", "wp_posts")
+db_export("hirono2016kk_wpcom", "wp_posts")
+
+||<
+
+　Ubuntuの場合は，utowというコマンド名にしています。これを実行するとカレントディレクトリにubuntu-last-cmd.txtというファイルが作成されます。
+
+　次がコマンドを実行し作成したテキストファイルの内容です。これは次回，Windows10の環境でデータベースの変更をした場合に使うものです。
+
+```
+(py37_env) ➜  sql cat ubuntu-last-cmd.txt 
+mysqldump -u hirono-hideki-01  -t benngosi_twitter tw_user_tweet --where 'id>496155'  > benngosi_twitter-tw_user_tweet.sql
+mysqldump -u hirono-hideki-01  -t benngosi_twitter tw_hirono_tweet --where 'id>32719'  > benngosi_twitter-tw_hirono_tweet.sql
+mysqldump -u hirono-hideki-01  -t benngosi_twitter tw_user_tweet_MOF --where 'id>611'  > benngosi_twitter-tw_user_tweet_MOF.sql
+mysqldump -u hirono-hideki-01  -t blog blogger2016k --where 'id>1165'  > blog-blogger2016k.sql
+mysqldump -u hirono-hideki-01  -t blog blogger_hirono2014sk --where 'id>65910'  > blog-blogger_hirono2014sk.sql
+mysqldump -u hirono-hideki-01  -t blog cocolog --where 'id>1252'  > blog-cocolog.sql
+mysqldump -u hirono-hideki-01  -t blog hatena --where 'id>5799'  > blog-hatena.sql
+mysqldump -u hirono-hideki-01  -t blog youtubes --where 'id>1106'  > blog-youtubes.sql
+mysqldump -u hirono-hideki-01  -t blog blogger_hirono2017kk --where 'id>756'  > blog-blogger_hirono2017kk.sql
+mysqldump -u hirono-hideki-01  -t blog hatena201912 --where 'id>985'  > blog-hatena201912.sql
+mysqldump -u hirono-hideki-01  -t blog blogger_hironokk2020 --where 'id>34'  > blog-blogger_hironokk2020.sql
+mysqldump -u hirono-hideki-01  -t hirono2016k_wpcom wp_posts --where 'id>5289'  > hirono2016k_wpcom-wp_posts.sql
+mysqldump -u hirono-hideki-01  -t hirono2016kk_wpcom wp_posts --where 'id>38'  > hirono2016kk_wpcom-wp_posts.sql
+```
+
+　Windows10のWSL2環境では前回に，win-last-cmd.txtというテキストファイルを作成しています。次がファイルの内容ですが，テキストファイルの内容をbashにパイプで渡し，実際にコマンドを実行しデータベースの追加用のsqlファイルを作成します。
+
+```
+(py37_env) ➜  sql cat win-last-cmd.txt 
+mysqldump -u hirono-hideki-01  -t benngosi_twitter tw_user_tweet --where 'id>494566'  > benngosi_twitter-tw_user_tweet.sql
+mysqldump -u hirono-hideki-01  -t benngosi_twitter tw_hirono_tweet --where 'id>31943'  > benngosi_twitter-tw_hirono_tweet.sql
+mysqldump -u hirono-hideki-01  -t benngosi_twitter tw_user_tweet_MOF --where 'id>611'  > benngosi_twitter-tw_user_tweet_MOF.sql
+mysqldump -u hirono-hideki-01  -t blog blogger2016k --where 'id>1165'  > blog-blogger2016k.sql
+mysqldump -u hirono-hideki-01  -t blog blogger_hirono2014sk --where 'id>65910'  > blog-blogger_hirono2014sk.sql
+mysqldump -u hirono-hideki-01  -t blog cocolog --where 'id>1252'  > blog-cocolog.sql
+mysqldump -u hirono-hideki-01  -t blog hatena --where 'id>5799'  > blog-hatena.sql
+mysqldump -u hirono-hideki-01  -t blog youtubes --where 'id>1106'  > blog-youtubes.sql
+mysqldump -u hirono-hideki-01  -t blog blogger_hirono2017kk --where 'id>756'  > blog-blogger_hirono2017kk.sql
+mysqldump -u hirono-hideki-01  -t blog hatena201912 --where 'id>975'  > blog-hatena201912.sql
+mysqldump -u hirono-hideki-01  -t blog blogger_hironokk2020 --where 'id>34'  > blog-blogger_hironokk2020.sql
+mysqldump -u hirono-hideki-01  -t hirono2016k_wpcom wp_posts --where 'id>5289'  > hirono2016k_wpcom-wp_posts.sql
+mysqldump -u hirono-hideki-01  -t hirono2016kk_wpcom wp_posts --where 'id>38'  > hirono2016kk_wpcom-wp_posts.sql
+```
+
+　ipythonコマンドから計算式を実行しましたが，1589件の追加となっていました。
+
+```
+In [2]: print('{} - {} = {}'.format(496155, 494566 , 496155 - 494566))
+496155 - 494566 = 1589
+```
+
+　このあとWindows10に移動して作業を行う予定なので，Windows10のWSL2のMySQLのデータベースを更新するためのsqlのテキストファイルを作成しました。
+
+```
+(py37_env) ➜  sql ls
+sql-cmd.txt  ubuntu-last-cmd.txt  win-last-cmd.txt
+(py37_env) ➜  sql cat win-last-cmd.txt | bash
+(py37_env) ➜  sql ls
+benngosi_twitter-tw_hirono_tweet.sql    blog-blogger_hirono2014sk.sql  blog-hatena.sql                 hirono2016kk_wpcom-wp_posts.sql
+benngosi_twitter-tw_user_tweet.sql      blog-blogger_hirono2017kk.sql  blog-hatena201912.sql           sql-cmd.txt
+benngosi_twitter-tw_user_tweet_MOF.sql  blog-blogger_hironokk2020.sql  blog-youtubes.sql               ubuntu-last-cmd.txt
+blog-blogger2016k.sql                   blog-cocolog.sql               hirono2016k_wpcom-wp_posts.sql  win-last-cmd.txt
+(py37_env) ➜  sql 
+```
+
+　benngosi_twitter-tw_hirono_tweet.sqlなどというsql文のテキストファイルが作成されていますが，これらをまとめて，次にWindows10のWSL2のUbuntuにログインしたとき，「cat sql-cmd.txt | bash」というコマンドを実行します。
+
+```
+(py37_env) ➜  sql cat sql-cmd.txt 
+mysql -u hirono-hideki-01  -t benngosi_twitter < benngosi_twitter-tw_user_tweet.sql
+mysql -u hirono-hideki-01  -t benngosi_twitter < benngosi_twitter-tw_hirono_tweet.sql
+mysql -u hirono-hideki-01  -t benngosi_twitter < benngosi_twitter-tw_user_tweet_MOF.sql
+mysql -u hirono-hideki-01  -t blog < blog-blogger2016k.sql
+mysql -u hirono-hideki-01  -t blog < blog-blogger_hirono2014sk.sql
+mysql -u hirono-hideki-01  -t blog < blog-cocolog.sql
+mysql -u hirono-hideki-01  -t blog < blog-hatena.sql
+mysql -u hirono-hideki-01  -t blog < blog-youtubes.sql
+mysql -u hirono-hideki-01  -t blog < blog-blogger_hirono2017kk.sql
+mysql -u hirono-hideki-01  -t blog < blog-hatena201912.sql
+mysql -u hirono-hideki-01  -t blog < blog-blogger_hironokk2020.sql
+mysql -u hirono-hideki-01  -t hirono2016k_wpcom < hirono2016k_wpcom-wp_posts.sql
+mysql -u hirono-hideki-01  -t hirono2016kk_wpcom < hirono2016kk_wpcom-wp_posts.sql
+```
+
+* 
+
+
