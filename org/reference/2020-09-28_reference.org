@@ -1,0 +1,47 @@
+* MySQLの新規のテーブルをダンプ，あとでWindows10のWSL2のデータベースにリストアする
+
+:CATEGORIES: MySQL
+
+mysqldump -u hirono-hideki-01 -pパスワード blog blogger_kk202009 > kk202009.sql
+
+```
+(385,5210121011412666828,'＼モトケン　@motoken_tw＼法律的論理を分かってない人とは法律論理的議論は成立しない、という当たり前のことを確認した朝です。\n','http://kk2020-09.blogspot.com/2020/09/motokentw_28.html\n','2020-09-28 09:59:00','','2020-09-27 15:00:00');
+```
+
+　最後に追加されているデータが，上記のモトケンこと矢部善朗弁護士（京都弁護士会）のツイートの記録記事で，昨日にTwitterアカウントの更新を確認しています。本人いわく，Twitterにロックをされていたとのことで，ツイートを１つ削除することで復活したとのことです。
+
+　次にリストアの方法です。これもわかってしまえばとても簡単に出来ます。データベースがblogで，それにblogger_kk202009というテーブルをデータとともに追加することになります。
+
+mysql -u hirono-hideki-01 -pパスワード blog < kk202009.sql
+
+* TwitterAPIでの「弁護士あるある」というキーワードの検索，曖昧検索と完全一致の違い
+
+:CATEGORIES: TwitterAPI
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-28 11:09／2020/09/28 10:58 URL： https://twitter.com/kk_hirono/status/1310401144808566787 https://twitter.com/hirono_hideki/status/1310398425096044546  
+
+> 2020年09月28日10時58分の実行記録 APIのリミットに達するので8500で処理と中断しました。 twitterAPI-search-lawList-mydql-add.rb "弁護士あるある" ツイート数：228/2027 リツイート数：255/2027 トータル：8500 hirono_hideki 14／2件 kk_hirono 3／1件 s_hirono 2／0件  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-09-28 11:09／2020/09/28 11:02 URL： https://twitter.com/kk_hirono/status/1310401173086560256 https://twitter.com/hirono_hideki/status/1310399529103929344  
+
+> 2020年09月28日11時02分の実行記録 twitterAPI-search-lawList-mydql-add.rb ""弁護士あるある"" ツイート数：11/2027 リツイート数：14/2027 トータル：41 hirono_hideki 1／0件 kk_hirono 0／0件 s_hirono 1／0件  
+
+　「twitterAPI-search-lawList-mydql-add.rb "弁護士あるある"」とありますが，実際は「twitterAPI-search-lawList-mydql-add.rb 弁護士あるある」と実行しました。これが曖昧検索になっていて，確認のため「"弁護士あるある"」とやっても同じでした。
+
+　「twitterAPI-search-lawList-mydql-add.rb ""弁護士あるある""」となっているのも，実際は「twitterAPI-search-lawList-mydql-add.rb '"弁護士あるある"'」という実行で，これで完全一致に成功しました。
+
+　曖昧検索だと，次のような内容のツイートがヒットしていました。
+
+```
+TW KR31917261（KR）2020/09/28 10:45 https://twitter.com/KR31917261/status/1310395095460405248
+よく弁護士が裁判官をバカにするツイートが見受けられるけど、これまで当たった裁判官は優秀な人ばかりだった。元々訴訟事件を多く取り扱ってないから、変な裁判官に当たったことないのかもしれないけど。あと、私が元々能力が低いというのもある。 \n 基本的に裁判官のことは信頼している。
+```
+
+　「弁護士」と「ある」の組み合わせでヒットしているようです。「弁護士」と「あるある」という程度の曖昧さかと思っていたのですが，考えが甘かったようで，このような大きな誤差があるのだと，この「弁護士あるある」というキーワードで気がついた次第です。
+
+* 
+

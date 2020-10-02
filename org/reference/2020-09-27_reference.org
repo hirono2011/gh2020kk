@@ -1,0 +1,99 @@
+* 今朝，「芸能界の闇」というTwitterのトレンドで知った，俳優の竹内結子さんの死去のニュース
+
+ - 2020年09月27日10時54分の登録： REGEXP：”竹内結子”／データベース登録済みツイート：2020年09月27日10時54分の記録：ユーザ・投稿：3／6件 http://kk2020-09.blogspot.com/2020/09/regexp20200927105436.html
+
+```
+2020年09月27日13時34分の実行記録
+APIのリミットに達するので8500で処理と中断しました。
+twitterAPI-search-lawList-mydql-add.rb "竹内結子"
+ツイート数：4/2026 リツイート数：1/2026 トータル：8500
+hirono_hideki 0／0件
+kk_hirono 2／0件
+s_hirono 0／0件
+
+竹内結子
+kk2020-09_ajx-all-user-mysql-REGEXP_blogger.rb "竹内結子"
+kk2020-09_ajx-all-user-mysql-REGEXP_blogger.rb "竹内結子" "2020-09-20 13:34/2020-09-27 13:34"
+kk2020-09_ajx-all-user-mysql-REGEXP_blogger.rb "竹内結子" "2020-09-24 13:34/2020-09-27 13:34"
+kk2020-09_ajx-all-user-mysql-REGEXP_blogger.rb "竹内結子" "2020-09-26 13:34/2020-09-27 13:34"
+
+kk2020-09_ajx-all-user-mysql-REGEXP_blogger.rb 竹内結子 "`date +"%Y-%m-%d %H:%M" --date "1 day ago"`/`date +"%Y-%m-%d %H:%M"`"
+kk2020-09_ajx-all-user-mysql-REGEXP_blogger.rb 竹内結子 "`date +"%Y-%m-%d %H:%M" --date "3 day ago"`/`date +"%Y-%m-%d %H:%M"`"
+kk2020-09_ajx-all-user-mysql-REGEXP_blogger.rb 竹内結子 "`date +"%Y-%m-%d %H:%M" --date "7 day ago"`/`date +"%Y-%m-%d %H:%M"`"
+```
+
+```
+2020年09月27日13時39分の実行記録
+APIのリミットに達するので8500で処理と中断しました。
+twitterAPI-search-lawList-mydql-add.rb "芸能界の闇"
+ツイート数：4/2026 リツイート数：4/2026 トータル：8500
+hirono_hideki 0／1件
+kk_hirono 1／0件
+s_hirono 0／0件
+```
+
+```
+(py37_env) ➜  ~ kk2020-09_ajx-all-user-mysql-REGEXP_blogger.rb "芸能界の闇"
+SELECT * FROM tw_user_tweet WHERE  tweet REGEXP "芸能界の闇"   ORDER BY tw_date ASC
+amneris84
+Shoko Egawa（amneris84）
+ユーザ名称：Shoko Egawa [screen_name]ユーザ名：amneris84 フォロー数：633 フォロワー数：292908 ツイート数：108084
+hirono_hideki
+奉納＼さらば弁護士鉄道・泥棒神社の物語（hirono_hideki）
+ユーザ名称：奉納＼さらば弁護士鉄道・泥棒神社の物語 [screen_name]ユーザ名：hirono_hideki フォロー数：4280 フォロワー数：4298 ツイート数：197299
+news_type_c
+News Japan（news_type_c）
+ユーザ名称：News Japan [screen_name]ユーザ名：news_type_c フォロー数：4072 フォロワー数：3946 ツイート数：248427
+NEWS_JAPAN_S
+NEWS JAPAN（NEWS_JAPAN_S）
+ユーザ名称：NEWS JAPAN [screen_name]ユーザ名：NEWS_JAPAN_S フォロー数：15767 フォロワー数：15645 ツイート数：661671
+ld_blogos
+BLOGOS（ld_blogos）
+ユーザ名称：BLOGOS [screen_name]ユーザ名：ld_blogos フォロー数：929 フォロワー数：132905 ツイート数：235832
+thatta0529
+八田隆 Terry Hatta（thatta0529）
+ユーザ名称：八田隆 Terry Hatta [screen_name]ユーザ名：thatta0529 フォロー数：199 フォロワー数：3558 ツイート数：17834
+mstk_Horiguchi
+ほりぐちです（mstk_Horiguchi）
+ユーザ名称：ほりぐちです [screen_name]ユーザ名：mstk_Horiguchi フォロー数：1990 フォロワー数：4805 ツイート数：167871
+kk_hirono
+刑事告発・非常上告＿金沢地方検察庁御中（kk_hirono）
+ユーザ名称：刑事告発・非常上告＿金沢地方検察庁御中 [screen_name]ユーザ名：kk_hirono フォロー数：491 フォロワー数：564 ツイート数：117998
+allgreen76b
+おるぐり（allgreen76b）
+ユーザ名称：おるぐり [screen_name]ユーザ名：allgreen76b フォロー数：1041 フォロワー数：3056 ツイート数：354055
+REGEXP：”芸能界の闇”／データベース登録済みツイート：2020年09月27日13時40分の記録：ユーザ・投稿：9／11件
+(py37_env) ➜  ~ 
+```
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜news24ntv（日テレNEWS / 日本テレビのニュース・速報） 日時：2020-09-27 13:45／2020/09/27 08:49 URL： https://twitter.com/kk_hirono/status/1310078125590458368 https://twitter.com/news24ntv/status/1310003595358552066  
+
+> 【速報】女優・竹内結子さん（４０）が死亡  女優の竹内結子さん（４０）が２７日未明、東京都内の自宅で死亡しました。自殺とみられています。警視庁などが経緯などを詳しく調べています。 https://t.co/jDxexTZ90m  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜asahi（朝日新聞(asahi shimbun）） 日時：2020-09-27 13:45／2020/09/27 10:14 URL： https://twitter.com/kk_hirono/status/1310078196000251904 https://twitter.com/asahi/status/1310024887570817026  
+
+> 俳優の竹内結子さん死去、40歳　「黄泉がえり」など https://t.co/ev8fhSIDrp  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜Daily_Online（デイリースポーツ） 日時：2020-09-27 13:46／2020/09/27 09:15 URL： https://twitter.com/kk_hirono/status/1310078281966731265 https://twitter.com/Daily_Online/status/1310010027621494784  
+
+> 竹内結子さん死去　事務所は「事実を確認中」　１月に出産したばかり/芸能/デイリースポーツ online https://t.co/whlwPhyH33 #DailySports  
+
+ - 2020年09月27日13時40分の登録： REGEXP：”芸能界の闇”／データベース登録済みツイート：2020年09月27日13時40分の記録：ユーザ・投稿：9／11件 http://kk2020-09.blogspot.com/2020/09/regexp202009271340911.html
+
+```
+訃報
+·
+5 時間前
+俳優の竹内結子さんが死去
+俳優の竹内結子さんが27日、東京都内の自宅で死亡しているのが見つかりました。40歳でした。
+
+［source：］俳優の竹内結子さんが死去 / Twitter https://twitter.com/i/events/1310002301235421184
+```
+
+* 
