@@ -1,0 +1,70 @@
+* perlで，テキストファイルの指定範囲を表示
+
+:CATEGORIES: perl
+
+windows — 大きな（巨大な、巨大な、大きな）テキストファイルを開くためのテキストエディタ https://t.co/85t2rmmWR6
+
+　perlは長い間，余り使うことがなかったのですが，ずいぶんと簡単な使い方があると上記のページで知りました。これまではsedでやってきたようなテキスト処理です。
+
+```
+perl -ne 'print if (100 .. 101)' t
+
+(py37_env) ➜  ~ perl -ne 'print if (/.*2020年10月06日19時47分の登録/ .. /.*2020年10月06日20時47分の登録： ＼モトケン/)' t
+
+ - 2020年10月06日19時47分の登録： REGEXP：”〜に基づいて……が任命する。”／データベース登録済みツイート：2020年10月06日19時47分の記録：ユーザ・投稿：11／12件 http://kk2020-09.blogspot.com/2020/10/regexp2020100619471112.html
+ - 2020年10月06日19時50分の登録： ＼モトケン　@motoken_tw＼私のツイートを勝手に解釈されるのも嫌なのでブロックします。さようなら。 http://kk2020-09.blogspot.com/2020/10/motokentw_6.html
+ - 2020年10月06日20時40分の登録： REGEXP：”被害者”／データベース登録済みツイートの検索：2020-09-23〜2020-10-06／2020年10月06日20時37分の記録：ユーザ・投稿：72／145件 http://kk2020-09.blogspot.com/2020/10/regexp2020-09-232020-10.html
+ - 2020年10月06日20時47分の登録： ＼モトケン　@motoken_tw＼感情的な問題はケースバイケース。 http://kk2020-09.blogspot.com/2020/10/motokentw_62.html
+
+```
+
+* Linux（Ubuntu）でWindowsのPowerShellを使う
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-06 23:50／2020/10/06 09:33 URL： https://twitter.com/kk_hirono/status/1313491754319044614 https://twitter.com/hirono_hideki/status/1313276102194786304  
+
+> PowerShell(パワーシェル)は何ができるの？メリット、使い方、実例まで｜ドスパラ通販【公式】 https://t.co/nsVY6lZuEM  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-06 23:50／2020/10/06 09:42 URL： https://twitter.com/kk_hirono/status/1313491768483217413 https://twitter.com/hirono_hideki/status/1313278475852107776  
+
+> 【連載】PowerShell Core入門 - 基本コマンドの使い方 ［92］ PowerShell 7 インストール方法（Windows、macOS、Ubuntu）｜サーバ/ストレージ｜IT製品の事例・解説記事 https://t.co/7t2828Lom2  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-06 23:50／2020/10/06 09:47 URL： https://twitter.com/kk_hirono/status/1313491793095393285 https://twitter.com/hirono_hideki/status/1313279636520931329  
+
+> 【Ubuntu】PPAを追加・削除する方法について | Hbk project https://t.co/nVELxgjr3m  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-06 23:50／2020/10/06 10:09 URL： https://twitter.com/kk_hirono/status/1313491810350772225 https://twitter.com/hirono_hideki/status/1313285175095160832  
+
+> PowerShellをLinuxにインストールして試す - Qiita https://t.co/BhtFVBkBcf  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-06 23:50／2020/10/06 10:24 URL： https://twitter.com/kk_hirono/status/1313491844395917318 https://twitter.com/hirono_hideki/status/1313288997527941121  
+
+> Windowsのポチポチ業務を爆速化するPowerShell、ファイル名を変更する方法 https://t.co/4z27vXy3zR  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-06 23:50／2020/10/06 10:45 URL： https://twitter.com/kk_hirono/status/1313491866013315074 https://twitter.com/hirono_hideki/status/1313294384499060736  
+
+> regex — PowerShellを使用して、正規表現に一致するフォルダー内のファイルを削除するにはどうすればよいですか？ https://t.co/mYImpqUIl0  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-06 23:50／2020/10/06 10:58 URL： https://twitter.com/kk_hirono/status/1313491875509264386 https://twitter.com/hirono_hideki/status/1313297613702066176  
+
+> Get-ChildItem | Rename-Item -NewName{$_.Name -Replace ‘.jpg’,’置換後の文字列.jpg’}  
+
+
+```
+Get-ChildItem $Path -Recurse | Where{$_.Name -Match "2017-09-07.*.jpg"} | Rename-Item -NewName{$_.Name -Replace ‘.jpg’,’_20170907.jpg’}
+```
+
+* 

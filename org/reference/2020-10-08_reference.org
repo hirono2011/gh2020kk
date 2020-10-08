@@ -1,0 +1,363 @@
+* PowerShell　Coreで，エラーの詳細を表示
+
+:CATEGORIES: PowerShell
+
+$Error[0].Exception
+
+ - PowerShell (7.0.2) で Microsoft.Data.SqlClient 2.0 を使用する at SE の雑記 https://blog.engineer-memo.com/2020/06/22/powershell-7-0-2-%E3%81%A7-microsoft-data-sqlclient-2-0-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B/
+
+```
+PS /home/a66/w3/201709> $path = (pwd).Path + "/abc.jpg"
+PS /home/a66/w3/201709> echo $path
+/home/a66/w3/201709/abc.jpg
+PS /home/a66/w3/201709> [void][Reflection.Assembly]::LoadWithPartialName("System.Drawing")
+PS /home/a66/w3/201709> $image_exif = New-Object System.Drawing.Bitmap($path)
+New-Object: Exception calling ".ctor" with "1" argument(s): "The type initializer for 'Gdip' threw an exception."
+PS /home/a66/w3/201709> 
+```
+
+* 『実録ドラマ　３つの取調室　～埼玉愛犬家連続殺人事件～』に関連した弁護士らのツイートの記録，弁護士の反応，ほぼ皆無に近い
+
+```
+アカウント名	ツイート数	リツイート数
+奉納＼さらば弁護士鉄道・泥棒神社の物語（hirono_hideki）	32	1
+細川　敦史（a_hosokawa）	1	0
+?高橋ユキ?（tk84yuki）	1	1
+ゴルーグ２８号（chemicalgroom）	0	1
+刑事告発・非常上告＿金沢地方検察庁御中（kk_hirono）	18	1
+momo3580（momo3580）	1	0
+弁護士 原 英彰（harahide622）	0	1
+
+
+［source：］奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中_2020： REGEXP：”愛犬家連続殺人”／データベース登録済みツイートの検索：2020-10-03〜2020-10-08／2020年10月08日10時23分の記録：ユーザ・投稿：7／58件 https://kk2020-09.blogspot.com/2020/10/regexp2020-10-032020-10.html
+```
+
+@momo3580 ===> You have been blocked from retweeting this user's tweets at their request.  
+▷▷▷　次のツイートのアカウント（@momo3580）は，@kk_hironoをブロックしています。リツイートできませんでした。 ▷▷▷  
+
+- TW momo3580（momo3580） 日時：2020/10/04 20:09 URL： https://twitter.com/momo3580/status/1312711352264212480  
+
+> 熊谷中央警察署…  
+>   
+> 実録ドラマ ３つの取調室 ～埼玉愛犬家連続殺人事件～ - フジテレビ https://t.co/tXP5oAcueH  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-08 11:03／2020/10/08 10:42 URL： https://twitter.com/kk_hirono/status/1314023556292902914 https://twitter.com/s_hirono/status/1314018327065325568  
+
+> 2020-10-08-104150_momo3580@momo3580·15時間「良識を欠くこと甚だしい」診察室で女性患者にキスした精神科医に実刑判決　：　社会　：　ニュース　.jpg https://t.co/PdjBKh1Eib  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-08 11:03／2020/10/08 10:42 URL： https://twitter.com/kk_hirono/status/1314023578736553984 https://twitter.com/s_hirono/status/1314018254092857346  
+
+> 2020-10-08-103513_被害者と合意の上で１００万円の損害賠償が支払われたが、吉井裁判官は「精神的打撃が大きく、回復のめどが立っていない」ことなどから、「相当程度の.jpg https://t.co/UKUmkVhQzc  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-08 11:03／2020/10/08 10:42 URL： https://twitter.com/kk_hirono/status/1314023591294369795 https://twitter.com/s_hirono/status/1314018179799162880  
+
+> 2020-10-08-103001_momo3580@momo3580ブロックされています@momo3580さんのフォローやツイートの表示はできません。詳細はこちら.jpg https://t.co/t5rlfowzp3  
+
+* 「菊池前日弁連会長がインタビューで若手弁護士から生涯バランスシートを見せられ大企業サラリーマンより弁護士の方が平均年収が低く投下資本や」に関連した弁護士らのツイートの記録，7日間で193ユーザ・506件
+
+```
+アカウント名	ツイート数	リツイート数
+そらまめ（sollamame）	1	0
+イケメン弁護士(PRO)（ikemen_lawyer）	4	1
+坂本正幸（sakamotomasayuk）	2	0
+弁護士メンタルふわ（bengoshimentaru）	5	0
+hidemusupremelawyershi（hidemusupremel1）	0	2
+いがぐり弁護士（igaigaguri）	1	1
+向原総合法律事務所　弁護士向原（harrier0516osk）	1	1
+ともしび（lighta_ampligh）	0	1
+トミカ弁護士（law63_show）	0	1
+塩タンメン（Bibendum65）	1	4
+りんご（__apple13）	0	9
+奉納＼さらば弁護士鉄道・泥棒神社の物語（hirono_hideki）	5	0
+しゃんきち弁護士（syankichilawyer）	0	11
+たけうち のぶやす／肝臓ニキ（nob0117）	1	4
+Takumi-Aikawa（公法１位×論文１６位「文章力で勝負する」司法試験講師）（TA_legal32）	0	1
+ねここ＠司法修習生（showonelaw）	0	1
+ゆとりlaw（y_muninare）	1	4
+古家野 彰平（shoheikoyanolaw）	0	2
+大津秀英（Botsu_kuma_Ben）	0	1
+ぽぽひと＠wordタケノコ粒あん党（popohito）	2	15
+大阪名物パチパチ弁護士（obpmb3fN93mQI9i）	2	0
+えきなんローヤー?（ekinan_lawyer）	0	20
+芳賀淳（jjjhaga）	0	2
+白州（hakushu501）	0	2
+中村剛（take-five）（take___five）	6	0
+浜 ち ゃ ん（lawer_hamachan）	0	6
+大窪和久（okuboka）	1	1
+魚占い（sakanauranai）	1	10
+冬弁（fuyuben）	2	0
+ＫＢブラック０２（battamonblack02）	4	0
+うそつきべんごし。（LiarLawyer800）	7	11
+めっこ＠めこ（megane_sense）	5	1
+米田龍玄（YonedaRyogen）	0	3
+竜剛馬（ryu_goma）	1	0
+とーしょくぱみゅぱみゅ（to_pamyu）	2	1
+小動物を愛するしんさん（aphros67）	0	2
+法曹養成（hosoyosei）	1	0
+ミドル弁護士（igiarigodoudesu）	2	0
+cloud_110（cloud_110）	1	8
+shibaken_law（shibaken_law）	2	0
+過食弁（juntaba1）	0	2
+馬車馬の如く定時退勤する社畜（depon2010）	2	12
+弁護士　山中理司（yamanaka_osaka）	0	4
+ちょ（bit_lawyer）	4	0
+ルビック貯金箱（yashi108）	0	5
+ふて寝べん（hirune_b）	1	3
+やぎ（kuroyag_i）	0	2
+いわぽん（yiwapon）	2	13
+toujin（tou_jin）	0	5
+dtk（dtk1970）	0	2
+法務ニュース（Sosho_Sokuho）	0	1
+銀冠（ginkanmuri_0202）	0	6
+鳩屋（haya_rt）	0	1
+橋本太地（弁護士・あなたのみかた法律事務所）（kojin_syugi）	1	1
+kohiyok（abekiyohiko2）	1	1
+弁護士　遠藤温子（Atsuko_law）	1	0
+中村元弥（1961kumachin）	0	1
+7286（jmjhjmwtad）	2	1
+法律ピザ野郎（ilillilliliili）	1	1
+きよし弁護士（n5M5ULaRFaY3Ayz）	1	0
+SxMx（dehumanizer3）	0	1
+弁護士法人空と海（soraumilaw）	1	0
+亀もち（kame_ishi）	1	2
+形式的弁護士なう（lawlawtg）	0	1
+D弁（dben82716007）	5	0
+サイ太（uwaaaa）	3	1
+turnreader（turnreader）	0	1
+くまえもん（kumaemon9）	0	2
+武本夕香子（icecream_melon）	1	3
+ヨコチン刑事(デカ)㊙️実況（yokotindeka_DJ）	0	1
+ほりぐちです（mstk_Horiguchi）	0	3
+ふなざわひろゆき（FLetlRmdM7gs5vS）	0	1
+なべきょう＠過眠症（wata_nabekyo_ko）	0	1
+ツンデレブログ　喧嘩腰じゃねーよ（tsundereblog）	0	1
+当職ぴぴにゃん@（emeth_pippi）	0	2
+Goshi弁太郎（mackckckck）	1	0
+eiichi（eiichi24196）	1	1
+TｰTAKA（TGN54）	0	2
+者bot（monobotto）	1	0
+すてぃっち（TAS6284）	3	2
+りっぴぃ（rippy08）	3	0
+DUKEまんごう（nan5o）	1	0
+『信仰の』ノースライム（noooooooorth）	6	2
+弁護士 小林航太（yomimate）	0	1
+渡辺輝人（nabeteru1Q78）	0	1
+たーな（lawgal709）	1	0
+ystk（lawkus）	1	1
+びーちゃん（eeyy888777）	0	3
+豪弁 足立敬太 @大事なのは感謝と恩返しだ（keita_adachi）	0	6
+ぽんぽん（ponponmonn）	0	3
+Yoshi（ysaksmz）	1	2
+ふ と り た に（takeemon19）	1	0
+うのじ（un_co_the2nd）	3	0
+山口貴士 aka無駄に感じが悪いヤマベン（otakulawyer）	0	1
+えび（ebiben2008）	2	2
+判官（LgE71H4oQlyrW1g）	1	0
+Harry_Sanada（OnigiriSociety1）	0	1
+Masahiro Ito/伊藤雅浩?（redipsjp）	2	1
+けっす（keskil_）	0	1
+???（funkadelawyer）	0	1
+井藤公量（pacitokun）	0	1
+Tm（63s244）	1	0
+赤ネコ@弁護士兼マンガ家（Redips00）	0	4
+田中　宏（tanakah）	1	0
+明石順平＠「キリギリスの年金」発売中（junpeiakashi）	1	1
+T.ニールセン（T__Nielsen）	1	0
+アンバサだよ（anbasalaw）	2	1
+venomy（idleness_venomy）	1	0
+きたぐにのふわもこ（kitaguni_b）	1	3
+深澤諭史（fukazawas）	2	3
+Kakuji Mitani（三谷 革司）（KMITANI）	0	1
+壮年ロビンソン（All_of_Me2018）	2	0
+弁護士 都 行志（Miyako_Koji）	0	1
+カール=レーフラー（hirohika777）	0	1
+レモミル（Lemon_and_Milk）	0	2
+キモオタ（zeyksheJnSLoqxk）	1	1
+佐藤正子（SATOMasako）	1	1
+たろう teacher（tomo_law_）	1	0
+hznf（_hznf_）	1	0
+T. E. Heauton（massuekyoto）	1	0
+おたべんさん（otalawyer）	1	1
+心の貧困（mental_poverty）	1	0
+泥濘大魔王サイケ（k_sawmen）	1	0
+蛇毒（bigbrother939）	1	1
+安藤啓一郎【弁護士/池袋/須田総合】（Ando_Keiichiro）	0	1
+白山次郎（hiromomosetsu）	1	0
+法曹界を漂うペンギン（prejurist）	1	0
+Ｂ54なぶさん（yotajirosan）	2	0
+aiko/鈴木愛子（ponikitiai）	0	1
+KR（KR31917261）	3	0
+マニアの受難＠日本酒沼（mt1q7q）	0	2
+K - 9 9 9 9（k999941457035）	2	0
+餅弁（EbiCheesePizza）	0	1
+しゃいん（shine_sann）	0	3
+メタルヘッド背神的悪意者（youarethehero）	0	2
+ゆーか/貴谷悠加（nyamu624）	0	1
+ぶちぽてと.（bwpotato）	1	1
+黒田法律事務所 弁護士黒田厚志（kurodalawoffice）	0	1
+いぬべん（nakahaya0427）	1	0
+津田大介（tsuda）	0	1
+福岡の弁護士　水野遼（mizuno_ryo_law）	3	1
+レーティア（galaxy_idol02）	0	1
+ヂルチ（zilchlaw）	0	1
+どうしたら”一般男性”になれるのか（okinawabengoshi）	0	2
+浜木綿弁右衛門（leplusallez）	1	0
+Document35（document35）	1	0
+しん（shin_ver0）	0	1
+山椒（sansyoub）	1	0
+カイト（kaitoshima）	0	1
+Luna(るな)?（starship_luna）	2	1
+てらやさん☆（terayasan）	1	0
+ᙚᑋⁱbata Yukimasa（yukimasashibata）	1	0
+志摩恭臣（yspurple）	1	0
+けーぞ伯爵?ふあくとりゐ（kzo_tan）	1	2
+のぐたん（nogtan_tommy）	0	1
+ぷら（purapura415）	2	0
+岡山の弁護士（nishigawalaw）	2	0
+Spring（Hi_Izumi）	0	1
+白黒つけるパンダ弁?（pandabengoshi）	2	0
+ふくろう弁（bgsh_owl）	1	0
+嶋﨑量（弁護士）（shima_chikara）	1	0
+法律家の自由帳（lawyer_freenote）	1	0
+弁護士ビショップ（30sattorney）	1	0
+弁護団ひとり（bengodan_single）	1	0
+kura（tapesut）	0	1
+VOL（v0l0ve）	0	1
+リーチ一発ツモ裏１（luckymangan）	0	2
+非常上告-最高検察庁御中_ツイッター（s_hirono）	4	0
+ルート６６（元ルパン３世）（Route66_LP3）	0	3
+It's law 1969（xmg_on）	1	1
+晴法会（okadaiseihoukai）	0	3
+かじか（k_kazika）	1	0
+W h i c h (今は社会的距離を保ってね)（which0623）	1	0
+弁護士　立憲太郎（0311_0919）	0	1
+珍山草（LuftMensch5779）	0	1
+Smith目（iy0kahn）	0	4
+肉弁護士™️@士業から事業へ（tajima38186887）	1	0
+大奥井 閑蔵（beautifulday00）	1	0
+おらるく（oraruku7）	1	0
+gimu13（gimu13）	1	0
+SakawaH（SakawaH）	1	0
+くにたち法律事務所＠吉祥寺（Kunitachi_LO）	1	0
+弁護士 堀内 聡（shoriuchi18）	1	0
+健?　弁護士兼マンガ家（simuken2016）	3	0
+₍ᐢꙬᐢ₎狸の金玉₍ᐢꙬᐢ₎（inonianomezak）	0	2
+まーやん（masayar2）	0	1
+北白川（GUv4i6）	1	0
+HRK（hKodama）	1	0
+COLORS＠73期（COLORS_I_am_you）	0	2
+半端ない弁護士（IkemenBengoshi）	1	0
+弁護士神原元（kambara7）	3	2
+shou_yasuda（shou_yasuda）	0	1
+青木　俊（AokiTonko）	1	0
+
+
+［source：］奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中_2020： REGEXP：”やりがい”／データベース登録済みツイートの検索：2020-10-06〜2020-10-08／2020年10月08日10時12分の記録：ユーザ・投稿：193／506件 https://kk2020-09.blogspot.com/2020/10/regexp2020-10-062020-10.html
+```
+
+ - （001／506） TW sollamame（そらまめ） 日時： 2020-10-06 18:27:00 +0900 URL： https://twitter.com/sollamame/status/1313410457059782661
+
+> 菊池前日弁連会長がインタビューで若手弁護士から生涯バランスシートを見せられ大企業サラリーマンより弁護士の方が平均年収が低く投下資本や労働量から割に合わないといわれたがそのバランスシートには「やりがい」という項目がなかったと仰っている。まだその程度の認識なんですか…という感想。
+
+ - （005／506） RT hidemusupremel1（hidemusupremelawyershi）｜harrier0516osk（向原総合法律事務所　弁護士向原） 日時：2020-10-07 00:43:00 +0900／2020-10-06 22:13:00 +0900 URL： https://twitter.com/hidemusupremel1/status/1313505270622908421 https://twitter.com/harrier0516osk/status/1313467479662895106
+
+> 当地では、九弁連元理事長による横領事件がありました。曰く、動機は、理事長時代の会務多忙。「やりがい沈没」です。
+> 真偽のほどは今やわかりませんが、会務に負担感を覚えていた当時の自分は、この事件で、会務への見方・付き合い方を完全にかえました。
+> あの事件がなければどうなってたか…
+
+ - （038／506） TW battamonblack02（ＫＢブラック０２） 日時： 2020-10-07 07:32:00 +0900 URL： https://twitter.com/battamonblack02/status/1313608041615380480
+
+> 「弁護士にはやりがいがあるからサラリーマンより魅力的です」と「日本人には根性があるから米兵には負けません」と「人間は食べ物がなくても感動を食べるだけで生きていける」は全部同じよ
+
+ - （043／506） RT YonedaRyogen（米田龍玄）｜tiberius24_hide（勝燕院殿無芸大食大居士） 日時：2020-10-07 07:43:00 +0900／2020-10-06 18:50:00 +0900 URL： https://twitter.com/YonedaRyogen/status/1313610925874634752 https://twitter.com/tiberius24_hide/status/1313416241986502656
+
+> @sollamame @sakamotomasayuk やりがいを足さないとバランスしない時点でお察しですね。日弁連と弁護士会にはあまり関わらないようにしよう。。
+
+ - （463／506） RT inonianomezak（₍ᐢꙬᐢ₎狸の金玉₍ᐢꙬᐢ₎）｜redipsjp（Masahiro Ito/伊藤雅浩?） 日時：2020-10-07 23:13:00 +0900／2020-10-07 13:46:00 +0900 URL： https://twitter.com/inonianomezak/status/1313844924551315457 https://twitter.com/redipsjp/status/1313702149314945028
+
+> 生涯BSやりがい先生の執務室すげーな。日弁連会長室かと思ったら事務所の執務室のようだ。 https://t.co/icTbe1zVkH
+
+ - （464／506） RT iy0kahn（Smith目）｜mizuno_ryo_law（福岡の弁護士　水野遼） 日時：2020-10-07 23:28:00 +0900／2020-10-07 23:11:00 +0900 URL： https://twitter.com/iy0kahn/status/1313848763207696385 https://twitter.com/mizuno_ryo_law/status/1313844478126424064
+
+> 顧問先が百社超えてて，若いのに事務所をまかせて毎月趣味程度に少年事件だけやってればいいとかだったら，あふれんばかりのやりがいが湧き出るかも．
+
+ - （465／506） RT iy0kahn（Smith目）｜ikemen_lawyer（イケメン弁護士(PRO)） 日時：2020-10-07 23:28:00 +0900／2020-10-07 15:34:00 +0900 URL： https://twitter.com/iy0kahn/status/1313848687408214016 https://twitter.com/ikemen_lawyer/status/1313729500111228928
+
+> 【法曹界の危機一覧】
+> ・旧司組は金太郎飴答案
+> ・予備試組は心の貧困
+> ・新司組は豚バッヂ
+> ・【new】法曹のB/S資産の部に「やりがい」が計上される
+> ・【new】最近の修習生の志望動機にストーリーがない
+>
+> どうすればええんや…
+
+ - （468／506） TW mizuno_ryo_law（福岡の弁護士　水野遼） 日時： 2020-10-08 00:03:00 +0900 URL： https://twitter.com/mizuno_ryo_law/status/1313857518133706752
+
+> しかし現実は，時給に換算したら千円切るくらいのコストパフォーマンスで炎天下を歩いて鑑別所に行くのである．それをやりがいで片付けられてはかなわない．他である程度売り上げがあるからこそできる話．バランスシートにやりがいを載せるとか，頭おかしいな
+
+ - （475／506） TW harrier0516osk（向原総合法律事務所　弁護士向原） 日時： 2020-10-08 00:50:00 +0900 URL： https://twitter.com/harrier0516osk/status/1313869316261990400
+
+> 今自分がやってる主な会務としては、非弁問題がありますが、これは、やりがいというよりは、ライフワークなんですよね。
+> 非弁問題を通じてこの業界界隈のいろんな課題が見え、自分の業務にも応用できるところが好きです。 https://t.co/A30vrwi3CM
+
+ - （486／506） TW igaigaguri（いがぐり弁護士） 日時： 2020-10-08 02:58:00 +0900 URL： https://twitter.com/igaigaguri/status/1313901476138250241
+
+> 法クラ流行語大賞の候補に「やりがい」が流星の如くあらわる！
+
+ - （489／506） RT popohito（ぽぽひと＠wordタケノコ粒あん党）｜take___five（中村剛（take-five）） 日時：2020-10-08 07:19:00 +0900／2020-10-07 19:45:00 +0900 URL： https://twitter.com/popohito/status/1313967151158448128 https://twitter.com/take___five/status/1313792650110144512
+
+> 弁護士業界には「お金」を「やりがい」に替えてくれる組織があります。
+> 法テラスって言うんですけどね。
+
+ - （491／506） TW kambara7（弁護士神原元） 日時： 2020-10-08 08:14:00 +0900 URL： https://twitter.com/kambara7/status/1313981014658543616
+
+> ある職種（この場合は弁護士）についている人たち（特に若手）が「生活が成り立たない」という話をしているのに、責任ある立場の人間が「やりがいがあるだろう」と返すのは誤りだ。
+>
+> 「やりがいがある」かどうかと「生活が成り立つ」かどうかは、異次元の問題であり、議論のすり替えだからである。
+
+ - （498／506） TW fukazawas（深澤諭史） 日時： 2020-10-08 08:52:00 +0900 URL： https://twitter.com/fukazawas/status/1313990522730553344
+
+> （・∀・）「やりがい」って要するに大和魂みたいなもんですね。
+> （＾ω＾）物資は有限だけど，精神力は無制限だって，昔の偉い人も言っていたお！
+
+* 「弁護士全体を逆恨み」というツイートの記録，ツイート本体は深澤諭史弁護士のみ確認
+
+:CATEGORIES: 深澤諭史弁護士
+
+```
+アカウント名	ツイート数	リツイート数
+深澤諭史（fukazawas）	2	0
+非常上告-最高検察庁御中_ツイッター（s_hirono）	1	0
+刑事告発・非常上告＿金沢地方検察庁御中（kk_hirono）	1	1
+inマイdreams（bengobengostory）	0	1
+奉納＼さらば弁護士鉄道・泥棒神社の物語（hirono_hideki）	2	0
+浜 ち ゃ ん（lawer_hamachan）	0	1
+
+
+［source：］奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中_2020： REGEXP：”弁護士全体を逆恨み”／データベース登録済みツイート：2020年10月08日11時54分の記録：ユーザ・投稿：6／9件 https://kk2020-09.blogspot.com/2020/10/regexp20201008115469.html
+```
+
+ - （1／9） TW fukazawas（深澤諭史） 日時： 2020-08-05 16:14:00 +0900 URL： https://twitter.com/fukazawas/status/1290908992433041408
+
+> たまに、こういう、弁護士全体を逆恨みしているみたいな人には遭遇しますね。相談者にもいますし、ネットにはもっといっぱいいます。
+> 属性は統一できないが、クレーマー、ストーカー、DV加害者、モラハラ加害者は弁護士全般への憎悪が強い傾向を… https://t.co/CkxRVLYHNS
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hahabengoshi（母弁） 日時：2020-10-08 12:14／2020/08/05 14:30 URL： https://twitter.com/kk_hirono/status/1314041325738627072 https://twitter.com/hahabengoshi/status/1290882954357399552  
+
+> 債務整理の相談に入ってミネルヴァの苦情を受ける者  当方ミネルヴァ関係なし 相談者ミネルヴァに依頼関係なし  完全にテレビ見て愚痴る延長的な 「弁護士なっとらん！」的な  私にどうしろと。 説教垂れときながら私に債務整理を依頼するのかい？  
+
+ - （5／9） TW fukazawas（深澤諭史） 日時： 2020-10-07 18:45:00 +0900 URL： https://twitter.com/fukazawas/status/1313777371279847425
+
+> 弁護士になる前から、関係者相手方に逆恨みされやすい仕事であることは知っていたが、なってみると、法曹特に弁護士全体を逆恨みしている人も少数だごいることを痛感したな。
+> （・∀・）
+
+* 
