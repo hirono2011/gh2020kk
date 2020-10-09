@@ -1,0 +1,277 @@
+* PowerShellで，正規表現を使いマッチしたファイルをディレクトリーの階層ごと指定ディレクトリーにコピー
+
+:CATEGORIES: PowerShell,正規表現
+
+```
+cls
+$source = "C：\test" 
+$destination = "C：\test2" 
+$filter = ［regex］ "^［0-9］{6}\.(jpg|gif)"
+
+$bin = Get-ChildItem -Path $source -Recurse | Where-Object {($_.Name -match $filter) -or ($_.PSIsContainer)}
+foreach ($item in $bin) {
+    Write-Host "
+----
+Obj： $item
+Path： "$item.fullname"
+Destination： "$item.FullName.ToString().Replace($source,$destination).Replace($item.Name,"")
+    Copy-Item -Path $item.FullName -Destination $item.FullName.ToString().Replace($source,$destination).Replace($item.Name,"")
+    }
+
+［source：］windows — Windows：ファイル名の正規表現を使用したファイルのコピー/移動？ https://www.it-swarm-ja.tech/ja/windows/windows%EF%BC%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%AE%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E7%A7%BB%E5%8B%95%EF%BC%9F/959356621/
+```
+
+　コピー元とコピー先のディレクトリーを変更して，Linux（Ubuntu）のPowerShell Coreで実行。
+
+```
+PS /kk/pwork/tv> $bin = Get-ChildItem -Path $source -Recurse | Where-Object {($_.Name -match $filter) -or ($_.PSIsContainer)}
+PS /kk/pwork/tv> foreach ($item in $bin) {
+>>     Write-Host "
+>> ----
+
+>> Obj: $item
+>> Path: "$item.fullname"
+>> Destination: "$item.FullName.ToString().Replace($source,$destination).Replace($item.Name,"")
+>>     Copy-Item -Path $item.FullName -Destination $item.FullName.ToString().Replace($source,$destination).Replace($item.Name,"")
+
+>>     }
+
+----
+Obj: /kk/pwork/tv/2020-09-09_190059＿テレビの画面・.jpg
+Path:  /kk/pwork/tv/2020-09-09_190059＿テレビの画面・.jpg 
+Destination:  /home/a66/w3/
+（以下略）
+```
+
+　書式を少し変更して実行。
+
+```
+PS /kk/pwork/tv> $filter = [regex] "^[0-9]{4}-09-09_1936.+\.(jpg|gif)"
+PS /kk/pwork/tv> $bin = Get-ChildItem -Path $source -Recurse | Where-Object {($_.Name -match $filter) -or ($_.PSIsContainer)}
+PS /kk/pwork/tv> foreach ($item in $bin) {
+>>     Write-Host "
+>> ----
+
+>> Obj: $item
+>> Path: "$item.fullname"
+>> Destination: "
+
+>>     $item.FullName.ToString().Replace($source,$destination).Replace($item.Name,"")
+>>     Copy-Item -Path $item.FullName -Destination $item.FullName.ToString().Replace($source,$destination).Replace($item.Name,"")
+
+>>     }
+
+----
+Obj: /kk/pwork/tv/2020-09-09_193623＿テレビの画面・.jpg
+Path:  /kk/pwork/tv/2020-09-09_193623＿テレビの画面・.jpg 
+Destination: 
+/home/a66/w3/
+
+----
+Obj: /kk/pwork/tv/2020-09-09_193644＿テレビの画面・.jpg
+Path:  /kk/pwork/tv/2020-09-09_193644＿テレビの画面・.jpg 
+Destination: 
+/home/a66/w3/
+
+----
+Obj: /kk/pwork/tv/2020-09-09_193652＿テレビの画面・.jpg
+Path:  /kk/pwork/tv/2020-09-09_193652＿テレビの画面・.jpg 
+Destination: 
+/home/a66/w3/
+PS /kk/pwork/tv>
+```
+
+　「-or ($_.PSIsContainer)」という部分が条件式でのディレクトリー（フォルダ）の指定と思われますが，パスをテキストとしてファイル名を除いて使っているようです。
+
+　やってみると，ページの末尾にある方法を参考に，Linux環境ですが，次の方法でも同じことが出来ました。
+
+dir|?{$_ -match '2020-09-10.*\.(jpg|png)'}|%{cp $_.fullname /home/a66/tmp}
+
+* 座間9人殺害事件の公判に関する弁護士らの反応と，関連ツイートの記録
+
+:CATEGORIES: 弁護士らの反応
+
+```
+ - 2020年10月09日01時12分の登録： REGEXP：”座間．＊事件”／データベース登録済みツイート：2020年10月09日01時05分の記録：ユーザ・投稿：170／659件 http://kk2020-09.blogspot.com/2020/10/regexp202010090105170659.html
+ - 2020年10月09日01時12分の登録： ＼弁護士SC預り口　@scazukari＼座間の弁護人大変そう。 http://kk2020-09.blogspot.com/2020/10/scscazukari.html
+ - 2020年10月09日01時18分の登録： REGEXP：”座間．＊（弁護｜弁護士｜弁護人）”／データベース登録済みツイート：2020年10月09日01時15分の記録：ユーザ・投稿：58／123件 http://kk2020-09.blogspot.com/2020/10/regexp20201009011558123.html
+ - 2020年10月09日01時32分の登録： REGEXP：”座間”／うのじ（@un_co_the2nd）の検索（2017-10-31〜2017-11-12／2020年10月09日01時32分の記録9件） http://kk2020-09.blogspot.com/2020/10/regexpuncothe2nd2017-10-312017-11.html
+ - 2020年10月09日01時34分の登録： REGEXP：”座間”／つまらむ（@km0bake）の検索（2012-08-26〜2019-05-28／2020年10月09日01時34分の記録7件） http://kk2020-09.blogspot.com/2020/10/regexpkm0bake2012-08-262019-05.html
+ - 2020年10月09日01時35分の登録： REGEXP：”座間”／深澤諭史（@fukazawas）の検索（2017-11-05〜2017-11-11／2020年10月09日01時35分の記録4件） http://kk2020-09.blogspot.com/2020/10/regexpfukazawas2017-11-052017-11.html
+ - 2020年10月09日01時35分の登録： REGEXP：”座間”／モトケン（@motoken_tw）の検索（2017-11-02〜2018-12-11／2020年10月09日01時35分の記録9件） http://kk2020-09.blogspot.com/2020/10/regexpmotokentw2017-11-022018-12.html
+ - 2020年10月09日01時36分の登録： REGEXP：”座間．＊（弁護｜弁護士｜弁護人）”／データベース登録済みツイートの検索：2020-10-07〜2020-10-09／2020年10月09日01時36分の記録：ユーザ・投稿：8／28件 http://kk2020-09.blogspot.com/2020/10/regexp2020-10-072020-10.html
+ - 2020年10月09日01時38分の登録： ＼弁護士 市川 寛　@imarockcaster42＼弁護人が承諾殺人を主張するのは理解できます。このやりとりを読んで、弁護士という存在自体を否定するのは止めていただきた http://kk2020-09.blogspot.com/2020/10/imarockcaster42_9.html
+ - 2020年10月09日01時49分の登録： ＼momo3580　@momo3580＼弁護人さん大変だな。裁判方針「全く合わない」　白石被告、弁護人に不満―座間９人殺害公判：時事ドットコム 裁判方針「全く合わない」　 http://kk2020-09.blogspot.com/2020/10/momo3580momo3580_9.html
+```
+
+　一昨日の7日の昼になると思いますが，家ではなく出先のテレビで座間9人殺害事件の公判に関する報道を少し見かけていました。その場で忘れていたとも思うのですが，昨日の8日になって気になることがあり，調べるようになりました。Twitterのトレンドで情報を見かけたようにも思います。
+
+　まだはっきりとは確認していないのですが，一昨日の10月7日に初公判があり，昨日の8日も続けて公判があったようです。どちらもNHKのNEWS７とNEWS９をテレビ録画から確認したのですが，この座間9人殺害事件の公判に関する報道は見当たらず，少なくとも主要項目にはなかったです。
+
+- RT hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語）｜livedoornews（ライブドアニュース） 日時：2020/10/09 00:44／2020/10/08 22:02 URL： https://twitter.com/hirono_hideki/status/1314230285504974848 https://twitter.com/livedoornews/status/1314189300410408960
+
+> RT @livedoornews: 【座間事件】白石被告、被害者に失踪宣告書書かせる「捜査防げると思った」  
+> https://t.co/Zi6OBcnRt2  
+>   
+> 「自殺はしません」「戻ってくる」とつづられていた書き置きについて「私が言い出して被害者に書かせた」と告白した。 https://t.co/cxYVgoslid  
+
+　最初の関連ツイートがリツイートで，日付が変わった0時44分となっていました。Twilogで座間をキーワードに含むツイートは，これも意外なことですが，本日2020年10月9日の前は，2019年11月11日の1件のツイートとなっていました。村松謙弁護士にメンションを飛ばしたものです。
+
+ - 奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)/「座間」の検索結果 - Twilog https://twilog.org/hirono_hideki/search?word=%E5%BA%A7%E9%96%93&ao=a  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-09 10:11／2019/11/11 22:38 URL： https://twitter.com/kk_hirono/status/1314372928658579457 https://twitter.com/hirono_hideki/status/1193885822870642688  
+
+> @kmuramatsu まったく法教育などと寝言をほざきながら、泥棒根性を屁理屈とともに迸らせ暴走する狂人、欲望の弁護士頭、弁護士脳には、毎度、血潮が湧き上がる思いです。座間市の9遺体遺棄事件が最たるものですね。神奈川県では。  
+
+　その前が2019年10月30日の2つのツイートですが，「東京新聞：「心弱っている子狙った」　座間９人殺害２年　白石被告、面会応じる：社会(TOKYO Web) 」という身にしみて印象的なタイトルでした。まったく弁護士商売に当てはまりそうな法則です。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-09 10:15／2019/10/30 17:05 URL： https://twitter.com/kk_hirono/status/1314373814063493120 https://twitter.com/hirono_hideki/status/1189453286937481216  
+
+> 2019年10月30日17時00分の登録： ＼?弁護士 落合洋司 YOJI OCHIAI　@yjochi＼落合コメントあり。\n→東京新聞:「心弱っている子狙った」　座間９人殺害２年　白石被告、面会応じる:社会(TO https://t.co/DvvLOZ2qP8  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-09 10:15／2019/10/30 16:57 URL： https://twitter.com/kk_hirono/status/1314373839069962240 https://twitter.com/hirono_hideki/status/1189451301228171264  
+
+> 東京新聞：「心弱っている子狙った」　座間９人殺害２年　白石被告、面会応じる：社会(TOKYO Web) https://t.co/xeiF8K6X71  
+
+* 「2020年３月末をもって、日本弁護士連合会会長の任期が満了」という菊地裕太郎弁護士，「やりがい」で法クラの話題になったことから知った
+
+:CATEGORIES: 日弁連,心神喪失
+
+```
+修習時代より本林弁護士の事務所で世話になっていた菊地は、81年、そのまま「本林・青木・千葉法律事務所（当時）」に入所。勤務弁護士としてスタートを切り、実務を担う青木、千葉両弁護士について修業を積んだ。「おおらかな事務所で、自由に伸び伸びと任せてくれた」と当時を振り返る。
+
+初めの頃は国選弁護の刑事事件をたくさん担当しました。印象に残っている事件は挙げるとキリがないのですが、その一つが無銭飲食の事件。刑務所を出てきたら、その日のうちに無銭飲食で逮捕されたという被疑者で、私が面会に行っても「確かにやりました」と言う。公判廷でも起訴状内容に対して「間違いありません」と本人は認めるんだけど、一貫して支離滅裂で何かおかしい。私としては確信が持てなかったので、認否を留保しました。10件以上の前科で簡易鑑定があるはずだから、その証拠開示を検察に求めたのですが拒否。ただ、幸いにとてもいい裁判官で、法廷での被告人の挙動不審な様子から、提出を検察官に求めてくれた。案の定、多くの記録が出てきましたが、いずれも責任能力あり。そこで、被疑者のお姉さんなどいろいろあたり、精神鑑定を求めた結果、採用されました。そして、１年ほどかかりましたが、松沢病院から「心神喪失である」という鑑定が出た。しかし、今度は検察官が東大の高名な教授に再鑑定を申し立ててと、話はどんどん大ごとになっていきました。
+
+で、さらに再鑑定を実施すると、今度は「責任能力あり」です。納得のいかない私は、「鑑定人を呼んで尋問させてくれ」と食い下がりました。その準備のために、図書館に行って医学書を読みあさり、最後は鑑定人を尋問でかなり追及して、なんとなく認めさせたような……。被告人は心神喪失で無罪となり、即強制入院となりました。証拠開示というものも定着しておらず、過去の国選事件でも見逃されてきた日本の刑事裁判の遅れを痛感しました。
+
+［source：］弁護士　菊地裕太郎【弁護士の肖像】 | Attorney's MAGAZINE Online https://legal-agent.jp/attorneys/humanhistory/humanhistory_vol73_74/
+```
+
+　今朝，ざっと上記の記事を読んだのですが，上記の引用部分が特に印象的でした。
+
+```
+2020年10月09日10時26分の実行記録
+twitterAPI-search-lawList-mydql-add.rb "菊地裕太郎"
+ツイート数：14/2049 リツイート数：23/2049 トータル：61
+hirono_hideki 2／0件
+kk_hirono 0／0件
+s_hirono 1／0件
+```
+
+　前年度の日弁連会長とのことですが，ほとんど見覚えのない名前でした。Twilogを確認すると一昨日の7日に2件出ていますが，その前は3月31日に1件，2018年2月9日に1件，2014年1月1日に1件のリツイートがあるだけでした。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-09 10:34／2020/10/07 19:51 URL： https://twitter.com/kk_hirono/status/1314378559406788608 https://twitter.com/hirono_hideki/status/1313794135963254786  
+
+> - 2020年10月07日19時25分の登録： ＼Goshi弁太郎　@mackckckck＼自己申告で構わないので法テラス何件やったか教えてケロ弁護士　菊地裕太郎【弁護士の肖像】 | Attorney''s MAGAZI https://t.co/7QE2pJh9M8  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-09 10:34／2020/10/07 19:51 URL： https://twitter.com/kk_hirono/status/1314378585193422848 https://twitter.com/hirono_hideki/status/1313794056779034624  
+
+> - 2020年10月07日19時17分の登録： ＼弁護士 都 行志　@Miyako_Koji＼弁護士　菊地裕太郎【弁護士の肖像】 | Attorney''s MAGAZINE Online大企業のサラリーマンと弁護士の平 https://t.co/bAs7hKDrIK  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-09 10:34／2020/03/31 23:00 URL： https://twitter.com/kk_hirono/status/1314378611290333185 https://twitter.com/hirono_hideki/status/1244987941656473600  
+
+> 患者死亡裁判 元看護助手の女性に再審無罪判決 大津地裁 | NHKニュース https://t.co/tYfZQYHGdT 日弁連＝日本弁護士連合会の菊地裕太郎会長は「今回の事件はいわゆる供述弱者に対する取り調べの在り方や捜査機関による証拠隠し  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-09 10:34／2018/02/09 21:42 URL： https://twitter.com/kk_hirono/status/1314378660204310530 https://twitter.com/hirono_hideki/status/961943505600839680  
+
+> 日弁連（会員数約４万人）は９日、中本和洋会長（７１）の任期満了に伴う次期会長選挙の投開票を行い、現執行部の路線を継承する元東京弁護士会会長の菊地裕太郎氏（６６）の当選が決まったと発表した。東京弁護士会の武内更一氏（６０）を破った。 https://t.co/NgLVkC9tUy  
+
+奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)/「菊地裕太郎」の検索結果 - Twilog https://t.co/wLav2tUV9n
+
+- RT hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語）｜TobenMedia（東京弁護士会） 日時：2014/01/01 09:46／2014/01/01 09:34 URL： https://twitter.com/hirono_hideki/status/418181409686421504 https://twitter.com/TobenMedia/status/418178416089628672
+
+> RT @TobenMedia: 【新年のご挨拶】菊地裕太郎会長の新年のご挨拶「東京弁護士会最終決算期の上方修正に向って」を掲載しました。http://t.co/UtvlGUmsLG  
+
+```
+アカウント名	ツイート数	リツイート数
+弁護士 萱野　唯 （yuikayano）	1	0
+深澤諭史（fukazawas）	0	4
+いわぽん（yiwapon）	1	0
+中村元弥（1961kumachin）	1	0
+奉納＼さらば弁護士鉄道・泥棒神社の物語（hirono_hideki）	4	0
+麗奈（reeeiinaaaa）	2	0
+魚占い（sakanauranai）	0	1
+えきなんローヤー?（ekinan_lawyer）	0	4
+うそつきべんごし。（LiarLawyer800）	0	3
+冬弁（fuyuben）	2	0
+びーちゃん（eeyy888777）	0	1
+中野 俊徳（kanonjilawfirm）	0	1
+アンバサだよ（anbasalaw）	0	1
+りんご（__apple13）	0	1
+古家野 彰平（shoheikoyanolaw）	1	0
+Goshi弁太郎（mackckckck）	1	0
+しゃんきち弁護士（syankichilawyer）	0	1
+弁護士　山中理司（yamanaka_osaka）	0	1
+サイ太（uwaaaa）	1	0
+浜 ち ゃ ん（lawer_hamachan）	0	2
+弁護士 都 行志（Miyako_Koji）	1	0
+ほりぐちです（mstk_Horiguchi）	0	1
+冬服テンプテーション（depon2010）	0	1
+toujin（tou_jin）	0	1
+Harry_Sanada（OnigiriSociety1）	0	1
+晴法会（okadaiseihoukai）	0	1
+cloud_110（cloud_110）	1	0
+非常上告-最高検察庁御中_ツイッター（s_hirono）	1	0
+
+
+［source：］奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中_2020： REGEXP：”菊地裕太郎”／データベース登録済みツイート：2020年10月09日10時42分の記録：ユーザ・投稿：28／42件 https://kk2020-09.blogspot.com/2020/10/regexp2020100910422842.html
+```
+
+ - （08／42） TW hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時： 2020-03-31 23:00:00 +0900 URL： https://twitter.com/hirono_hideki/status/1244987941656473600
+
+> 患者死亡裁判 元看護助手の女性に再審無罪判決 大津地裁 | NHKニュース https://t.co/tYfZQYHGdT
+> 日弁連＝日本弁護士連合会の菊地裕太郎会長は「今回の事件はいわゆる供述弱者に対する取り調べの在り方や捜査機関による証拠隠し
+
+　任期終了間際の日弁連会長としてのコメントとなったようです。NHKの記事はリンク切れとなっていました。日弁連会長が直接取材を受け，コメントしたとは考えにくいので，よくある日弁連の会長声明になるのかと思われます。
+
+ - （09／42） TW reeeiinaaaa（麗奈） 日時： 2020-10-06 19:17:00 +0900 URL： https://twitter.com/reeeiinaaaa/status/1313423222080110592
+
+> 日弁連の委員会活動したら、菊地裕太郎弁護士から、“それなり”のお仕事いただけるんですかね？
+
+　法クラの菊地裕太郎弁護士に関する話題は，10月7日の一日前，10月6日から出ていたようです。
+
+```
+本日、大津地方裁判所は、いわゆる「湖東事件」について、西山美香氏に対して、再審無罪判決を言い渡した。
+
+
+本件は、２００３年（平成１５年）５月２２日、滋賀県愛知郡湖東町（当時）所在の病院に看護助手として勤務していた西山氏が、同病院に重篤な症状で入院していた患者に装着された人工呼吸器のチューブを引き抜き、急性低酸素状態により死亡させて殺害したとされた事件である。西山氏は、捜査段階で自白し、公判では否認に転じたものの、一審の大津地方裁判所は懲役１２年の有罪判決を言い渡した。その後控訴、上告がなされたが、２００７年（平成１９年）５月２１日に、一審の有罪判決が確定した。
+
+
+西山氏は、再審請求手続で、患者の死因や自白の信用性を争い、２０１７年（平成２９年）１２月２０日、大阪高等裁判所は、新旧証拠の総合評価を行い、患者が自然死した合理的疑いが生じたとして、本件の再審開始を決定した。昨年３月１８日、最高裁判所第二小法廷も検察官の特別抗告を棄却し、今回の再審公判が開かれた。再審公判手続では、人工呼吸器の管内での痰の詰まりにより患者が心臓停止した可能性もあるとする解剖医の所見が記載された捜査報告書などが新たに開示された。
+
+
+今回の判決は、患者が人工呼吸器の管の外れに基づく酸素供給欠乏により死亡したと認めるに足りる証拠はなく、かえって、患者が低カリウム血症による致死性不整脈等、上記以外の原因で死亡した具体的な可能性があるとし、事件性を認めるに足りないとした。そして、西山氏の自白についても、信用性に疑いがあるのみならず、防御権の侵害や不当な捜査手続によって誘発された疑いが強く、任意性にも疑いがあるとし、証拠排除した。このように、今回の判決は、確定審における判断の誤りを明確に指摘したものであって、当連合会としてもこれを評価する。
+
+
+他方、検察官は、再審公判において、当初は西山氏の有罪を主張立証する方針を示し、後に新たな有罪立証を断念したものの、無罪判決を求めるわけでもなく、「取調済みの証拠に基づき、適切な判断を求める」とだけ述べて、従前の主張にいたずらに固執しているようにも見受けられる。このような検察官の態度は、公益の代表者としてふさわしいとは言い難い。
+
+
+本件は、いわゆる供述弱者に対する取調べの在り方、捜査機関による証拠隠し、科学的知見の軽視や自白の偏重など、我が国の刑事司法制度が抱える構造的な問題点を改めて浮き彫りにした。当連合会は、西山氏のようなえん罪被害を救済し、えん罪を防止するため、取調べ全過程の可視化、取調べの弁護人立会い、全面的証拠開示、再審開始決定に対する検察官の不服申立て禁止をはじめとした制度改革の実現を目指して、全力を尽くす決意である。
+
+
+　２０２０年（令和２年）３月３１日
+
+日本弁護士連合会
+会長　菊地　裕太郎
+
+［source：］日本弁護士連合会：「湖東事件」再審無罪判決に関する会長声明 https://www.nichibenren.or.jp/document/statement/year/2020/200331.html
+```
+
+　2020年3月31日付の日本弁護士連合会会長声明となっていました。これは再審無罪の判決がでた当日だと思います。前日の3月30日は大崎事件の再審請求があって，その翌日と記憶にあります。再審請求無罪となった西山美香氏は，前日に鹿児島で応援演説をしていたという話があり，それもよく憶えています。
+
+* 
+
