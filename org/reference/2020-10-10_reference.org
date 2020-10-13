@@ -1,0 +1,203 @@
+* Powershellで文字列内での変数展開 
+
+:CATEGORIES: Powershell
+
+ -  Windows PowerShellの文字列内で変数を扱う方法 http://exrecord.net/how-to-use-variable-in-string
+
+```
+PS D:\> $array = "石川", "富山", "福井"
+
+PS D:\> $aaa = "Powershellの変数"
+
+PS D:\> echo "今日は，${aaa}を勉強。${$array} abc"
+今日は，Powershellの変数を勉強。 abc
+
+PS D:\> $str = "今日は，{0}を勉強した。{1}県鳳珠郡で" -f $aaa, $array[0]
+
+PS D:\> echo $str
+今日は，Powershellの変数を勉強した。石川県鳳珠郡で
+
+PS D:\> $x = 3600
+
+PS D:\> echo "計算（$($x * 800)）"
+計算（2880000）
+```
+
+* Powershellの文字列検索でアルファベットの大文字と小文字を区別
+
+:CATEGORIES: Powershell
+
+```
+PS D:\> Get-Process | Out-String -Stream | Select-String "sh"
+
+    169      10     1620       1120              9392   0 GoogleCrashHandler                                                                                                                                                                                                        
+    152       9     1656       1104              6660   0 GoogleCrashHandler64                                                                                                                                                                                                      
+    365      32    55688      62140       7.52  10432   1 NVIDIA Share                                                                                                                                                                                                              
+    784      41    52452      55056      13.92  11012   1 NVIDIA Share                                                                                                                                                                                                              
+    542      29    68676      35044       0.27  11180   1 NVIDIA Share                                                                                                                                                                                                              
+    807      56   175976     195272      19.27  13124   1 powershell_ise                                                                                                                                                                                                            
+
+
+
+PS D:\> Get-Process | Out-String -Stream | Select-String "sh"  -CaseSensitive
+
+    169      10     1620       1120              9392   0 GoogleCrashHandler                                                                                                                                                                                                        
+    152       9     1656       1104              6660   0 GoogleCrashHandler64                                                                                                                                                                                                      
+    814      56   176284     195852      19.63  13124   1 powershell_ise                                                                                                                                                                                                            
+
+```
+
+参考：
+ - Windowsで大文字・小文字を区別してファイルを検索する方法 http://sogohiroaki.sblo.jp/article/179189667.html
+
+　「-CaseSensitive」がアルファベットの大文字と小文字を区別する指定となるようです。
+
+* Powershellでデジカメ・スマートフォンの写真の撮影日時を取得し，後方参照で文字列置換
+
+:CATEGORIES: Powershell
+
+```
+(Get-ChildItem -Recurse | ? { ! $_.PSIsContainer } | Measure-Object).Count
+
+$file_path = "C:\Users\（ファイルの絶対パス）\2002-12-29_163215＿告発事件一件記録（写真資料・撮影日時）.jpg"
+
+[Reflection.Assembly]::LoadWithPartialName("System.Drawing") | Out-Null
+$img = $null
+$img = New-Object Drawing.Bitmap($file_path)
+
+$date = ($img.PropertyItems | Where-Object{$_.Id -eq 306}).value
+$date = [Text.Encoding]::ASCII.GetString($date)
+$date = $date -replace "(....):(..):(..) (..):(..):(..)", '$1-$2-$3_$4$5$6'
+```
+
+PS D:\> echo $date
+2002-12-29_163215 
+
+参考：
+ - デジカメ、スマートフォンなどで撮影した画像、動画ファイルをリネーム後月ごとのフォルダに移動するスクリプト · GitHub https://gist.github.com/ebibibi/4175880?fbclid=IwAR3q7utypxoxlekjeQBTI-CMgWhg555FXrMPV7pvPDLIYkkLzgfQL6knUqY
+ - 後方参照はシングルクォートで - コンピュータってすごいらしい https://kyasmt.hatenablog.com/entry/20091215/1260863095
+ 
+　「$date.Replace('0', 'x').Replace('2', 'y').Replace('1', 'z')」という形式での正規表現，後方参照はできないみたいです。少し調べたところ，次のページによると，-replaceは，オプション指定ではなく演算子のようです。
+
+ -  PowerShell - 正規表現 | powershell Tutorial https://sodocumentation.net/ja/powershell/topic/6674/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE
+
+　「 [regex]::Replace($date, "(....):(..):(..) (..):(..):(..)", '$1-$2-$3_$4$5$6')」というやり方もできました。こちらの方が他のプログラム言語に近い書式で，可読性が良さそうに思います。
+
+* Powershellの-matchで文字列正規表現での部分文字列を取得，（？＜＞？）の名前付けではまったが理解が深まった
+
+:CATEGORIES: Powershell,正規表現
+
+```
+PS D:\> $str
+2002-12-29_163215＿告発事件一件記録（写真資料・撮影日時）.jpg
+
+PS D:\> $Str
+2002-12-29_163215＿告発事件一件記録（写真資料・撮影日時）.jpg
+
+PS D:\> $Str -match "＿[^\.]+"; $Matches
+True
+
+Name                           Value                                                                                                                                                                                                                                         
+----                           -----                                                                                                                                                                                                                                         
+0                              ＿告発事件一件記録（写真資料・撮影日時）                                                                                                                                                                                                                          
+
+
+
+PS D:\> 
+PS D:\> $str -match "(?<name>＿[^\.]+?)"; $Matches
+True
+
+Name                           Value                                                                                                                                                                                                                                         
+----                           -----                                                                                                                                                                                                                                         
+name                           ＿告                                                                                                                                                                                                                                            
+0                              ＿告                                                                                                                                                                                                                                            
+
+
+
+PS D:\> $str -match "(?<name>＿[^\.]+?)"; $Matches["name"]
+True
+＿告
+
+PS D:\> $str -match "(?<fname>＿[^\.]+?)"; $Matches["fname"]
+True
+＿告
+
+PS D:\> $Str -match "＿[^\.]+"; $Matches
+True
+
+Name                           Value                                                                                                                                                                                                                                         
+----                           -----                                                                                                                                                                                                                                         
+0                              ＿告発事件一件記録（写真資料・撮影日時）                                                                                                                                                                                                                          
+
+
+
+PS D:\> $str -match "(?<fname>....-..-.._......?)"; $Matches["fname"]
+True
+2002-12-29_163215
+
+PS D:\> $str -match "(?<fname>＿[^\.]+)"; $Matches["fname"]
+True
+＿告発事件一件記録（写真資料・撮影日時）
+
+PS D:\> $Str -match "(?:....-..-.._......＿)(.+)(?:\.jpg)"; $Matches
+True
+
+Name                           Value                                                                                                                                                                                                                                         
+----                           -----                                                                                                                                                                                                                                         
+1                              告発事件一件記録（写真資料・撮影日時）                                                                                                                                                                                                                           
+0                              2002-12-29_163215＿告発事件一件記録（写真資料・撮影日時）.jpg 
+
+
+
+PS D:\> $Matches[1]
+告発事件一件記録（写真資料・撮影日時）
+
+PS D:\> 
+```
+
+　きっかけは，次のページの次のコードが気になり，調べたのが始まりでした。「"(?<name>＿[^\.]+?)"」では何度やってもうまく行かず，最長一致のはずの＋が最短一致となっていました。
+
+```
+function script：makeFolderName($originalSatsueiDate){
+    $folderName = ""
+
+    if($originalSatsueiDate -eq $null -or $originalSatsueiDate.length -lt 1){
+        return $folderName
+    }
+
+    # yyyy.mm.ddを抽出しyyyy-mm-ddに変換
+    if($originalSatsueiDate -match "(?<SatsueiDate>\d\d\d\d.\d\d.\d\d?)"){
+        $folderName = $Matches［"SatsueiDate"］.replace("：","-")
+        return $folderName
+    }else{
+        return $folderName
+    }
+}
+
+［source：］Exifの撮影日時からフォルダを作成して画像をコピーする - 管理人Kのひとりごと https://www.k-hitorigoto.online/entry/2017/09/23/124528
+```
+
+　疑問が解決できたのは次のページの次の部分になりますが，？を末尾につけて囲んだ場合の挙動は情報が見当たりませんでした。とりあえず，先頭にのみ？をつけた場合に，期待通りの結果が得られました。
+
+```
+(?<name>subexpression)
+キャプチャした部分式に名前を指定できる。
+
+PS>"PowerShell" -match '(?<first>o.e)r(?<second>S.e)ll';$matches
+True
+
+Name                           Value
+----                           -----
+second                         She
+first                          owe
+0                              owerShell
+
+
+PS>$matches.second
+She
+
+［source：］PowerShell： ◆正規表現の基礎＜グループ化構成体＞ http://mtgpowershell.blogspot.com/2011/12/blog-post_23.html
+```
+
+* 
+
