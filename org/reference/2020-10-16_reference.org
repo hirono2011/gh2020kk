@@ -1,0 +1,582 @@
+* 「法的紛争で，相手方は相手方代理人弁護士に騙されているとか，こういう事件を担当する弁護士はダメな弁護士とか，そう思いたがる人がいますが，」という深澤諭史弁護士のツイート
+
+:CATEGORIES: 深澤諭史弁護士
+
+@fukazawas ===> You have been blocked from retweeting this user's tweets at their request.  
+▷▷▷　次のツイートのアカウント（@fukazawas）は，@kk_hironoをブロックしています。リツイートできませんでした。 ▷▷▷  
+
+- TW fukazawas（深澤諭史） 日時：2020/10/16 16:24 URL： https://twitter.com/fukazawas/status/1317003448248795136  
+
+> 法的紛争で，相手方は相手方代理人弁護士に騙されているとか，こういう事件を担当する弁護士はダメな弁護士とか，そう思いたがる人がいますが，はっきりと，正直にいって，自爆につながる有害な発想です。そういう案件は，そう思い込む人に @fukazawas #note https://t.co/rR3oZjqYyj  
+
+　noteのつぶやきがリンクのツイートとなっています。
+
+```
+深澤諭史
+2020/10/16 16：24
+法的紛争で，相手方は相手方代理人弁護士に騙されているとか，こういう事件を担当する弁護士はダメな弁護士とか，そう思いたがる人がいますが，はっきりと，正直にいって，自爆につながる有害な発想です。そういう案件は，そう思い込む人にとっての負け筋であることが，経験上ほとんどです（・∀・；）
+
+［source：］法的紛争で，相手方は相手方代理人弁護士に騙されているとか，こういう事件を担当する弁護士はダメな弁護士とか，そう思いたがる人がいますが，はっきりと，正直にいって，自爆につながる有害な発想です。そういう案件｜深澤諭史｜note https://note.com/fukazawas/n/n7c25ebf653f1
+```
+
+　これまでにも何度か見かけてきた，弁護士以外に対する，「思い込み」や「思い込む」という否定的なツイートですが，これもまとめ記事として記録する作業に移ります。今日は朝からTwitterのエラーが多く，TwitterAPIでもエラーが出てきました。
+
+　TwitterAPIに仕様変更があったこともエラーがきっかけで知ったのですが，2018年辺りに情報が出ていたようです。ちょうどiphoneのHEIC画像と似た時期になりそうですが，HEIC画像のことを知ったのも一週間ほど前です。
+
+* 「準強姦逮捕状の「山口敬之」氏、高級外車修理代を踏み倒し訴訟　地裁では敗訴」というツイートがきっかけで調べた，宮武嶺というアカウント，プロフィールに弁護士とあるがペンネームとも知った
+
+　まず奉納＼さらば弁護士鉄道・泥棒神社の物語(@hirono_hideki)のアカウントでのツイートです。調べながらツイートをしていました。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜Sankei_news（産経ニュース） 日時：2020-10-16 18:55／2020/10/16 13:20 URL： https://twitter.com/kk_hirono/status/1317041348533366785 https://twitter.com/Sankei_news/status/1316957152179871746  
+
+> 静岡知事が「教養レベル露見」発言を撤回　菅首相に謝罪の意 https://t.co/ss5XYHtwjo   発言後に、菅首相が直接、会員候補の人選の起案をしていなかったことが判明したためとしている。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:55／2020/10/16 18:18 URL： https://twitter.com/kk_hirono/status/1317041363796467712 https://twitter.com/hirono_hideki/status/1317032118149472256  
+
+> 菅首相の教養レベル露見 - Twitter検索 / Twitter https://t.co/EmFvxuMhcM  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:55／2020/10/16 18:17 URL： https://twitter.com/kk_hirono/status/1317041373355241473 https://twitter.com/hirono_hideki/status/1317031970686132226  
+
+> ブログのヘッダ画像，たぶん10年以上前に作成。 https://t.co/1DWObS1zwR  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:55／2020/10/16 17:50 URL： https://twitter.com/kk_hirono/status/1317041390233112576 https://twitter.com/hirono_hideki/status/1317025214476165120  
+
+> TOSHIBA PDR-T15のニュース/レビューとお買い得情報 - PHILE WEB 製品データベース https://t.co/FS7t88hq81 TOSHIBA PDR-T15 （sora） \OPEN（予想実売価格30,000円前後）  発売：2002年11月下旬  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:55／2020/10/16 17:45 URL： https://twitter.com/kk_hirono/status/1317041405546561537 https://twitter.com/hirono_hideki/status/1317023911297638400  
+
+> - TOSHIBA PDR-T15のニュース/レビューとお買い得情報 - PHILE WEB 製品データベース https://t.co/FS7t88z1wB  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:55／2020/10/16 17:27 URL： https://twitter.com/kk_hirono/status/1317041416615325697 https://twitter.com/hirono_hideki/status/1317019226855469056  
+
+> 再審請求_金沢地方裁判所御中_current https://t.co/YPyp4NU06h  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:55／2020/10/16 17:09 URL： https://twitter.com/kk_hirono/status/1317041429382717440 https://twitter.com/hirono_hideki/status/1317014787134349313  
+
+> - 2020年10月16日16時59分の登録： REGEXP：”栃木女児殺害事件。自白偏重はえん罪の温床。危うい裁判員裁判”／データベース登録済みツイート：2020年10月16日16時59分の記録：ユーザ・投稿：3／30件 https://t.co/jiNrjWew2t  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:55／2020/10/16 17:09 URL： https://twitter.com/kk_hirono/status/1317041441198149640 https://twitter.com/hirono_hideki/status/1317014760756375552  
+
+> - 2020年10月16日16時47分の登録： REGEXP：”森雅子法相「ゴーン氏は無罪を証明すべきだ」と”／データベース登録済みツイート：2020年10月16日16時47分の記録：ユーザ・投稿：1／17件 https://t.co/NHUfLFnApV  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:55／2020/10/16 16:29 URL： https://twitter.com/kk_hirono/status/1317041455169368064 https://twitter.com/hirono_hideki/status/1317004717164167173  
+
+> - 2020年10月16日16時25分の登録： REGEXP：”栃木女児殺害事件”／データベース登録済みツイート：2020年10月16日16時23分の記録：ユーザ・投稿：45／123件 https://t.co/bMvJkakghc  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:55／2020/10/16 16:29 URL： https://twitter.com/kk_hirono/status/1317041587378036736 https://twitter.com/hirono_hideki/status/1317004690802946048  
+
+> - 2020年10月16日16時00分の登録： TWEET：”2011-09-01 23:54〜2020-10-16 13:04”／宮武嶺（@raymiyatake）の検索（2020年10月16日16時00分の記録123件） https://t.co/lI6sOkw4vo  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:56／2020/10/16 16:12 URL： https://twitter.com/kk_hirono/status/1317041606222966785 https://twitter.com/hirono_hideki/status/1317000482468945926  
+
+> 高畑裕太氏の人権も、被害者女性の人権も大事にする事件報道と、世論の受け止め方。 - Everyone says I love you ! https://t.co/4epRDVmUVQ  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:56／2020/10/16 16:08 URL： https://twitter.com/kk_hirono/status/1317041618977878016 https://twitter.com/hirono_hideki/status/1316999347498700800  
+
+> いつの間にか表現の自由を失っていた日本弁護士連合会！当ブログ記事の削除を要求。 - Everyone says I love you ! https://t.co/0RcIWokuWi  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:56／2020/10/16 15:42 URL： https://twitter.com/kk_hirono/status/1317041633699844096 https://twitter.com/hirono_hideki/status/1316993015274090496  
+
+> - 2020年10月16日15時38分の登録： REGEXP：”アベ魔”／データベース登録済みツイート：2020年10月16日15時38分の記録：ユーザ・投稿：3／3件 https://t.co/KoQikyjS1P  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:56／2020/10/16 15:42 URL： https://twitter.com/kk_hirono/status/1317041760955084801 https://twitter.com/hirono_hideki/status/1316992988904476672  
+
+> - 2020年10月16日15時06分の登録： ＼₍ᐢꙬᐢ₎狸の金玉₍ᐢꙬᐢ₎　@inonianomezak＼弁護士なりたての頃、パイセンに連れて行って頂いたお店に後輩ちゃんを連れて行ける喜びプライスレス。。。 https://t.co/JfDzpST93r  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:56／2020/10/16 15:42 URL： https://twitter.com/kk_hirono/status/1317041768123097088 https://twitter.com/hirono_hideki/status/1316992962404978688  
+
+> - 2020年10月16日15時05分の登録： ＼深澤諭史　@fukazawas＼弁護士やっていると，特にネット上の表現トラブルについては，「これってスラップですよね？」みたいに聞かれることが非常に増えており，用語とし https://t.co/VenS4MBr9q  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:56／2020/10/16 15:42 URL： https://twitter.com/kk_hirono/status/1317041775324753920 https://twitter.com/hirono_hideki/status/1316992935854886912  
+
+> - 2020年10月16日15時04分の登録： ＼つまらむ　@km0bake＼なんでもかんでも吊せ吊せ！厳罰化！の人たちも「コロナを複数の他人に感染させたら罰金」というのはおかしいと分かるのか。う～ん。 https://t.co/Ckg3qFV5uG  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:56／2020/10/16 15:42 URL： https://twitter.com/kk_hirono/status/1317041789073645568 https://twitter.com/hirono_hideki/status/1316992909485338625  
+
+> - 2020年10月16日15時00分の登録： ＼宮武嶺　@raymiyatake＼大統領も逃げ出す質問をするアメリカのジャーナリズムと、安倍首相の「演説」を垂れ流すだけの日本、どちらが健全なのか。 https://t.co/1PFK6NKvR1  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:56／2020/10/16 15:42 URL： https://twitter.com/kk_hirono/status/1317041802424188928 https://twitter.com/hirono_hideki/status/1316992883098931207  
+
+> - 2020年10月16日14時44分の登録： REGEXP：”山口敬之”／データベース登録済みツイート：2020年10月16日14時36分の記録：ユーザ・投稿：211／1410件 https://t.co/RaLbXR1NMM  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:57／2020/10/16 15:42 URL： https://twitter.com/kk_hirono/status/1317041872041177091 https://twitter.com/hirono_hideki/status/1316992856695787520  
+
+> - 2020年10月16日14時12分の登録： ツイートの記録資料：＼法務検察・石川県警察宛＼／深澤諭史（@fukazawas）／”2020年10月15日”：68件 https://t.co/uL3VBADWX0  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:57／2020/10/16 15:42 URL： https://twitter.com/kk_hirono/status/1317041881205800961 https://twitter.com/hirono_hideki/status/1316992830322061312  
+
+> - 2020年10月16日14時12分の登録： ツイートの記録資料：＼法務検察・石川県警察宛＼／小倉秀夫（@chosakukenho）／”2020年10月15日”：65件 https://t.co/tBMqiGOPof  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:57／2020/10/16 15:42 URL： https://twitter.com/kk_hirono/status/1317041891616063490 https://twitter.com/hirono_hideki/status/1316992803847598080  
+
+> - 2020年10月16日14時12分の登録： ツイートの記録資料：＼法務検察・石川県警察宛＼／モトケン（@motoken_tw）／”2020年10月15日”：22件 https://t.co/1QHn3PZJwx  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:57／2020/10/16 15:38 URL： https://twitter.com/kk_hirono/status/1317041906690396161 https://twitter.com/hirono_hideki/status/1316991793032884229  
+
+> 2020年10月16日15時37分の実行記録 twitterAPI-search-lawList-mydql-add.rb "アベ魔" ツイート数：1/2050 リツイート数：1/2050 トータル：46 hirono_hideki 0／0件 kk_hirono 0／0件 s_hirono 0／0件  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜sneijderbot（みんなのぴえんちゃん🥺） 日時：2020-10-16 18:57／2020/10/16 11:53 URL： https://twitter.com/kk_hirono/status/1317041947479924736 https://twitter.com/sneijderbot/status/1316935181635301377  
+
+> 👑準強姦逮捕状の「山口敬之」氏、高級外車修理代を踏み倒し訴訟　地裁では敗訴  👑「Twitter不具合」「メディア欄 の不具合」「ブックマーク の不具合」で大荒れ、通信障害のもよう  📎鬼滅の映画 、 煉獄さん が話題に  📎池袋暴走｢上級国民批判｣異常なほど沸騰する訳  https://t.co/9IYAAVQovT  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:57／2020/10/16 15:22 URL： https://twitter.com/kk_hirono/status/1317041961115611136 https://twitter.com/hirono_hideki/status/1316987873116135424  
+
+> 「・・・・ちゃん、今のあなたは最低な子じゃないよ」　子ども未来法律事務所通信２６ - Everyone says I love you ! https://t.co/DDl87J57NQ  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:57／2020/10/16 15:21 URL： https://twitter.com/kk_hirono/status/1317041994418458624 https://twitter.com/hirono_hideki/status/1316987617330655235  
+
+> ショックです！！　すごいなぁ　癌と闘う徳岡さん。。。ぜひブログを訪問してください　!(^^)! ： ススムが進む https://t.co/acE9o0ouq8  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜digTV_japan（digTV） 日時：2020-10-16 18:57／2020/07/24 18:09 URL： https://twitter.com/kk_hirono/status/1317042075079077888 https://twitter.com/digTV_japan/status/1286589328903122944  
+
+> 事件当時には分かっていなかった新たな証拠や鑑定結果が出ており、もう一度メディアとして検証する意義はあるハズなのに… などと考えていたタイミングでのコロナ禍でした。 22年前の事件で当事者たちに語ってもらうハードルも高いですが、この際、思いっきりやってみたいと考えています。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜digTV_japan（digTV） 日時：2020-10-16 18:57／2020/07/24 18:09 URL： https://twitter.com/kk_hirono/status/1317042083648077824 https://twitter.com/digTV_japan/status/1286589327217057792  
+
+> しかし、その番組は現在まで放送されることはなく、後ほど長男から聞いたのは、「テレビでは既に判決が確定している事件について、冤罪の可能性を取り上げる番組はできないと上司からストップがかかった」と担当ディレクターから連絡があったということでした。  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜nakanori930（弁護士 中村憲昭） 日時：2020-10-16 18:58／2020/10/15 22:33 URL： https://twitter.com/kk_hirono/status/1317042097636085763 https://twitter.com/nakanori930/status/1316733850500825089  
+
+> 森達也氏のオウムのドキュメントと同じ展開。 見なきゃ。 https://t.co/ZGDpu3o0kR  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜uirousakura（桜ういろう） 日時：2020-10-16 18:58／2020/10/16 09:22 URL： https://twitter.com/kk_hirono/status/1317042113582804994 https://twitter.com/uirousakura/status/1316897356659318785  
+
+> 450万円の修理代はキツい。高いクルマ乗るなら保険くらい入っておけばいいのに。  準強姦逮捕状の「山口敬之」氏、高級外車修理代を踏み倒し訴訟　地裁では敗訴 https://t.co/ang40dDqQP #デイリー新潮  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:58／2020/10/16 14:24 URL： https://twitter.com/kk_hirono/status/1317042136672473088 https://twitter.com/hirono_hideki/status/1316973155546763265  
+
+> 2020年10月16日14時23分の実行記録 APIのリミットに達するので8500で処理と中断しました。 twitterAPI-search-lawList-mydql-add.rb "山口敬之" ツイート数：8/2050 リツイート数：6/2050 トータル：8500 hirono_hideki 0／0件 kk_hirono 0／0件 s_hirono 0／0件  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:58／2020/10/16 11:01 URL： https://twitter.com/kk_hirono/status/1317042229324599296 https://twitter.com/hirono_hideki/status/1316922275757740032  
+
+> - 2020年10月16日10時07分の登録： REGEXP：”大崎事件”／データベース登録済みツイートの検索：2020-10-13〜2020-10-15／2020年10月16日10時07分の記録：ユーザ・投稿：9／11件 https://t.co/nBDb1kHWGp  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:58／2020/10/16 11:01 URL： https://twitter.com/kk_hirono/status/1317042239751647232 https://twitter.com/hirono_hideki/status/1316922249165852672  
+
+> - 2020年10月16日09時40分の登録： ％@chosakukenho　小倉秀夫％実際そうなので。あなたが安倍政権の都合の悪いところを見たくないというだけのことです。 https://t.co/HdNYkM2ntm  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:58／2020/10/16 11:01 URL： https://twitter.com/kk_hirono/status/1317042269527011328 https://twitter.com/hirono_hideki/status/1316922222553038849  
+
+> - 2020年10月16日09時39分の登録： ％@chosakukenho　小倉秀夫％香山リカ先生対チャンネル桜事件を担当したものとして言うと、右派メディアって、基本的な取材ができていないんだということでクラクラするんですよ。 https://t.co/JMvKZQ78XA  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:58／2020/10/16 11:01 URL： https://twitter.com/kk_hirono/status/1317042288611127302 https://twitter.com/hirono_hideki/status/1316922195923341312  
+
+> - 2020年10月16日09時38分の登録： ％@chosakukenho　小倉秀夫％香山リカ先生対チャンネル桜事件を担当したものとして言うと、右派メディアって、基本的な取材ができていないんだということでクラクラするんですよ。 https://t.co/UXitGqbkHr  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:58／2020/10/16 09:52 URL： https://twitter.com/kk_hirono/status/1317042311075831810 https://twitter.com/hirono_hideki/status/1316904872084647938  
+
+> Twitterがサードパーティ向け新API「Twitter API v2」をリリース、これまで3分割されていたAPIが統合され面倒な移行が不要に - GIGAZINE https://t.co/H2P2nSUHfZ  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:58／2020/10/16 09:51 URL： https://twitter.com/kk_hirono/status/1317042331795615744 https://twitter.com/hirono_hideki/status/1316904542584377346  
+
+> 【Twitter】TwitterAPIの仕様変更などに関する話 - プロレス統計 https://t.co/qS4hkNzzUz  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:58／2020/10/16 09:42 URL： https://twitter.com/kk_hirono/status/1317042347855683584 https://twitter.com/hirono_hideki/status/1316902397550231560  
+
+> 新しく進化したTwitter APIの登場 https://t.co/BlF5NWPI8Q  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:59／2020/10/16 09:31 URL： https://twitter.com/kk_hirono/status/1317042396337635328 https://twitter.com/hirono_hideki/status/1316899488871575554  
+
+> - 2020年10月16日09時27分の登録： 2020-10-15の投稿一覧＼検察・石川県警察宛記録資料＼奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中：28件 https://t.co/QL7BqgviQi  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:59／2020/10/16 09:31 URL： https://twitter.com/kk_hirono/status/1317042405711904768 https://twitter.com/hirono_hideki/status/1316899462480949249  
+
+> - 2020年10月16日09時27分の登録： ツイートの記録資料：＼法務検察・石川県警察宛＼／深澤諭史（@fukazawas）／”2020年10月15日”：2件 https://t.co/h1WrupeyK7  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜hirono_hideki（奉納＼さらば弁護士鉄道・泥棒神社の物語） 日時：2020-10-16 18:59／2020/10/16 09:31 URL： https://twitter.com/kk_hirono/status/1317042422103166979 https://twitter.com/hirono_hideki/status/1316899436073611265  
+
+> - 2020年10月16日09時27分の登録： ツイートの記録資料：＼法務検察・石川県警察宛＼／モトケン（@motoken_tw）／”2020年10月15日”：1件 https://t.co/EURWNeY68G  
+
+　mhfという自作コマンドでエラーが出て，モトケンこと矢部善朗弁護士（京都弁護士会），小倉秀夫弁護士，深澤諭史弁護士のツイートのタイムラインがTwitterAPIで取得できずにいました。用事を済ませ，午後に戻るとこれまで通りに実行できるようになっていました。
+
+　遅い昼食となりましたが，Aコープ能都店に銀鱈の焼き魚が580円（税別）で売っていたので買ってきました。オーストラリア産となっていましたが，Aコープ能都店で銀鱈を見たのは初めてで，それもスーパーでは見たことのないカマの部分になっていました。石巻の食堂には銀カマ定食がありました。
+
+　次に，情報の正確性を担保するため記録したスクリーンショットのツイートになります。非常上告-最高検察庁御中_ツイッター（@s_hirono）のアカウントのツイートです。
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:06／2020/10/16 17:41 URL： https://twitter.com/kk_hirono/status/1317044348261814273 https://twitter.com/s_hirono/status/1317022843872243713  
+
+> 2002-11-02_152511＿別冊ジュリスト，シッカロール.jpg https://t.co/YrEUzj2GwA  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:40 URL： https://twitter.com/kk_hirono/status/1317044365089386496 https://twitter.com/s_hirono/status/1317022641589346305  
+
+> 2020-10-16-173220_2005年12月04日　02時10分35秒.jpg https://t.co/wdtvrqNdnz  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:40 URL： https://twitter.com/kk_hirono/status/1317044379798786048 https://twitter.com/s_hirono/status/1317022568885358592  
+
+> 2020-10-16-172946_2009年03月29日　19時15分38秒.jpg https://t.co/oGKPjxTvDT  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:40 URL： https://twitter.com/kk_hirono/status/1317044400439009280 https://twitter.com/s_hirono/status/1317022505966608384  
+
+> 2020-10-16-172946_2009年03月29日　19時15分38秒.jpg https://t.co/lH8hZLKa7M  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:40 URL： https://twitter.com/kk_hirono/status/1317044412006817793 https://twitter.com/s_hirono/status/1317022495929556992  
+
+> 2020-10-16-172340_サーバの状態について　-　hirono_hideki.jpg https://t.co/iFc8YK1iNS  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:39 URL： https://twitter.com/kk_hirono/status/1317044423029452805 https://twitter.com/s_hirono/status/1317022433493147648  
+
+> 2020-10-16-172340_サーバの状態について　-　hirono_hideki.jpg https://t.co/REj4xIUFj8  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:39 URL： https://twitter.com/kk_hirono/status/1317044458957852672 https://twitter.com/s_hirono/status/1317022423288459271  
+
+> 2020-10-16-172037_Everyone　says　I　love　you　!毎日、泣いて笑って喜んで哀しんでる、かなりラテンの血の濃い、そんな宮武嶺のエブリワンブロ.jpg https://t.co/xjSDZ9xWhP  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:39 URL： https://twitter.com/kk_hirono/status/1317044470999777282 https://twitter.com/s_hirono/status/1317022360516456449  
+
+> 2020-10-16-172037_Everyone　says　I　love　you　!毎日、泣いて笑って喜んで哀しんでる、かなりラテンの血の濃い、そんな宮武嶺のエブリワンブロ.jpg https://t.co/lhfB4V4Po8  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:39 URL： https://twitter.com/kk_hirono/status/1317044489848909825 https://twitter.com/s_hirono/status/1317022350630531072  
+
+> 2020-10-16-172021_スカスカ・アベ政治を許さない、護憲、個人の尊厳、少数者の人権擁護、法の支配、脱原発、格差社会の是正、辺野古新基地建設反対、絶対平和主義、朝鮮.jpg https://t.co/groF8587rW  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:39 URL： https://twitter.com/kk_hirono/status/1317044504575111168 https://twitter.com/s_hirono/status/1317022287812468736  
+
+> 2020-10-16-172021_スカスカ・アベ政治を許さない、護憲、個人の尊厳、少数者の人権擁護、法の支配、脱原発、格差社会の是正、辺野古新基地建設反対、絶対平和主義、朝鮮.jpg https://t.co/FLB0V5Piqq  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:39 URL： https://twitter.com/kk_hirono/status/1317044516499517441 https://twitter.com/s_hirono/status/1317022277821607936  
+
+> 2020-10-16-171910_これだけ報道陣がいるのに、表に出てくる報道の極端な少なさが、アベ忖度社会の象徴なんですねえ。　　　女性ジャーナリストの伊藤詩織さんが、元TB.jpg https://t.co/ld0eE7YSKp  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:38 URL： https://twitter.com/kk_hirono/status/1317044529317310466 https://twitter.com/s_hirono/status/1317022215200591873  
+
+> 2020-10-16-171910_これだけ報道陣がいるのに、表に出てくる報道の極端な少なさが、アベ忖度社会の象徴なんですねえ。　　　女性ジャーナリストの伊藤詩織さんが、元TB.jpg https://t.co/NzGxfDq3uJ  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:38 URL： https://twitter.com/kk_hirono/status/1317044544198733826 https://twitter.com/s_hirono/status/1317022205071388672  
+
+> 2020-10-16-170937_祝！伊藤詩織さんが「アベ友」山口敬之氏からの性交強制を主張・立証して全面勝訴！2019年12月18日　｜　社会とマスコミ.jpg https://t.co/o01JfJIi7y  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:38 URL： https://twitter.com/kk_hirono/status/1317044556253163520 https://twitter.com/s_hirono/status/1317022142437892096  
+
+> 2020-10-16-170937_祝！伊藤詩織さんが「アベ友」山口敬之氏からの性交強制を主張・立証して全面勝訴！2019年12月18日　｜　社会とマスコミ.jpg https://t.co/T1VKOshpQ9  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:38 URL： https://twitter.com/kk_hirono/status/1317044568370544640 https://twitter.com/s_hirono/status/1317022132316958721  
+
+> 2020-10-16-170631_大渕愛子弁護士の次にアクセスが多いと言われている法律家ブログ（自称）である当ブログなので、稲田朋美政調会長に政治献金していると名指しにされた.jpg https://t.co/OtjzU0HVw7  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:38 URL： https://twitter.com/kk_hirono/status/1317044582001958913 https://twitter.com/s_hirono/status/1317022069461196800  
+
+> 2020-10-16-170631_大渕愛子弁護士の次にアクセスが多いと言われている法律家ブログ（自称）である当ブログなので、稲田朋美政調会長に政治献金していると名指しにされた.jpg https://t.co/e9VY2B2GRd  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:38 URL： https://twitter.com/kk_hirono/status/1317044593808998402 https://twitter.com/s_hirono/status/1317022059793326080  
+
+> 2020-10-16-170545_いつの間にか表現の自由を失っていた日本弁護士連合会！当ブログ記事の削除を要求。2016年01月25日　｜　人権保障と平和.jpg https://t.co/sAUm6wJFvl  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:07／2020/10/16 17:38 URL： https://twitter.com/kk_hirono/status/1317044605523615744 https://twitter.com/s_hirono/status/1317021996639678466  
+
+> 2020-10-16-170545_いつの間にか表現の自由を失っていた日本弁護士連合会！当ブログ記事の削除を要求。2016年01月25日　｜　人権保障と平和.jpg https://t.co/jYmBPgNsa1  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:38 URL： https://twitter.com/kk_hirono/status/1317044617783595009 https://twitter.com/s_hirono/status/1317021987055706112  
+
+> 2020-10-16-170235_【祝】エブリワンブログが２５００万ＰＶ（アクセス）突破！【御礼】2016年01月31日　｜　娯楽.jpg https://t.co/H7rw3UkJx6  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:37 URL： https://twitter.com/kk_hirono/status/1317044631155036160 https://twitter.com/s_hirono/status/1317021923981717506  
+
+> 2020-10-16-170235_【祝】エブリワンブログが２５００万ＰＶ（アクセス）突破！【御礼】2016年01月31日　｜　娯楽.jpg https://t.co/uBKwl7YR3N  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:37 URL： https://twitter.com/kk_hirono/status/1317044645134659584 https://twitter.com/s_hirono/status/1317021913969876992  
+
+> 2020-10-16-170212_それから、アクセスが徐々に増加し、今では１日平均３万アクセスを数えるようになりました。.jpg https://t.co/SbuDjz74eR  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:37 URL： https://twitter.com/kk_hirono/status/1317044659508498432 https://twitter.com/s_hirono/status/1317021851281813509  
+
+> 2020-10-16-170212_それから、アクセスが徐々に増加し、今では１日平均３万アクセスを数えるようになりました。.jpg https://t.co/TU7f2A1JpE  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:37 URL： https://twitter.com/kk_hirono/status/1317044672250834944 https://twitter.com/s_hirono/status/1317021778158383106  
+
+> 2020-10-16-170122_おかげさまで、当ブログEveryone　says　I　love　you　!が２５００万アクセスを突破いたしました！.jpg https://t.co/nq7Kj4FJV7  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:36 URL： https://twitter.com/kk_hirono/status/1317044685152559105 https://twitter.com/s_hirono/status/1317021705525604352  
+
+> 2020-10-16-165052_財務省内部での犯罪行為に関連してとうとう職員が自殺する事態になったのに、セカンドキルともいうべきこの暴言。　これには、ネットで批判が殺到しま.jpg https://t.co/JM5QFfLoTt  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:36 URL： https://twitter.com/kk_hirono/status/1317044700533063680 https://twitter.com/s_hirono/status/1317021632569909248  
+
+> 2020-10-16-164958_２０１８年の産経新聞の正論大賞で、あの小川栄太郎氏と一緒に正論新風賞をもらったとのこと。右翼の本性を隠して中立っぽく語るのが卑怯。.jpg https://t.co/we1mlSVPP0  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:36 URL： https://twitter.com/kk_hirono/status/1317044714638487552 https://twitter.com/s_hirono/status/1317021559995813888  
+
+> 2020-10-16-164809_安倍内閣が総辞職して、安倍・麻生・菅氏らがみんな大臣でなくなる、その日まで。これからもぜひ毎日一回、上下ともクリックしてくださると大変うれし.jpg https://t.co/sI7Qr9XORt  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:36 URL： https://twitter.com/kk_hirono/status/1317044725065478147 https://twitter.com/s_hirono/status/1317021487325274112  
+
+> 2020-10-16-164524_こんなお粗末な法務大臣、安倍首相はどこから見つけてきたんですか？おまけに、日本の刑事司法が全世界から大注目されているときに、この森雅子法務大.jpg https://t.co/Jlrf8AL1OE  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:35 URL： https://twitter.com/kk_hirono/status/1317044735953891335 https://twitter.com/s_hirono/status/1317021414369619971  
+
+> 2020-10-16-164433_森雅子法務大臣をはじめ、日本の当局はこんな失態を演じるなら、いつものように口を閉ざしていた方が何万倍もマシでしたね。　産経新聞なんぞは、ゴー.jpg https://t.co/cCjpr5kUzz  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:35 URL： https://twitter.com/kk_hirono/status/1317044746850762752 https://twitter.com/s_hirono/status/1317021341522952192  
+
+> 2020-10-16-164300_「間違えたのは、容易に理解できる。あなたの（国の）司法制度はこうした原則を無視しているためだ」と皮肉ったんですね（笑）。.jpg https://t.co/nIeDnZ6Nb2  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:35 URL： https://twitter.com/kk_hirono/status/1317044758833897472 https://twitter.com/s_hirono/status/1317021268202254336  
+
+> 2020-10-16-164121_森雅子法相「ゴーン氏は無罪を証明すべきだ」と言ってしまい、ゴーン氏のフランス人弁護士に皮肉られて大恥をかく。ゴーン　is　　gone３　-　.jpg https://t.co/R6VPouYeJV  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:34 URL： https://twitter.com/kk_hirono/status/1317044769546072065 https://twitter.com/s_hirono/status/1317021195112337408  
+
+> 2020-10-16-163858_そもそも、生活保護は生存権という憲法上の基本的人権の具体的な表れで、憲法上最も重要な「権利」の一つです。　それを最初から不正受給容疑者のよう.jpg https://t.co/hmxVfqwIDV  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:34 URL： https://twitter.com/kk_hirono/status/1317044780447068161 https://twitter.com/s_hirono/status/1317021122253058048  
+
+> 2020-10-16-163706_法治国家においてはまず憲法と法律が守られてこその勧善懲悪。時代劇とは違うのですから、気に食わない人が懲らしめられてよかったではすみません。ぜ.jpg https://t.co/sOiNO9SHoB  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:34 URL： https://twitter.com/kk_hirono/status/1317044790601547778 https://twitter.com/s_hirono/status/1317021049356079104  
+
+> 2020-10-16-163621_今回の東京地裁の捜索差し押さえ令状発布により、捜査機関が令状請求をしたら、裁判所はほぼベルトコンベヤーのように令状を出してしまうのが当たり前.jpg https://t.co/76NS2yFyBc  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:34 URL： https://twitter.com/kk_hirono/status/1317044802391715841 https://twitter.com/s_hirono/status/1317020976668762112  
+
+> 2020-10-16-163424_特捜部が強制捜査を断行したことは、両者による弘中弁護士、ひいてはすべての刑事弁護人に対する見せしめの意味しかありません。.jpg https://t.co/SgXjgjP03s  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:33 URL： https://twitter.com/kk_hirono/status/1317044814622326785 https://twitter.com/s_hirono/status/1317020904073818113  
+
+> 2020-10-16-163135_まず第一に、強大な権力を有する国家機関である警察・検察と対峙して、被疑者・被告人の人権を守り、もって刑事司法全体の適正手続きを担保する弁護人.jpg https://t.co/U0ZD74nitx  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:33 URL： https://twitter.com/kk_hirono/status/1317044826626379776 https://twitter.com/s_hirono/status/1317020831319379968  
+
+> 2020-10-16-163002_東京地検特捜部による弘中惇一郎弁護士の事務所に対する強制捜査は、刑事弁護人に対する東京地裁と検察庁の見せしめと報復のための八つ当たりにすぎず.jpg https://t.co/YnfDktg3ez  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:33 URL： https://twitter.com/kk_hirono/status/1317044841675583488 https://twitter.com/s_hirono/status/1317020758745391105  
+
+> 2020-10-16-162122_”袴田事件”　（from：raymiyatake）.jpg https://t.co/6tkU3iJzp4  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:32 URL： https://twitter.com/kk_hirono/status/1317044853310590977 https://twitter.com/s_hirono/status/1317020686389448704  
+
+> 2020-10-16-162041_「”大崎事件”　（from：raymiyatake）」の検索結果はありません入力した単語の検索結果はありません。単語の入力を間違えたか、セン.jpg https://t.co/skEHNBjnQs  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:08／2020/10/16 17:32 URL： https://twitter.com/kk_hirono/status/1317044864811290625 https://twitter.com/s_hirono/status/1317020613349830656  
+
+> 2020-10-16-161927_被告人・弁護人側は、まさに最初の自白が採取される前後の段階で利益誘導や暴行・威圧があったと言っているのですが、肝心のそこの取り調べは録画がな.jpg https://t.co/wskU7WwSDr  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:09／2020/10/16 17:32 URL： https://twitter.com/kk_hirono/status/1317044878920970241 https://twitter.com/s_hirono/status/1317020540633194501  
+
+> 2020-10-16-161832_法廷で異例の７時間の録画再生が行なわれたと言いますが、最初に自白した場面の録画ではなく、しかも７時間なんて録画した取り調べの１０分の１、全取.jpg https://t.co/QrhjllG2gf  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:09／2020/10/16 17:32 URL： https://twitter.com/kk_hirono/status/1317044890614734849 https://twitter.com/s_hirono/status/1317020468063334401  
+
+> 2020-10-16-161648_「決定的な証拠がなかったが、録音・録画で判断が決まった」と話したという文字が目に飛び込んできて、目がくらむというか、目の前が真っ暗になりまし.jpg https://t.co/hRiL0om2D2  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:09／2020/10/16 17:31 URL： https://twitter.com/kk_hirono/status/1317044915507929089 https://twitter.com/s_hirono/status/1317020395413721088  
+
+> 2020-10-16-161444_被疑者の推定無罪も被害者の人権も両方大事→高畑裕太氏の人権も、被害者女性の人権も大事にする事件報道と、世論の受け止め方。.jpg https://t.co/bXk9nYao5z  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:09／2020/10/16 17:31 URL： https://twitter.com/kk_hirono/status/1317044928896139264 https://twitter.com/s_hirono/status/1317020322558738432  
+
+> 2020-10-16-161342_被疑者の推定無罪も被害者の人権も両方大事→高畑裕太氏の人権も、被害者女性の人権も大事にする事件報道と、世論の受け止め方。.jpg https://t.co/EZwuPX4IeD  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:09／2020/10/16 17:31 URL： https://twitter.com/kk_hirono/status/1317044941458083841 https://twitter.com/s_hirono/status/1317020250047565824  
+
+> 2020-10-16-155727_【生活保護は生存権という憲法上の人権！】小田原市の生活保護担当職員が「保護なめんな」ジャンパーを着用して、生活保護受給者を10年間も威圧。.jpg https://t.co/8rJZ3RJqDC  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:09／2020/10/16 17:30 URL： https://twitter.com/kk_hirono/status/1317044973309632518 https://twitter.com/s_hirono/status/1317020177158950912  
+
+> 2020-10-16-150434_深澤諭史さんがリツイート￼つまらむ@km0bake·21分なんでもかんでも吊せ吊せ！厳罰化！の人たちも「コロナを複数の他人に感染させたら罰金.jpg https://t.co/onz7x55spr  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:09／2020/10/16 17:30 URL： https://twitter.com/kk_hirono/status/1317044987498934272 https://twitter.com/s_hirono/status/1317020103913787396  
+
+> 2020-10-16-150306_宮武嶺さん　（@raymiyatake）　／　Twitter.jpg https://t.co/xdnUt3l21C  
+
+▶▶▶　kk_hironoのリツイート　▶▶▶  
+
+- RT kk_hirono（刑事告発・非常上告＿金沢地方検察庁御中）｜s_hirono（非常上告-最高検察庁御中_ツイッター） 日時：2020-10-16 19:09／2020/10/16 17:30 URL： https://twitter.com/kk_hirono/status/1317045050627354624 https://twitter.com/s_hirono/status/1317020031230779400  
+
+> 2020-10-16-144307_弁護士　中村憲昭@nakanori930·16時間森達也氏のオウムのドキュメントと同じ展開。見なきゃ。.jpg https://t.co/c8WJg4PmG4  
+
+　最後にしますが，ブログの記録になります。ずいぶん久しぶりに見かけたアカウントだと思ったのですが，記録には確かにかなりの空白期間がありました。いままで知らなかったことも多いのですが，なにかの部門のランキングでアクセス数が1位，2位になるという人気ブログのようです。
+
+　Twilogの方でブログ名を検索すると，いくつかツイートがあったのですが，デザインが変わっているためか全くに近く見覚えのないブログとなっていました。現在はテーマがハローウィンとなっていて，10月に入ってハローウィンの季節なのだと初めて気が付きました。
+
+```
+~ ❯❯❯ dp -p |grep raymiyatake
+ - 2017年09月27日21時04分の登録： ＼宮武嶺　@raymiyatake＼橋下徹氏が新潮社に敗訴。「『最も危険な政治家』橋下徹研究」は真実で公益目的あり。 http://hirono2014sk.blogspot.com/2017/09/raymiyatake.html
+ - 2017年10月18日13時43分の登録： ＼宮武嶺　@raymiyatake＼自白採取の録画が決定的証拠になった栃木女児殺害事件。自白偏重はえん罪の温床。危うい裁判員裁判。 http://hirono2014sk.blogspot.com/2017/10/raymiyatake.html
+ - 2017年12月20日21時08分の登録： ＼宮武嶺　@raymiyatake＼【実は四人目だった】歴代総理で真珠湾訪問は安倍首相が初めてと宣伝した安倍政権に乗せられたマスメディアは猛省すべきだ。 http://hirono2014sk.blogspot.com/2017/12/raymiyatake.html
+ - 2018年05月08日00時48分の登録： ＃宮武嶺　@raymiyatake＃のツイート／2018-05-01_1634〜2018-05-07_2334／法務検察・石川県警察宛参考資料／記録作成措置実行日時：2018年05月08日00時48分 http://hirono2014sk.blogspot.com/2018/05/raymiyatake2018-05-0116342018-05.html
+ - 2018年05月23日07時21分の登録： ＃宮武嶺　@raymiyatake＃のツイート／2018-05-16_1334〜2018-05-22_2334／法務検察・石川県警察宛参考資料／記録作成措置実行日時：2018年05月23日07時21分 http://hirono2014sk.blogspot.com/2018/05/raymiyatake2018-05-1613342018-05.html
+ - 2019年05月14日10時16分の登録： ＼raymiyatake　@raymiyatake＼右翼が大同団結した日本会議が改憲賛同署名700万人分を集める。市民と野党も共闘！大同団結！！ http://hirono2014sk.blogspot.com/2019/05/raymiyatakeraymiyatake700.html
+ - 2019年05月15日21時40分の登録： ＼raymiyatake　@raymiyatake＼ワタミの渡邊美樹氏ら、過労自殺の新入社員ご遺族と和解成立。なんと、死から8年目にやっと謝罪。 http://hirono2014sk.blogspot.com/2019/05/raymiyatakeraymiyatake8.html
+ - 2019年11月02日19時50分の登録： ＼raymiyatake　@raymiyatake＼またオリンピックを口実に今度は共謀罪を提出する安倍政権。五輪、テロ対策はオールマイティの大義名分じゃない。  http://hirono2014sk.blogspot.com/2019/11/raymiyatakeraymiyatake.html
+ - 2019年11月02日19時53分の登録： ＼raymiyatake　@raymiyatake＼【生活保護は生存権という憲法上の人権！】小田原市の生活保護担当職員が「保護なめんな」ジャンパーを着用して、生活保護受給 http://hirono2014sk.blogspot.com/2019/11/raymiyatakeraymiyatake_2.html
+ - 2019年11月02日19時54分の登録： ＼raymiyatake　@raymiyatake＼日弁連選挙管理委員会が削除させた、日弁連会長候補と稲田自民党政調会長に関する当ブログの記事はこれだ！ http://hirono2014sk.blogspot.com/2019/11/raymiyatakeraymiyatake_96.html
+ - 2019年11月02日19時55分の登録： ＼raymiyatake　@raymiyatake＼ダウンタウン松本人志氏がパワハラ過労自殺のアイドル（享年１６歳）に「これという原因がないから遺書がない」「死んだらみん http://hirono2014sk.blogspot.com/2019/11/raymiyatakeraymiyatake_74.html
+ - 2020年05月14日21時58分の登録： ＼raymiyatake　@raymiyatake＼時給３００円！低賃金・長時間労働・パワハラで１年に７０００人以上の外国人技能実習生が失踪している日本。 https:/ http://hirono2014sk.blogspot.com/2020/05/raymiyatakeraymiyatake-https.html
+ - 2020年10月16日15時00分の登録： ＼宮武嶺　@raymiyatake＼大統領も逃げ出す質問をするアメリカのジャーナリズムと、安倍首相の「演説」を垂れ流すだけの日本、どちらが健全なのか。 http://kk2020-09.blogspot.com/2020/10/raymiyatake.html
+ - 2020年10月16日16時00分の登録： TWEET：”2011-09-01 23:54〜2020-10-16 13:04”／宮武嶺（@raymiyatake）の検索（2020年10月16日16時00分の記録123件） http://kk2020-09.blogspot.com/2020/10/tweet2011-09-01-23542020-10-16.html
+~ ❯❯❯ 
+```
+
+* 
+
