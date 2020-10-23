@@ -1,0 +1,20 @@
+* 理解するのに時間が掛かった，C#で文字列から正規表現で部分文字列を抽出するRegexの使い方
+
+using System.Text.RegularExpressions;
+
+var url = "https://twitter.com/fukazawas/status/497913648950411264";
+
+var regex = new Regex(@"(?:https://twitter\.com/)(?<user>\w+?)(?:/status/.+)");
+var m = regex.Matches(url);
+
+for (Match m = regex.Match(url); m.Success; m = m.NextMatch())
+{
+    string user = m.Groups["user"].Value;
+    Console.WriteLine(user);
+}
+
+ pythonにも似たようなRegexのようなものがあって，Matchのようなもので値を取り出していましたが，全て1つの配列に入っていたように思います。このC#では，NextMatch()というメソッドを実行することで，次の値を読み込んでいるようです。
+
+ この仕組みを理解するのに，試行錯誤しながら2時間ほど時間を使いました。
+
+ 
