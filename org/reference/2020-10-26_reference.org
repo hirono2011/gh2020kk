@@ -1,0 +1,615 @@
+* PowerShell Coreで，指定したディレクトリーの一日前に更新したファイルを取得
+
+:CATEGORIES: PowerShell Core
+
+>|ps1|
+
+Get-ChildItem -Path /home/a66/a_screenshot/  -Recurse | Where-Object {
+   $_.LastWriteTime.Date -eq (Get-Date).Date.AddDays(-1)
+}
+||<
+
+参考：
+ - PowerShell/Get-Dateで前日、翌日、前月、翌月などの日付を取得する方法 - Windowsと暮らす https://win.just4fun.biz/?PowerShell/Get-Date%E3%81%A7%E5%89%8D%E6%97%A5%E3%80%81%E7%BF%8C%E6%97%A5%E3%80%81%E5%89%8D%E6%9C%88%E3%80%81%E7%BF%8C%E6%9C%88%E3%81%AA%E3%81%A9%E3%81%AE%E6%97%A5%E4%BB%98%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95
+
+ - PowerShell - powershellで更新日付が今日のファイルだけを抽出したい｜teratail https://teratail.com/questions/130323」
+
+```
+PS /home/a66/pwsh (09:39:53) > (Get-Date) | Get-Member
+
+
+   TypeName: System.DateTime
+
+Name                 MemberType     Definition
+----                 ----------     ----------
+Add                  Method         datetime Add(timespan value)
+AddDays              Method         datetime AddDays(double value)
+AddHours             Method         datetime AddHours(double value)
+AddMilliseconds      Method         datetime AddMilliseconds(double value)
+AddMinutes           Method         datetime AddMinutes(double value)
+AddMonths            Method         datetime AddMonths(int months)
+AddSeconds           Method         datetime AddSeconds(double value)
+AddTicks             Method         datetime AddTicks(long value)
+AddYears             Method         datetime AddYears(int value)
+CompareTo            Method         int CompareTo(System.Object value), int CompareTo(datetime value), int IComparable.CompareTo(System.Object obj), int ICom…
+Equals               Method         bool Equals(System.Object value), bool Equals(datetime value), bool IEquatable[datetime].Equals(datetime other)
+GetDateTimeFormats   Method         string[] GetDateTimeFormats(), string[] GetDateTimeFormats(System.IFormatProvider provider), string[] GetDateTimeFormats(…
+GetHashCode          Method         int GetHashCode()
+GetObjectData        Method         void ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.Stream…
+GetType              Method         type GetType()
+GetTypeCode          Method         System.TypeCode GetTypeCode(), System.TypeCode IConvertible.GetTypeCode()
+IsDaylightSavingTime Method         bool IsDaylightSavingTime()
+Subtract             Method         timespan Subtract(datetime value), datetime Subtract(timespan value)
+ToBinary             Method         long ToBinary()
+ToBoolean            Method         bool IConvertible.ToBoolean(System.IFormatProvider provider)
+ToByte               Method         byte IConvertible.ToByte(System.IFormatProvider provider)
+ToChar               Method         char IConvertible.ToChar(System.IFormatProvider provider)
+ToDateTime           Method         datetime IConvertible.ToDateTime(System.IFormatProvider provider)
+ToDecimal            Method         decimal IConvertible.ToDecimal(System.IFormatProvider provider)
+ToDouble             Method         double IConvertible.ToDouble(System.IFormatProvider provider)
+ToFileTime           Method         long ToFileTime()
+ToFileTimeUtc        Method         long ToFileTimeUtc()
+ToInt16              Method         short IConvertible.ToInt16(System.IFormatProvider provider)
+ToInt32              Method         int IConvertible.ToInt32(System.IFormatProvider provider)
+ToInt64              Method         long IConvertible.ToInt64(System.IFormatProvider provider)
+ToLocalTime          Method         datetime ToLocalTime()
+ToLongDateString     Method         string ToLongDateString()
+ToLongTimeString     Method         string ToLongTimeString()
+ToOADate             Method         double ToOADate()
+ToSByte              Method         sbyte IConvertible.ToSByte(System.IFormatProvider provider)
+ToShortDateString    Method         string ToShortDateString()
+ToShortTimeString    Method         string ToShortTimeString()
+ToSingle             Method         float IConvertible.ToSingle(System.IFormatProvider provider)
+ToString             Method         string ToString(), string ToString(string format), string ToString(System.IFormatProvider provider), string ToString(stri…
+ToType               Method         System.Object IConvertible.ToType(type conversionType, System.IFormatProvider provider)
+ToUInt16             Method         ushort IConvertible.ToUInt16(System.IFormatProvider provider)
+ToUInt32             Method         uint IConvertible.ToUInt32(System.IFormatProvider provider)
+ToUInt64             Method         ulong IConvertible.ToUInt64(System.IFormatProvider provider)
+ToUniversalTime      Method         datetime ToUniversalTime()
+TryFormat            Method         bool TryFormat(System.Span[char] destination, [ref] int charsWritten, System.ReadOnlySpan[char] format, System.IFormatPro…
+DisplayHint          NoteProperty   DisplayHintType DisplayHint=DateTime
+Date                 Property       datetime Date {get;}
+Day                  Property       int Day {get;}
+DayOfWeek            Property       System.DayOfWeek DayOfWeek {get;}
+DayOfYear            Property       int DayOfYear {get;}
+Hour                 Property       int Hour {get;}
+Kind                 Property       System.DateTimeKind Kind {get;}
+Millisecond          Property       int Millisecond {get;}
+Minute               Property       int Minute {get;}
+Month                Property       int Month {get;}
+Second               Property       int Second {get;}
+Ticks                Property       long Ticks {get;}
+TimeOfDay            Property       timespan TimeOfDay {get;}
+Year                 Property       int Year {get;}
+DateTime             ScriptProperty System.Object DateTime {get=if ((& { Set-StrictMode -Version 1; $this.DisplayHint }) -ieq  "Date")…
+
+```
+実行結果：
+```
+PS /home/a66/pwsh (09:40:09) > (Get-ChildItem -Path /home/a66/a_screenshot/  -Recurse | Where-Object {
+>>    $_.LastWriteTime.Date -eq (Get-Date).Date.AddDays(-1)
+>> })
+
+
+    Directory: /home/a66/a_screenshot/ts
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-----          2020/10/25    12:55         251269 2020-10-25-125521_モトケンさんがリツイート￼感熱紙（疑似太陽炉）@thermalpaper00·14時間先日の迷い子を助けた小学生のニュースの際の反応もそうだ.jpg
+                                                 
+-----          2020/10/25    12:57         261263 2020-10-25-125734_モトケンさんがリツイート￼弁護士　市川　寛@imarockcaster42·14時間「主語が大きい」との批判を受けるツイートが散見される今日.jpg
+                                                 
+-----          2020/10/25    12:58         251810 2020-10-25-125848_モトケン@motoken_tw返信先：　@joytamachanさん最初の発言者の発言内容が不十分だったり分かりにくい場合は、その点について.jpg
+                                                 
+-----          2020/10/25    13:14         217992 2020-10-25-131405_深澤諭史さんがリツイート￼アラン・スミシー@bluebuggle·31分注文していた本が届いた。.jpg
+-----          2020/10/25    13:30         226218 2020-10-25-133015_深澤諭史さんがリツイート￼リーチ一発ツモ裏１@luckymangan·1時間だって執行部が無惨様と変わらない言動してますし….jpg
+                                                 
+-----          2020/10/25    13:31         224672 2020-10-25-133122_@k_sawmen魔界を愛する普通の大魔王。人類滅亡を企む悪の若手弁護士の会、略して「めつわか」の代表です。めつわかメンバーは随時募集中です.jpg
+                                                 
+-----          2020/10/25    14:45         217377 2020-10-25-144555_gmail-sent。ps1　-　Visual　Studio　Code.jpg
+-----          2020/10/25    20:15         267628 2020-10-25-201510_深澤諭史さんがリツイート￼弁護士大西洋一@o2441·1時間御意。.jpg
+-----          2020/10/25    20:17         291011 2020-10-25-201705_深澤諭史さんがリツイート￼弁護士　中村憲昭@nakanori930·1時間全く同感です。あっという間に枯渇しちゃいますよね。長年かけて築いた.jpg
+                                                 
+-----          2020/10/25    20:18         291386 2020-10-25-201804_深澤諭史さんがリツイート￼きよし弁護士@n5M5ULaRFaY3Ayz·1時間この信頼がなくなってしまったら、弁護士業務も難しくなってしまい.jpg
+                                                 
+-----          2020/10/25    20:18         290955 2020-10-25-201841_深澤諭史さんがリツイート￼齋藤裕@bengyutakasaito·1時間禿同.jpg
+-----          2020/10/25    20:41         287167 2020-10-25-204104_深澤諭史さんがリツイート￼小倉秀夫@chosakukenho·3時間科学的知見をもとに政府の諮問に答申しまたは提言等をするだけの組織がどうや.jpg
+                                                 
+-----          2020/10/25    20:45         282189 2020-10-25-204543_小倉秀夫@chosakukenho被告人に下される刑が死刑ではなく無期懲役にとどまることによる遺族の不快感と、無実の被告人が死刑判決が下され.jpg
+                                                 
+-----          2020/10/25    20:50         287582 2020-10-25-205053_ふなざわひろゆき@FLetlRmdM7gs5vS死刑廃止論は、被害者遺族の痛切な思いは当然受け止めた上で（なお、死刑を望まない遺族もいる。原.jpg
+                                                 
+-----          2020/10/25    20:51         263362 2020-10-25-205138_小倉秀夫@chosakukenho初期捜査段階でガバッとかき集めた資料の中に被告人が真犯人であることを疑わせるものがあっても、これを弁護人に.jpg
+                                                 
+-----          2020/10/25    20:58         282012 2020-10-25-205853_￼新田はちろう（富山県知事候補）@nitta8chan·21時間富山県知事候補の新田はちろうです。投票前にぜひご覧ください。.jpg
+                                                 
+-----          2020/10/25    20:59         299675 2020-10-25-205920_新田はちろう（富山県知事候補）@nitta8chan富山県知事選挙に立候補した新田はちろうです。県政に民間企業の当たり前を取り入れ、将来世代.jpg
+                                                 
+-----          2020/10/25    20:59         327684 2020-10-25-205939_石井　たかかず（富山県知事）@ishii_takakazu5石井隆一です。危機こそチャンス！アフター・コロナ時代のモデル県となる、人が輝く「.jpg
+                                                 
+-----          2020/10/25    21:34         240222 2020-10-25-213423_豪弁　足立敬太　@大事なのは感謝と恩返しだ@keita_adachi札幌は〜まーあかん、汚れとる　はんかくさい病気がはやっとる.jpg
+                                                 
+-----          2020/10/25    21:38         317367 2020-10-25-213808_豪弁　足立敬太　@大事なのは感謝と恩返しださんがリツイート￼たろう　teacher@tomo_law_·2時間被疑者国選が開始する前、「当地.jpg
+                                                 
+-----          2020/10/25    21:39         294217 2020-10-25-213902_豪弁　足立敬太　@大事なのは感謝と恩返しだ@keita_adachi·1時間現職知事が8時で落選確実ってどういうこと.jpg
+                                                 
+-----          2020/10/25    21:50         386548 2020-10-25-215046_ＮＨＫスペシャル公式@nhk_n_sp·18　d’oct。【ただいま放送中】　＃NHKスペシャル　「香港　激動の記録～市民と“自由”の行方～.jpg
+                                                 
+-----          2020/10/25    21:51         391993 2020-10-25-215141_ＮＨＫスペシャル公式@nhk_n_sp·10月18日【ただいま放送中】　＃NHKスペシャル　「香港　激動の記録～市民と“自由”の行方～」番組.jpg
+                                                 
+-----          2020/10/25    23:43         278444 2020-10-25-234353_モトケン@motoken_tw返信先：　@jupiterthunder_さん,　@MC6809EOS9さん君のツイートは見る価値がないので私.jpg
+                                                 
+-----          2020/10/25    23:51         233611 2020-10-25-235145_小倉秀夫@Hideo_Ogura戦争賛美云々以前に、政教分離的にまずくないですかね。「知覧特攻平和観音堂等慰霊碑にて、慰霊式或いは鎮魂式とい.jpg
+                                                 
+-----          2020/10/25    23:57         419684 2020-10-25-235725_奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中_2020：　REGEXP：”観音”／データベース登録済みツイート：2020年10月.jpg
+                                                 
+-----          2020/10/25    23:58         415325 2020-10-25-235838_奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中_2020：　REGEXP：”観音”／データベース登録済みツイート：2020年10月.jpg
+                                                 
+
+PS /home/a66/pwsh (09:41:45) > 
+```
+
+* PowerShell Coreで，指定したディレクトリー内の画像ファイルを正規表現で検索し，画像ビューアソフトで開くスクリプト
+
+:CATEGORIES: PowerShell Core
+
+　昨日の夕方遅めの時間に宇出津新港に買い物に出掛ける前に作成し終えたスクリプトですが，2箇所コードを追加しました。範囲指定の書式のチェックと，始まりが終わりより大きい場合に値を入れ替える処理です。
+
+　自分用なのでけっこう適当に作っていますが，Linuxの環境を前提にしています。画像ビューアにはeogというコマンドを使っています。標準では入っていないですが，aptでインストールできると思います。
+
+>|ps1|
+#!/snap/bin/pwsh
+Param(
+	[String]$targetPath = "/home/a66/a_screenshot/ts",
+	[String]$test,
+	[String]$regex = "^200[1-3]-..-...*\.jpg$",
+	[String] $No = "False",
+	[String] $View = "False"
+)
+
+if ($No -Eq "True") {
+	[Int]$i = 1
+	Get-ChildItem -Path $targetPath -Recurse  -Include *.jpg,*.jpeg,*.png | Where-Object { $_.name -match  $regex }| % { $n = $_.name; echo "$i $($_.FullName)"; $i += 1; }
+	$i = $Null
+	exit
+}
+
+if ($View -Eq "True") {
+	[String[]]$list = Get-ChildItem -Path $targetPath -Recurse  -Include *.jpg,*.jpeg,*.png | Where-Object { $_.name -match  $regex }| % { $n = $_.name; echo "$($_.FullName)"; }
+	if ($list.Length -eq 0) { Write-Host "該当なし"; exit;}
+
+	[Int]$i = 1
+	$list | % { Write-Host "${i} $($list[$i - 1])"; $i += 1; }
+
+	$list = $list -ne $Null
+	Write-Host "$($list.length)件取得しました。画像ビューアで表示する範囲を指定（例：9-13，1つの場合は9だけ）"
+	[string]$renge = Read-Host
+	if ($renge -notmatch "^([0-9]+-[0-9]+|[0-9]+)$")
+	{	Write-Host "書式が違います。"; exit; }
+	
+	if ($renge.IndexOf('-') -ge 0) {
+		[Int]$StartPoint = $renge.split('-')[0] - 1
+		[Int]$EndPoint = $renge.split('-')[1] - 1
+		if ($StartPoint -gt $EndPoint) { $tmp1 = $StartPoint; $tmp2 = $EndPoint; $StartPoint = $tmp2; $EndPoint = $tmp1; }
+		for($i=$StartPoint; $i -le $EndPoint; $i++) {
+			eog $list[$i]
+		}
+		exit
+
+	} else {
+		eog $list[[Int]$renge]
+		exit
+	}
+}
+
+if (! [string]::IsNullOrEmpty($test)) {
+	Write-Host '何もしません。'
+	exit
+}
+
+Get-ChildItem -Path $targetPath -Recurse  -Include *.jpg,*.jpeg,*.png | Where-Object { $_.name -match  $regex }| % { $n = $_.name; echo "$($_.FullName)";}
+
+Write-Host "# {$($regex))}で検索しました。"
+
+||<
+
+実行結果：
+```
+PS /home/a66/pwsh> ./jpg-filename-search.ps1 -regex '2020-10-25.*' -View True
+
+1 /home/a66/a_screenshot/ts/2020-10-25-125521_モトケンさんがリツイート￼感熱紙（疑似太陽炉）@thermalpaper00·14時間先日の迷い子を助けた小学生のニュースの際の反応もそうだ.jpg
+2 /home/a66/a_screenshot/ts/2020-10-25-125734_モトケンさんがリツイート￼弁護士　市川　寛@imarockcaster42·14時間「主語が大きい」との批判を受けるツイートが散見される今日.jpg
+3 /home/a66/a_screenshot/ts/2020-10-25-125848_モトケン@motoken_tw返信先：　@joytamachanさん最初の発言者の発言内容が不十分だったり分かりにくい場合は、その点について.jpg
+4 /home/a66/a_screenshot/ts/2020-10-25-131405_深澤諭史さんがリツイート￼アラン・スミシー@bluebuggle·31分注文していた本が届いた。.jpg
+5 /home/a66/a_screenshot/ts/2020-10-25-133015_深澤諭史さんがリツイート￼リーチ一発ツモ裏１@luckymangan·1時間だって執行部が無惨様と変わらない言動してますし….jpg
+6 /home/a66/a_screenshot/ts/2020-10-25-133122_@k_sawmen魔界を愛する普通の大魔王。人類滅亡を企む悪の若手弁護士の会、略して「めつわか」の代表です。めつわかメンバーは随時募集中です.jpg
+7 /home/a66/a_screenshot/ts/2020-10-25-144555_gmail-sent。ps1　-　Visual　Studio　Code.jpg
+8 /home/a66/a_screenshot/ts/2020-10-25-201510_深澤諭史さんがリツイート￼弁護士大西洋一@o2441·1時間御意。.jpg
+9 /home/a66/a_screenshot/ts/2020-10-25-201705_深澤諭史さんがリツイート￼弁護士　中村憲昭@nakanori930·1時間全く同感です。あっという間に枯渇しちゃいますよね。長年かけて築いた.jpg
+10 /home/a66/a_screenshot/ts/2020-10-25-201804_深澤諭史さんがリツイート￼きよし弁護士@n5M5ULaRFaY3Ayz·1時間この信頼がなくなってしまったら、弁護士業務も難しくなってしまい.jpg
+11 /home/a66/a_screenshot/ts/2020-10-25-201841_深澤諭史さんがリツイート￼齋藤裕@bengyutakasaito·1時間禿同.jpg
+12 /home/a66/a_screenshot/ts/2020-10-25-204104_深澤諭史さんがリツイート￼小倉秀夫@chosakukenho·3時間科学的知見をもとに政府の諮問に答申しまたは提言等をするだけの組織がどうや.jpg
+13 /home/a66/a_screenshot/ts/2020-10-25-204543_小倉秀夫@chosakukenho被告人に下される刑が死刑ではなく無期懲役にとどまることによる遺族の不快感と、無実の被告人が死刑判決が下され.jpg
+14 /home/a66/a_screenshot/ts/2020-10-25-205053_ふなざわひろゆき@FLetlRmdM7gs5vS死刑廃止論は、被害者遺族の痛切な思いは当然受け止めた上で（なお、死刑を望まない遺族もいる。原.jpg
+15 /home/a66/a_screenshot/ts/2020-10-25-205138_小倉秀夫@chosakukenho初期捜査段階でガバッとかき集めた資料の中に被告人が真犯人であることを疑わせるものがあっても、これを弁護人に.jpg
+16 /home/a66/a_screenshot/ts/2020-10-25-205853_￼新田はちろう（富山県知事候補）@nitta8chan·21時間富山県知事候補の新田はちろうです。投票前にぜひご覧ください。.jpg
+17 /home/a66/a_screenshot/ts/2020-10-25-205920_新田はちろう（富山県知事候補）@nitta8chan富山県知事選挙に立候補した新田はちろうです。県政に民間企業の当たり前を取り入れ、将来世代.jpg
+18 /home/a66/a_screenshot/ts/2020-10-25-205939_石井　たかかず（富山県知事）@ishii_takakazu5石井隆一です。危機こそチャンス！アフター・コロナ時代のモデル県となる、人が輝く「.jpg
+19 /home/a66/a_screenshot/ts/2020-10-25-213423_豪弁　足立敬太　@大事なのは感謝と恩返しだ@keita_adachi札幌は〜まーあかん、汚れとる　はんかくさい病気がはやっとる.jpg
+20 /home/a66/a_screenshot/ts/2020-10-25-213808_豪弁　足立敬太　@大事なのは感謝と恩返しださんがリツイート￼たろう　teacher@tomo_law_·2時間被疑者国選が開始する前、「当地.jpg
+21 /home/a66/a_screenshot/ts/2020-10-25-213902_豪弁　足立敬太　@大事なのは感謝と恩返しだ@keita_adachi·1時間現職知事が8時で落選確実ってどういうこと.jpg
+22 /home/a66/a_screenshot/ts/2020-10-25-215046_ＮＨＫスペシャル公式@nhk_n_sp·18　d’oct。【ただいま放送中】　＃NHKスペシャル　「香港　激動の記録～市民と“自由”の行方～.jpg
+23 /home/a66/a_screenshot/ts/2020-10-25-215141_ＮＨＫスペシャル公式@nhk_n_sp·10月18日【ただいま放送中】　＃NHKスペシャル　「香港　激動の記録～市民と“自由”の行方～」番組.jpg
+24 /home/a66/a_screenshot/ts/2020-10-25-234353_モトケン@motoken_tw返信先：　@jupiterthunder_さん,　@MC6809EOS9さん君のツイートは見る価値がないので私.jpg
+25 /home/a66/a_screenshot/ts/2020-10-25-235145_小倉秀夫@Hideo_Ogura戦争賛美云々以前に、政教分離的にまずくないですかね。「知覧特攻平和観音堂等慰霊碑にて、慰霊式或いは鎮魂式とい.jpg
+26 /home/a66/a_screenshot/ts/2020-10-25-235725_奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中_2020：　REGEXP：”観音”／データベース登録済みツイート：2020年10月.jpg
+27 /home/a66/a_screenshot/ts/2020-10-25-235838_奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中_2020：　REGEXP：”観音”／データベース登録済みツイート：2020年10月.jpg
+27件取得しました。画像ビューアで表示する範囲を指定（例：9-13，1つの場合は9だけ）
+9-11
+PS /home/a66/pwsh> 
+```
+
+　久しぶりにxargsとeogの組み合わせでやってみたところ，以前とは挙動が違ったようで画像ファイルが１つだけ表示され，ビューアを閉じるとそれでコマンドの実行が終わっていました。これがきっかけで思わぬ発見がありました。１つは浜木綿弁右衛門という法クラのアカウントのことです。
+
+　それが，「locate -r '2017-11.*.jpg' |grep ブロック|xargs eog」というコマンドの実行で，１つだけ表示されていたスクリーンショットの画像ファイルになります。初めは気にしなかったのですが，10回ほど繰り返しがあって問題に気が付きました。
+
+　最初はeogというアプリの動作が変わったのかと思い，コマンドラインから実行できる軽量の画像ビューアを２つインストールしました。sudo apt install xli　と　sudo apt install feh　です。fehの方は，以前に使ったような憶えがあります。
+
+　eog，xli，fetと動作は同じでした。xargsの方で調べたところ，オプションを付けることで，以前のように連続して画像が開けるようになりました。
+
+* xargsコマンドで，検索結果の画像ファイルを連続して画像ビューアアプリで開く，初めて知ったxargsのオプション２つ
+
+:CATEGORIES: Linux
+
+% locate -r '2017-11.*.jpg' |grep ブロック|xargs -L 1 -p  eog
+
+```
+コマンド実行例
+コマンドA | xargs -L 1 コマンドB
+
+（コマンドAの出力1行ごとにコマンドBを実行する）
+
+grep -l bash /etc/* 2>/dev/null | xargs -L 1 -p head -3
+
+（headコマンドの実行内容をユーザーが1行ずつ確認してから実行する）
+
+［source：］【 xargs 】コマンド――コマンドラインを作成して実行する：Linux基本コマンドTips（176） - ＠IT https://www.atmarkit.co.jp/ait/articles/1801/19/news014.html#sample3
+```
+
+　locate -r '2017-11.*.jpg' |grep ブロック|wc -lの結果は76となっていました。パイプでxargs -L 1 -p  eogに渡すと，表示された画像を閉じるたびに，次の画像が表示され続けます。終了させるにはプロンプトが戻らない状態でCtrl-cで強制シグナルを送ります。
+
+　xargsの-pオプションは，１つずつ確認をしながら実行するものでした。遅くても平成17年頃にはxargsコマンドを使うようになっていたと思いますが，今日まで知らなかったのが不思議で，新発見となりました。
+
+実行例：
+```
+(py37_env) ➜  ~ locate -r '2017-11.*.jpg' |grep ブロック|cat -n|sed -E 's/^\s+//'
+1       /kk/k_スクリーンショット/2017/2017-11/2017-11-03-101838_浜木綿弁窯衛門　@leplusallez　＞　手合いなとど素人に評されるいわれはないのでブロック、非常上告だかしらんけど一生やってろどうせ.jpg
+2       /kk/k_スクリーンショット/2017/2017-11/2017-11-05-061640_ブロックされているため、@lawer_hamachanさんのフォローや@lawer_hamachanさんのツイートの表示はできません。詳細は.jpg
+3       /kk/k_スクリーンショット/2017/2017-11/2017-11-05-061724_ブロックされているため、@bluebuggleさんのフォローや@bluebuggleさんのツイートの表示はできません。詳細はこちら.jpg
+4       /kk/k_スクリーンショット/2017/2017-11/2017-11-05-112201_ブロックされているため、@kamatatylawさんのフォローや@kamatatylawさんのツイートの表示はできません。詳細はこちら.jpg
+5       /kk/k_スクリーンショット/2017/2017-11/2017-11-06-042534_ブロックされているため、@un_co_the2ndさんのフォローや@un_co_the2ndさんのツイートの表示はできません。詳細はこちら.jpg
+6       /kk/k_スクリーンショット/2017/2017-11/2017-11-06-225553_ブロックされているため、@rippy08さんのフォローや@rippy08さんのツイートの表示はできません。詳細はこちら.jpg
+7       /kk/k_スクリーンショット/2017/2017-11/2017-11-07-114924_ブロックされているため、@GUv4i6さんのフォローや@GUv4i6さんのツイートの表示はできません。詳細はこちら.jpg
+8       /kk/k_スクリーンショット/2017/2017-11/2017-11-07-115020_ブロックされているため、@ekinan_lawyerさんのフォローや@ekinan_lawyerさんのツイートの表示はできません。詳細はこち.jpg
+9       /kk/k_スクリーンショット/2017/2017-11/2017-11-08-043621_ブロックされているため、@stdauxさんのフォローや@stdauxさんのツイートの表示はできません。詳細はこちら.jpg
+10      /kk/k_スクリーンショット/2017/2017-11/2017-11-08-134647_ブロックされているため、@kyuhi_realizeさんのフォローや@kyuhi_realizeさんのツイートの表示はできません。詳細はこち.jpg
+11      /kk/k_スクリーンショット/2017/2017-11/2017-11-11-123432_ブロックされているため、@cinghiale7474さんのフォローや@cinghiale7474さんのツイートの表示はできません。詳細はこち.jpg
+12      /kk/k_スクリーンショット/2017/2017-11/2017-11-13-201706_ブロックされているため、@obiekt_JPさんのフォローや@obiekt_JPさんのツイートの表示はできません。詳細はこちら.jpg
+13      /kk/k_スクリーンショット/2017/2017-11/2017-11-16-024847_ブロックされているため、@tomo_law_さんのフォローや@tomo_law_さんのツイートの表示はできません。詳細はこちら.jpg
+14      /kk/k_スクリーンショット/2017/2017-11/2017-11-16-133847_ブロックされているため、@naotarou1981さんのフォローや@naotarou1981さんのツイートの表示はできません。詳細はこちら.jpg
+15      /kk/k_スクリーンショット/2017/2017-11/2017-11-16-180327_ブロックされているため、@kyuhi_realizeさんのフォローや@kyuhi_realizeさんのツイートの表示はできません。詳細はこち.jpg
+16      /kk/k_スクリーンショット/2017/2017-11/2017-11-18-210001_ブロックされているため、@TasukuMizunoさんのフォローや@TasukuMizunoさんのツイートの表示はできません。詳細はこちら.jpg
+17      /kk/k_スクリーンショット/2017/2017-11/2017-11-19-124018_ブロックされているため、@kame_ishiさんのフォローや@kame_ishiさんのツイートの表示はできません。詳細はこちら.jpg
+18      /kk/k_スクリーンショット/2017/2017-11/2017-11-20-175825_ブロックされているため、@t_hiraiさんのフォローや@t_hiraiさんのツイートの表示はできません。詳細はこちら.jpg
+19      /kk/k_スクリーンショット/2017/2017-11/2017-11-21-052836_ブロックされているため、@uzw1978さんのフォローや@uzw1978さんのツイートの表示はできません。詳細はこちら.jpg
+20      /kk/k_スクリーンショット/2017/2017-11/2017-11-21-053127_う　　＞　ブロックしたやつのことについては言及しないというセルフルールを作っているがたまに破りそうになることがある.jpg
+21      /kk/k_スクリーンショット/2017/2017-11/2017-11-21-065800_ブロックされているため、@sioMinnさんのフォローや@sioMinnさんのツイートの表示はできません。詳細はこちら.jpg
+22      /kk/k_スクリーンショット/2017/2017-11/2017-11-21-073032_ブロックされているため、@calowyerさんのフォローや@calowyerさんのツイートの表示はできません。詳細はこちら.jpg
+23      /kk/k_スクリーンショット/2017/2017-11/2017-11-21-073058_ブロックされているため、@calowyerさんのフォローや@calowyerさんのツイートの表示はできません。詳細はこちら.jpg
+24      /kk/k_スクリーンショット/2017/2017-11/2017-11-21-075336_う　　＞　ブロックしたやつのことについては言及しないというセルフルールを作っているがたまに破りそうになることがある.jpg
+25      /kk/k_スクリーンショット/2017/2017-11/2017-11-21-163915_ブロックされているため、@kumaemon9さんのフォローや@kumaemon9さんのツイートの表示はできません。詳細はこちら.jpg
+26      /kk/k_スクリーンショット/2017/2017-11/2017-11-23-131904_ブロックされているため、@yuikayanoさんのフォローや@yuikayanoさんのツイートの表示はできません。詳細はこちら.jpg
+27      /kk/k_スクリーンショット/2017/2017-11/2017-11-24-151918_kk_hirono　＝＞　ブロックされているため、@yiwaponさんのフォローや@yiwaponさんのツイートの表示はできません。詳細はこ.jpg
+28      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-162942_ブロックされているため、@juntaba1さんのフォローや@juntaba1さんのツイートの表示はできません。詳細はこちら.jpg
+29      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-163007_ブロックされているため、@leplusallezさんのフォローや@leplusallezさんのツイートの表示はできません。詳細はこちら.jpg
+30      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-163030_ブロックされているため、@mackckckckさんのフォローや@mackckckckさんのツイートの表示はできません。詳細はこちら.jpg
+31      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-163051_ブロックされているため、@makotoakishigeさんのフォローや@makotoakishigeさんのツイートの表示はできません。詳細は.jpg
+32      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-163123_ブロックされているため、@nodahayatoさんのフォローや@nodahayatoさんのツイートの表示はできません。詳細はこちら.jpg
+33      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-163149_ブロックされているため、@noooooooorthさんのフォローや@noooooooorthさんのツイートの表示はできません。詳細はこちら.jpg
+34      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-163212_ブロックされているため、@okumuraosakaさんのフォローや@okumuraosakaさんのツイートの表示はできません。詳細はこちら.jpg
+35      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-163235_ブロックされているため、@torakiti0405さんのフォローや@torakiti0405さんのツイートの表示はできません。詳細はこちら.jpg
+36      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164245_ブロックされているため、@GUv4i6さんのフォローや@GUv4i6さんのツイートの表示はできません。詳細はこちら.jpg
+37      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164306_ブロックされているため、@KTetsさんのフォローや@KTetsさんのツイートの表示はできません。詳細はこちら.jpg
+38      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164329_ブロックされているため、@NOSUKE0607さんのフォローや@NOSUKE0607さんのツイートの表示はできません。詳細はこちら.jpg
+39      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164348_ブロックされているため、@SATOMasakoさんのフォローや@SATOMasakoさんのツイートの表示はできません。詳細はこちら.jpg
+40      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164409_ブロックされているため、@TasukuMizunoさんのフォローや@TasukuMizunoさんのツイートの表示はできません。詳細はこちら.jpg
+41      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164433_ブロックされているため、@bluebuggleさんのフォローや@bluebuggleさんのツイートの表示はできません。詳細はこちら.jpg
+42      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164457_ブロックされているため、@calowyerさんのフォローや@calowyerさんのツイートの表示はできません。詳細はこちら.jpg
+43      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164600_ブロックされているため、@calowyerさんのフォローや@calowyerさんのツイートの表示はできません。詳細はこちら.jpg
+44      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164622_ブロックされているため、@ekinan_lawyerさんのフォローや@ekinan_lawyerさんのツイートの表示はできません。詳細はこち.jpg
+45      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164649_ブロックされているため、@ekinan_lawyerさんのフォローや@ekinan_lawyerさんのツイートの表示はできません。詳細はこち.jpg
+46      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164720_ブロックされているため、@fukazawasさんのフォローや@fukazawasさんのツイートの表示はできません。詳細はこちら.jpg
+47      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164750_ブロックされているため、@k_sawmenさんのフォローや@k_sawmenさんのツイートの表示はできません。詳細はこちら.jpg
+48      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164822_ブロックされているため、@kamatatylawさんのフォローや@kamatatylawさんのツイートの表示はできません。詳細はこちら.jpg
+49      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164850_ブロックされているため、@kame_ishiさんのフォローや@kame_ishiさんのツイートの表示はできません。詳細はこちら.jpg
+50      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164917_ブロックされているため、@kasumi_shiroさんのフォローや@kasumi_shiroさんのツイートの表示はできません。詳細はこちら.jpg
+51      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-164948_ブロックされているため、@keita_adachiさんのフォローや@keita_adachiさんのツイートの表示はできません。詳細はこちら.jpg
+52      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165025_ブロックされているため、@kotadonさんのフォローや@kotadonさんのツイートの表示はできません。詳細はこちら.jpg
+53      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165054_ブロックされているため、@kumaemon9さんのフォローや@kumaemon9さんのツイートの表示はできません。詳細はこちら.jpg
+54      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165125_ブロックされているため、@kyuhi_realizeさんのフォローや@kyuhi_realizeさんのツイートの表示はできません。詳細はこち.jpg
+55      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165156_ブロックされているため、@lawer_hamachanさんのフォローや@lawer_hamachanさんのツイートの表示はできません。詳細は.jpg
+56      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165303_ブロックされているため、@motoken_twさんのフォローや@motoken_twさんのツイートの表示はできません。詳細はこちら.jpg
+57      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165333_ブロックされているため、@nan5oさんのフォローや@nan5oさんのツイートの表示はできません。詳細はこちら.jpg
+58      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165412_ブロックされているため、@naotarou1981さんのフォローや@naotarou1981さんのツイートの表示はできません。詳細はこちら.jpg
+59      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165441_ブロックされているため、@nobu2794さんのフォローや@nobu2794さんのツイートの表示はできません。詳細はこちら.jpg
+60      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165506_ブロックされているため、@penology_nagataさんのフォローや@penology_nagataさんのツイートの表示はできません。詳.jpg
+61      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165535_ブロックされているため、@rippy08さんのフォローや@rippy08さんのツイートの表示はできません。詳細はこちら.jpg
+62      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165604_ブロックされているため、@sakamotomasayukさんのフォローや@sakamotomasayukさんのツイートの表示はできません。詳.jpg
+63      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165654_ブロックされているため、@sanngatuusaginoさんのフォローや@sanngatuusaginoさんのツイートの表示はできません。詳.jpg
+64      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165723_ブロックされているため、@sioMinnさんのフォローや@sioMinnさんのツイートの表示はできません。詳細はこちら.jpg
+65      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165750_ブロックされているため、@sollamameさんのフォローや@sollamameさんのツイートの表示はできません。詳細はこちら.jpg
+66      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165827_ブロックされているため、@sspmiさんのフォローや@sspmiさんのツイートの表示はできません。詳細はこちら.jpg
+67      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165852_ブロックされているため、@stdauxさんのフォローや@stdauxさんのツイートの表示はできません。詳細はこちら.jpg
+68      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165920_ブロックされているため、@t_hiraiさんのフォローや@t_hiraiさんのツイートの表示はできません。詳細はこちら.jpg
+69      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-165946_ブロックされているため、@thermalpaper00さんのフォローや@thermalpaper00さんのツイートの表示はできません。詳細は.jpg
+70      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-170018_ブロックされているため、@tomo_law_さんのフォローや@tomo_law_さんのツイートの表示はできません。詳細はこちら.jpg
+71      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-170045_ブロックされているため、@torakiti0405さんのフォローや@torakiti0405さんのツイートの表示はできません。詳細はこちら.jpg
+72      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-170113_ブロックされているため、@un_co_the2ndさんのフォローや@un_co_the2ndさんのツイートの表示はできません。詳細はこちら.jpg
+73      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-170142_ブロックされているため、@uwaaaaさんのフォローや@uwaaaaさんのツイートの表示はできません。詳細はこちら.jpg
+74      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-170212_ブロックされているため、@uzw1978さんのフォローや@uzw1978さんのツイートの表示はできません。詳細はこちら.jpg
+75      /kk/k_スクリーンショット/2017/2017-11/2017-11-28-170240_ブロックされているため、@yjochiさんのフォローや@yjochiさんのツイートの表示はできません。詳細はこちら.jpg
+76      /kk/k_スクリーンショット/2017/2017-11/2017-11-29-223919_ブロックされているため、@amneris84さんのフォローや@amneris84さんのツイートの表示はできません。詳細はこちら.jpg
+(py37_env) ➜  ~ 
+```
+
+　何年か前，WindowsのPowerShellで一度だけスクリプトを作成したことがあって，時刻と名前をファイル名にスクリーンショットを作成するコマンドでした。URLを１つずつ読み込んでブラウザで開き，スクリーンショットを記録するスクリプトも作れそうです。
+
+　ブラウザを起動せずにスクリーンショットだけ作成するスクリプトというのも作ったことがあります。撮影日時の記録ができなかったのですぐに使わなくなりました。
+
+　やはり「2017-11-03-101838_浜木綿弁窯衛門　@leplusallez　＞　手合いなとど素人に評されるいわれはないのでブロック、非常上告だかしらんけど一生やってろどうせ.jpg」が先頭にありましたが，コマンドの履歴を保存したファイルから貼り付けて実行したのが始まりです。
+
+　しかし，76件のファイルの先頭にあったというのも巡り合わです。
+
+* Linux（Ubuntu）のMonoでC＃のCoreTweetをコンパイル
+
+:CATEGORIES: C＃,TwitterAPI
+
+　ファイルのタイムスタンプをみたところ，24日の未明のようですが，Monoでコンパイルが成功したものと思っていました。ところがあると思っていたexeの実行ファイルがどこにも見当たらず，成功した形跡はありませんでした。
+
+　Googleで調べながら試したところ，同じディレクトリにCoreTweet.dll置いた前提で，mcs -r:CoreTweet.dll Program.cs　とやるとProgram.exeが一瞬で出来上がりました。実行は，mono Program.exe　です。
+
+tu motoken_tw 200  0.26s user 0.06s system 36% cpu 0.903 total
+
+mono Program.exe  0.43s user 0.02s system 56% cpu 0.792 total
+
+　どちらも200件の最新ツイートを読み込むものですが，Rubyのスクリプトの方がCPUの使用率が少し高めのものの実行時間が短いようです。コンパイルした実行ファイルの方が早いと言われているので意外な結果でした。
+
+参考：
+ - 【 time 】コマンド（外部コマンド）――コマンドの実行時間と実行時のシステムリソース情報を計測する：Linux基本コマンドTips（252） - ＠IT https://www.atmarkit.co.jp/ait/articles/1810/25/news022.html  
+
+```
+-r：System.Numerics オプションを追加して、コンパイルします。
+
+$ mcs -r：System.Numerics sample.cs
+$ mono sample.exe
+20
+BigInteger を使うことができました。
+
+以下、まとめです。
+
+C# コードに using System.Numerics を追加する。
+mcs コマンドに -r：System.Numerics を追加する。
+
+［source：］Mono で BigInteger を使う - C#練習日記 http://noriok.hatenadiary.jp/entry/2015/08/29/132345
+```
+
+　ソースファイルのusingは,次の３つだけで追加はしていません。
+
+```
+using System;
+using System.Collections.Generic;
+using System.IO;
+```
+
+　ネットの情報をみると，次のようなものがありましたが，usingの仕組み自体をまだ理解しておらず，pythonのimportなどとは違っているような感じです。
+
+```
+using CoreTweet;
+using static CoreTweet.OAuth;
+```
+
+* Linux（Ubuntu）のC＃のソースコードを，dotnetコマンドでコンパイル
+
+:CATEGORIES: C＃
+
+　先日，dotnetコマンドをインストールして，Googleで調べながらやったのですが，dotnet run Program.cs　という実行方法しか情報が見つかりませんでした。それも，dotnet new console -o twitterTl　という感じでプロジェクトのようなものを作って始める方法でした。
+
+　今回見つけたのは次の方法で，ソースコードのようにも読めるのですが，5340行目にその記載がありました。次の引用部分です。
+
+```
+/usr/bin/dotnet build CoreTweet/CoreTweet.csproj -c Release
+
+［source：］CoreTweet/CoreTweet - Travis CI https://travis-ci.org/github/CoreTweet/CoreTweet
+```
+
+　csprojというファイルの編集方法は，この前見かけていたので，次のように2箇所を追加しました。
+
+```
+(py37_env) ➜  twitterTlmono cat twitterTlmono.csproj 
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+    <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreTweet" Version="1.0.0.483" />
+  </ItemGroup>
+
+
+</Project>
+```
+
+　今気がついたのですが，2箇所のうち <TargetFramework>netcoreapp3.1</TargetFramework>の部分は先に記述があったようです。重複しているようですがエラーは出ませんでした。そして，次のように実行しました。
+
+/usr/bin/dotnet build twitterTlmono.csproj -c Release
+
+　次のように出来ていたDLLファイルをmonoで実行しました。パスは相対パスになります。
+
+mono bin/Release/netcoreapp3.1/twitterTlmono.dll
+
+　実行結果の終わりの部分と，処理時間の計測です。
+
+```
+---------195---------
+TW モトケン(@motoken_tw) 日時： 2020/10/13 8:31:47 URL： https://twitter.com/motoken_tw/status/1315797340775571456
+> @mLs74aRlKz6ck5P わたしにみっともないところがあるとすれば、君のようなアカウントの相手をしていることだろうな(^^;
+
+---------196---------
+TW モトケン(@motoken_tw) 日時： 2020/10/13 8:16:28 URL： https://twitter.com/motoken_tw/status/1315793487736958976
+> @mLs74aRlKz6ck5P 君、「壊れたレコードのように」という言葉を知ってるかい？
+
+---------197---------
+TW モトケン(@motoken_tw) 日時： 2020/10/13 8:06:57 URL： https://twitter.com/motoken_tw/status/1315791091556261888
+> @mLs74aRlKz6ck5P その手の話をする、嘘だと言うことがすぐ分かるよw
+> 
+> ところで、君は、「自分の見解」というものを何も述べていないね。述べられるだけの知識も理解もないんだと思うけどね。
+> それで、議論がどうのと言っても嗤われるだけだよ。
+
+---------198---------
+TW モトケン(@motoken_tw) 日時： 2020/10/13 7:59:53 URL： https://twitter.com/motoken_tw/status/1315789313968271360
+> @mLs74aRlKz6ck5P いや、君とは議論してないしw
+> 君が何も勉強してないことは丸わかりなので。
+
+---------199---------
+TW モトケン(@motoken_tw) 日時： 2020/10/13 7:57:06 URL： https://twitter.com/motoken_tw/status/1315788615310401537
+> @mLs74aRlKz6ck5P 読んでないけど、あなたが読んでるのなら、その「本質的差異」とやらを説明してみてほしいな。
+
+---------200---------
+TW モトケン(@motoken_tw) 日時： 2020/10/13 7:53:09 URL： https://twitter.com/motoken_tw/status/1315787622388699137
+> @mLs74aRlKz6ck5P うん、それで？
+
+mono bin/Release/netcoreapp3.1/twitterTlmono.dll  0.46s user 0.06s system 61% cpu 0.854 total
+```
+
+* Linux（Ubuntu）で，指定したアカウントのタイムライン200件ツイートを取得（CoreTweet）するC＃のプログラム
+
+:CATEGORIES: C＃
+
+　元はWindows10のVisual Studioで，.NET Coreとかのコンソールとして作成したものでした。そちらはnamespaceがConsoleAppTwitterとなっていました。これがC＃で作成した初めてのプログラムですが，Windows10では先にGUIでウィンドウ処理を行っていました。
+
+>|cs|
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+namespace ttt
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string tweetText = TweetsGet();
+            Console.WriteLine(tweetText);
+        }
+
+        static string TweetsGet()
+        {
+            //var screenName = cmb1.SelectedValue.ToString();
+            var screenName = "motoken_tw";
+            var str = "";
+
+            var tokens = CoreTweet.Tokens.Create(
+                ("ConsumerKey", 
+		"ConsumerSecret",
+		"AccessToken",
+		"AccessSecret");
+
+            // var session = CoreTweet.OAuth.Authorize(("ConsumerKey", "ConsumerSecret", "AccessToken", "AccessSecret");
+            // var url = session.AuthorizeUri; // -> user open in browser
+            // //get pin
+            // tokens = CoreTweet.OAuth.GetTokens(session, "PIN code");
+
+
+            var parm = new Dictionary<string, object>();
+            parm["count"] = 200;
+            parm["screen_name"] = screenName;
+            parm["tweet_mode"] = "extended";
+
+            var tweets = tokens.Statuses.UserTimeline(parm);
+
+            int i = 1;
+
+            foreach (var tweet in tweets)
+            {
+                if (tweet.RetweetedStatus == null)
+                {
+                    var tw_url = "";
+                    tw_url = "https://twitter.com/" + tweet.User.ScreenName + "/status/" + tweet.Id;
+                    str = str + string.Format("\n---------{0:D3}---------\n", i);
+                    str = str + "TW " + tweet.User.Name + "(@" + tweet.User.ScreenName + ") 日時： " + tweet.CreatedAt.DateTime.AddHours(9) + " URL： " + tw_url + "\r\n" + System.Text.RegularExpressions.Regex.Replace(
+    tweet.FullText, "^", "> ", System.Text.RegularExpressions.RegexOptions.Multiline) + "\r\n";
+
+                }
+                else
+                {
+                    var tw_url = "https://twitter.com/" + tweet.User.ScreenName + "/status/" + tweet.Id;
+                    var rt_url = "https://twitter.com/" + tweet.RetweetedStatus.User.ScreenName + "/status/" + tweet.RetweetedStatus.Id;
+                    str = str + string.Format("\n---------{0:D3}---------\n", i);
+                    str = str + "RT " + tweet.User.Name + "(@" + tweet.User.ScreenName + ") ｜" + tweet.RetweetedStatus.User.Name + "(@" + tweet.RetweetedStatus.User.ScreenName + ") 日時：" + tweet.CreatedAt.DateTime.AddHours(9) + "／" + tweet.RetweetedStatus.CreatedAt.DateTime.AddHours(9) + " URL： " + tw_url + " " + rt_url + "\r\n" + System.Text.RegularExpressions.Regex.Replace(
+    tweet.FullText, "^", "> ", System.Text.RegularExpressions.RegexOptions.Multiline) + "\r\n";
+
+                }
+
+                i = i + 1;
+            }
+
+            return str;
+
+        }
+
+    }
+
+}
+
+||<
+
+　tweet.CreatedAt.DateTime.AddHours(9)　という部分でツイートの時刻を日本時間に変更しています。
+
+　よくみると改行コードが\r\nでWindowsのままになっていましたが，Linuxの環境でも問題はなさそうでした。
+
+　他に簡潔な方法があるのかもしれないですが，System.Text.RegularExpressions.Regex.Replace(tweet.FullText, "^", "> ", System.Text.RegularExpressions.RegexOptions.Multiline)　は，行頭に引用符を付けるだけの処理です。
+
+　Rubyだと#{tweet_text.gsub(/^/,'> ')}　だけで終わる処理です。
+
+```
+using System.Text.RegularExpressions;
+……省略……
+bool result = Regex.IsMatch("{検査対象文字列}", "{正規表現パターン}");
+
+［source：］正規表現を使って文字列がパターンに一致するか調べるには？［C#／VB］：.NET TIPS - ＠IT https://www.atmarkit.co.jp/ait/articles/1701/25/news025.html
+```
+
+　やはり，ここでusingの出番があったようです。「using System.Text.RegularExpressions;」と宣言を行い，Regex.IsMatch("{検査対象文字列}", "{正規表現パターン}");と使う方法があるようです。
+
+　次の方法の方がよさそうです。
+
+```
+using System.Text.RegularExpressions;
+……省略……
+var rx = new Regex("{正規表現パターン}", RegexOptions.Compiled);
+bool result = rx.IsMatch("{検査対象文字列}" );
+
+［source：］正規表現を使って文字列がパターンに一致するか調べるには？［C#／VB］：.NET TIPS - ＠IT https://www.atmarkit.co.jp/ait/articles/1701/25/news025.html
+```
+
+　VBでは，C＃のusingの部分が，Importsとなるようですが，Visual Basicでは見たことがなく，使った覚えがありません。
+
+* 
+

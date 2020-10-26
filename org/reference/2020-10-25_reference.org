@@ -1,0 +1,95 @@
+* PowerShell Coreでgmailアカウントでメール（添付ファイル付き）を送信するスクリプト
+
+:CATEGORIES: PowerShell
+
+参考：
+ - ソースコードの式の途中で改行する方法［PowerShell］ ： バヤシタ https://bayashita.com/p/entry/show/87
+ - 19.複数行の入力を取得する < 自作関数 Tips メニュー < PowerShell Tips < HIRO's.NET https://hiros-dot.net/PowerShell/myfunction/myfunction19.htm
+ - PowerShellでメールを送る（［Send-MailMessageコマンドレット］ GmailからYahooメールへ） - Qiita https://qiita.com/hisabo/items/077431a9c30d38eae37a
+
+>|ps1|
+#!/snap/bin/pwsh
+
+Param(
+    [String]$Subject,
+    [String]$Body,
+    [String]$Attachments,
+    [Int]$Test = 0,
+    [Int]$Read = 0
+)
+
+$passwordFile = [String]"パスワードを保存したファイルのフルパス"
+
+if ( $Read -Ne 0 ) {
+    Write-Host "送信するメールの本文を入力してください。終了は.のみで改行です。"
+    $Body = Read-MultiLine
+}
+
+if ([string]::IsNullOrEmpty($Subject) -Or [string]::IsNullOrEmpty($Body)) {
+    Write-Host "gmail-sent.ps1 -Subject """" -Body """""
+    Write-Host "or"
+    Write-Host "gmail-sent.ps1 -Subject """" -Body """" -Attachments 添付ファイル名"
+    exit
+}
+
+
+if ( $Test -Ne 0 ) {
+    Write-Host "Subject:"
+    Write-Host $Subject
+    Write-Host "Body:"
+    Write-Host $Body
+
+    exit
+}
+
+# 送信元
+$From = "送信者のGoogleアカウント@gmail.com"
+$To  = @("送信先メールアドレス")
+
+# メールサーバ設定
+$MailSv = "smtp.gmail.com" #ipaddress or host name
+$Port = 587
+$Encode = "UTF8"
+
+#$pwd = "XXXX" | ConvertTo-SecureString -AsPlainText -Force
+$password = [String](Get-Content $passwordFile)[3].Substring(2)
+$pwd = ConvertTo-SecureString $password -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential $From,$pwd
+
+if (! [string]::IsNullOrEmpty($Attachments)) {
+    Send-MailMessage -From $From -To $To -SmtpServer $MailSv -Credential $cred -Encoding $Encode -Port $Port -UseSsl -Subject $Subject -Body $Body -Attachments $Attachments
+} else {
+    Send-MailMessage -From $From -To $To -SmtpServer $MailSv -Credential $cred -Encoding $Encode -Port $Port -UseSsl -Subject $Subject -Body $Body
+}
+
+function Read-MultiLine ( [string]$prompt, [string]$endChar = "." ){
+	if ( $prompt.Length -gt 0 ){ Write-Host ($prompt + ":") }
+
+	while(1)
+	{
+		$ip += Read-Host
+		if ($ip.SubString($ip.Length - $endChar.Length) -eq $endChar){ break; }
+		else{$ip += "`n"}
+    }
+
+	return $ip.Substring(0, $ip.Length - $endChar.Length)
+}
+||<
+
+実行結果：
+```
+PS /home/a66/pwsh> gmail-sent.ps1 -Subject "送信メール（$(Get-Date -Format F)）" -Body "メールの本文" -Attachments ./t1.txt
+
+WARNING: The command 'Send-MailMessage' is obsolete. This cmdlet does not guarantee secure connections to SMTP servers. While there is no immediate replacement available in PowerShell, we recommend you do not use Send-MailMessage at this time. See https://aka.ms/SendMailMessage for more information.
+PS /home/a66/pwsh> 
+```
+
+　決まってワーニングが出るのですが，翻訳すると，「Send-MailMessageは廃止になりました。代替手段はないですが現時点では使わないことを推奨します。」などとありました。
+
+　PowerShell Coreの引数は簡単に名前付けが利用できて，引数の順番を意識しないで済むのも楽です。コマンド履歴を再利用する場合，この利便性を強く感じました。
+
+　添付ファイルの送信を目的とする場合，メールの本文は必要がないという考えですが，引数に「-Read 1」をつけることで，複数行での入力を出来るようにしました。半角の.だけの行が入力の終了になります。
+
+　参考にさせてもらったページは他の記号になっていましたが，平成18年頃によく使っていたコマンドラインのsendmailが半角の.を本文入力の終了にしていたように思います。
+
+* 
