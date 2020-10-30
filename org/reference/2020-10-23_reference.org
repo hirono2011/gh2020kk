@@ -17,4 +17,4 @@ for (Match m = regex.Match(url); m.Success; m = m.NextMatch())
 
  この仕組みを理解するのに，試行錯誤しながら2時間ほど時間を使いました。
 
- 
+ * 
