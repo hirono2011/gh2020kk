@@ -1,0 +1,754 @@
+* 「BFG Repo-Cleaner」というjavaのjarファイルを使ってGitのリポジトリから不用なディレクトリ，ファイルを削除
+
+:CATEGORIES: Git
+
+　情報自体余り多くなかったですが，ネットで書いてある情報ではうまくいくものがなく，別に「--no-blob-protection」というオプション指定を見つけて，試したところ実行できました。他にも分かりづらい使用方法のコマンドでした。
+
+　リポジトリからディレクトリやファイルは削除されますが，git logの履歴は残っていました。個人的に，この存在したという履歴は残ってくれた方が好都合です。懸念したのは誤ってTwitterAPIのアクセストークンや，パスワードのあるファイルが，リポジトリに残ることです。
+
+　先日，うるおぼえの記憶からsnapと間違ってnpmを実行してしまい。指定した名前のパッケージが存在したらしくnode_modulesのディレクトリが出来ていたらしく，気が付かずにリポジトリにpushしてしまいました。
+
+　コマンドは次のような実行履歴となっていますが，初めの方は間違ったものがあります。
+
+```
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11$ h|grep 'java -jar bfg.jar '
+ 1852  java -jar bfg.jar --delete-files 参考資料/弁護士/package-lock.json
+ 1853  java -jar bfg.jar --delete-files 参考資料/弁護士/package-lock.json*
+ 1857  java -jar bfg.jar --delete-files package-lock.json gh2020kk
+ 1901  java -jar bfg.jar --delete-files *.txt aaaa.git
+ 1902  java -jar bfg.jar --delete-files *motoken* aaaa.git
+ 1915  java -jar bfg.jar --delete-files *motoken* aaaa
+ 1930  java -jar bfg.jar --delete-files *.txt kk2020_11
+ 1940  java -jar bfg.jar --delete-files *motoken* kk2020_11
+ 1941  java -jar bfg.jar  --strip-blobs-bigger-than 1M kk2020_11
+ 1945  java -jar bfg.jar  --strip-blobs-bigger-than 1M kk2020_11
+ 1984  java -jar bfg.jar  --strip-blobs-bigger-than 1M kk2020_11.git
+ 2018  java -jar bfg.jar --delete-files "*.MOV"  --no-blob-protection kk2020_11.git
+ 2030  h|grep 'java -jar bfg.jar '
+```
+
+　上記のコマンド履歴の2018がうまくいったものです。別のタブで実行したので上記の履歴にはないですが，次がディレクトリを削除したコマンドです。このコマンド履歴のややこしさでzshを使うようになったのですが，WSL2では，他に問題もありそうなのでbashを使っています。
+
+```
+ 2019  java -jar bfg.jar --delete-folders 'node_modules'  --no-blob-protection kk2020_11.git
+```
+
+　「--no-blob-protection」というオプションを付けないで実行すると，次のような表示になります。
+
+```
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ java -jar bfg.jar --delete-files "あ.md" kk2020_11.git
+
+Using repo : /home/a66/git/kk2020_11.git
+
+Found 9 objects to protect
+Found 2 commit-pointing refs : HEAD, refs/heads/main
+
+Protected commits
+-----------------
+
+These are your protected commits, and so their contents will NOT be altered:
+
+ * commit c74ff178 (protected by 'HEAD') - contains 14 dirty files : 
+        - 弁護士/モトケンこと矢部善朗弁護士（京都弁護士会）/あ.md (0 B)
+        - 弁護士/中村元弥弁護士（旭川弁護士会）/あ.md (0 B)
+        - ...
+
+WARNING: The dirty content above may be removed from other commits, but as
+the *protected* commits still use it, it will STILL exist in your repository.
+
+Details of protected dirty content have been recorded here :
+
+/home/a66/git/kk2020_11.git.bfg-report/2020-11-01/00-54-54/protected-dirt/
+
+If you *really* want this content gone, make a manual commit that removes it,
+and then run the BFG on a fresh copy of your repo.
+       
+
+Cleaning
+--------
+
+Found 3 commits
+Cleaning commits:       100% (3/3)
+Cleaning commits completed in 22 ms.
+
+BFG aborting: No refs to update - no dirty commits found??
+
+
+
+--
+You can rewrite history in Git - don't let Trump do it for real!
+Trump's administration has lied consistently, to make people give up on ever
+being told the truth. Don't give up: https://www.theguardian.com/us-news/trump-administration
+--
+
+
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ 
+```
+
+　 --no-blob-protectionをつけると，「Commit Tree-Dirt History」などという情報が出てきて，「git reflog expire --expire=now --all && git gc --prune=now --aggressive」というのも出て来ます。
+
+　ややこしいのですが，上記のコマンドは「kk2020_11.git」というディレクトリの一つ上で行っており，そこにbfg.jarを置いています。上記のメッセージが出たら「kk2020_11.git」に入り，上記の「git reflog expire」で始まるコマンドを実行するようです。
+
+　そして，「git push」を実行し，リモートリポジトリに変更を反映させるようです。しかし，すでにcloneしたローカルリポジトリでは，「git pull」が出来ないので，新たにcloneを行いました。--miroorオプションを付けないで行います。このオプション自体初めて知りました。
+
+　削除するファイルの指定もパスではなく，ワイルドカードでのファイル名の検索となるようです。試したところ14MBから動画ファイルのコミットで75MBに増えていたローカルのリポジトリのディレクトリの容量が，bfg.jarを使った削除で，15MBに戻っていました。
+
+　"あ.md"というような日本語ファイル名の指定も全く問題なさそうです。kk2020_11.gitというGitHubのリポジトリはテスト用に作ったもので，削除する予定です。同名のリポジトリを作り直すことはあるかもしれません。ファイルのコピーでのリポジトリの作り直しも考えています。
+
+
+>|sh|
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ git clone https://github.com/hirono2011/kk2020_11.git
+Cloning into 'kk2020_11'...
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 18 (delta 2), reused 18 (delta 2), pack-reused 0
+Unpacking objects: 100% (18/18), 204.35 KiB | 427.00 KiB/s, done.
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ cd kk2020_11/
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11$ ls
+README.md  dot-auto-git-push.sh  弁護士
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11$ du -h
+4.0K    ./弁護士/佐々木亮弁護士（東京弁護士会）
+4.0K    ./弁護士/中村元弥弁護士（旭川弁護士会）
+4.0K    ./弁護士/小倉秀夫弁護士（東京弁護士会）
+4.0K    ./弁護士/モトケンこと矢部善朗弁護士（京都弁護士会）
+788K    ./弁護士/深澤諭史弁護士（第二東京弁護士会）
+8.0K    ./弁護士/高橋雄一郎弁護士（東京弁護士会）
+32K     ./弁護士/櫻井光政弁護士（第二東京弁護士会）
+4.0K    ./弁護士/平裕介弁護士（東京弁護士会）
+4.0K    ./弁護士/村松謙弁護士（神奈川県弁護士会）
+4.0K    ./弁護士/北周士弁護士（東京弁護士会）
+4.0K    ./弁護士/野田隼人弁護士（滋賀弁護士会）
+4.0K    ./弁護士/渡辺輝人弁護士（京都弁護士会）
+4.0K    ./弁護士/市川寛弁護士（第二東京弁護士会）
+4.0K    ./弁護士/向原栄大朗弁護士（福岡県弁護士会）
+4.0K    ./弁護士/秋重実弁護士（京都弁護士会）
+4.0K    ./弁護士/嶋﨑量（神奈川県弁護士会）
+884K    ./弁護士
+4.0K    ./.git/branches
+56K     ./.git/hooks
+8.0K    ./.git/objects/7d
+8.0K    ./.git/objects/7c
+12K     ./.git/objects/44
+8.0K    ./.git/objects/5b
+8.0K    ./.git/objects/48
+8.0K    ./.git/objects/07
+4.0K    ./.git/objects/pack
+8.0K    ./.git/objects/2a
+8.0K    ./.git/objects/ce
+92K     ./.git/objects/02
+8.0K    ./.git/objects/4e
+8.0K    ./.git/objects/60
+8.0K    ./.git/objects/80
+8.0K    ./.git/objects/a7
+4.0K    ./.git/objects/info
+156K    ./.git/objects/eb
+12K     ./.git/objects/e6
+8.0K    ./.git/objects/83
+380K    ./.git/objects
+8.0K    ./.git/info
+4.0K    ./.git/refs/tags
+8.0K    ./.git/refs/remotes/origin
+12K     ./.git/refs/remotes
+8.0K    ./.git/refs/heads
+28K     ./.git/refs
+8.0K    ./.git/logs/refs/remotes/origin
+12K     ./.git/logs/refs/remotes
+8.0K    ./.git/logs/refs/heads
+24K     ./.git/logs/refs
+32K     ./.git/logs
+536K    ./.git
+1.4M    .
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11$ ls
+IMG_6023.MOV  IMG_6827.MOV  README.md  ZIMG_6259.MOV  dot-auto-git-push.sh  弁護士
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11$ du -h
+4.0K    ./弁護士/佐々木亮弁護士（東京弁護士会）
+4.0K    ./弁護士/中村元弥弁護士（旭川弁護士会）
+4.0K    ./弁護士/小倉秀夫弁護士（東京弁護士会）
+4.0K    ./弁護士/モトケンこと矢部善朗弁護士（京都弁護士会）
+788K    ./弁護士/深澤諭史弁護士（第二東京弁護士会）
+8.0K    ./弁護士/高橋雄一郎弁護士（東京弁護士会）
+32K     ./弁護士/櫻井光政弁護士（第二東京弁護士会）
+4.0K    ./弁護士/平裕介弁護士（東京弁護士会）
+4.0K    ./弁護士/村松謙弁護士（神奈川県弁護士会）
+4.0K    ./弁護士/北周士弁護士（東京弁護士会）
+4.0K    ./弁護士/野田隼人弁護士（滋賀弁護士会）
+4.0K    ./弁護士/渡辺輝人弁護士（京都弁護士会）
+4.0K    ./弁護士/市川寛弁護士（第二東京弁護士会）
+4.0K    ./弁護士/向原栄大朗弁護士（福岡県弁護士会）
+4.0K    ./弁護士/秋重実弁護士（京都弁護士会）
+4.0K    ./弁護士/嶋﨑量（神奈川県弁護士会）
+884K    ./弁護士
+4.0K    ./.git/branches
+56K     ./.git/hooks
+8.0K    ./.git/objects/7d
+8.0K    ./.git/objects/7c
+12K     ./.git/objects/44
+8.0K    ./.git/objects/5b
+8.0K    ./.git/objects/48
+8.0K    ./.git/objects/07
+4.0K    ./.git/objects/pack
+8.0K    ./.git/objects/2a
+8.0K    ./.git/objects/ce
+92K     ./.git/objects/02
+8.0K    ./.git/objects/4e
+8.0K    ./.git/objects/60
+8.0K    ./.git/objects/80
+8.0K    ./.git/objects/a7
+4.0K    ./.git/objects/info
+156K    ./.git/objects/eb
+12K     ./.git/objects/e6
+8.0K    ./.git/objects/83
+380K    ./.git/objects
+8.0K    ./.git/info
+4.0K    ./.git/refs/tags
+8.0K    ./.git/refs/remotes/origin
+12K     ./.git/refs/remotes
+8.0K    ./.git/refs/heads
+28K     ./.git/refs
+8.0K    ./.git/logs/refs/remotes/origin
+12K     ./.git/logs/refs/remotes
+8.0K    ./.git/logs/refs/heads
+24K     ./.git/logs/refs
+32K     ./.git/logs
+536K    ./.git
+75M     .
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11$ ./dot-auto-git-push.sh 
+[main df72e28]  new file:   IMG_6827.MOV        new file:   ZIMG_6259.MOV
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100755 IMG_6023.MOV
+ create mode 100755 IMG_6827.MOV
+ create mode 100755 ZIMG_6259.MOV
+Username for 'https://github.com': hirono2011
+Password for 'https://hirono2011@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 40.48 MiB | 3.02 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+remote: warning: See http://git.io/iEPt8g for more information.
+remote: warning: File IMG_6827.MOV is 67.97 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+To https://github.com/hirono2011/kk2020_11.git
+   48854bd..df72e28  main -> main
+
+
+共有リポジトリを更新しました。
+
+update 2020-10-31_2358 DESKTOP-1ASSOGN DONE
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11$ du -h
+4.0K    ./弁護士/佐々木亮弁護士（東京弁護士会）
+4.0K    ./弁護士/中村元弥弁護士（旭川弁護士会）
+4.0K    ./弁護士/小倉秀夫弁護士（東京弁護士会）
+4.0K    ./弁護士/モトケンこと矢部善朗弁護士（京都弁護士会）
+788K    ./弁護士/深澤諭史弁護士（第二東京弁護士会）
+8.0K    ./弁護士/高橋雄一郎弁護士（東京弁護士会）
+32K     ./弁護士/櫻井光政弁護士（第二東京弁護士会）
+4.0K    ./弁護士/平裕介弁護士（東京弁護士会）
+4.0K    ./弁護士/村松謙弁護士（神奈川県弁護士会）
+4.0K    ./弁護士/北周士弁護士（東京弁護士会）
+4.0K    ./弁護士/野田隼人弁護士（滋賀弁護士会）
+4.0K    ./弁護士/渡辺輝人弁護士（京都弁護士会）
+4.0K    ./弁護士/市川寛弁護士（第二東京弁護士会）
+4.0K    ./弁護士/向原栄大朗弁護士（福岡県弁護士会）
+4.0K    ./弁護士/秋重実弁護士（京都弁護士会）
+4.0K    ./弁護士/嶋﨑量（神奈川県弁護士会）
+884K    ./弁護士
+4.0K    ./.git/branches
+56K     ./.git/hooks
+8.0K    ./.git/objects/7d
+8.0K    ./.git/objects/7c
+12K     ./.git/objects/44
+8.0K    ./.git/objects/5b
+8.0K    ./.git/objects/48
+8.0K    ./.git/objects/df
+8.0K    ./.git/objects/07
+4.0K    ./.git/objects/pack
+8.0K    ./.git/objects/2a
+8.0K    ./.git/objects/ce
+96K     ./.git/objects/02
+592K    ./.git/objects/3c
+4.3M    ./.git/objects/9b
+8.0K    ./.git/objects/4e
+8.0K    ./.git/objects/60
+8.0K    ./.git/objects/80
+8.0K    ./.git/objects/a7
+4.0K    ./.git/objects/info
+36M     ./.git/objects/e8
+156K    ./.git/objects/eb
+12K     ./.git/objects/e6
+8.0K    ./.git/objects/83
+41M     ./.git/objects
+8.0K    ./.git/info
+4.0K    ./.git/refs/tags
+12K     ./.git/refs/remotes/origin
+16K     ./.git/refs/remotes
+8.0K    ./.git/refs/heads
+32K     ./.git/refs
+12K     ./.git/logs/refs/remotes/origin
+16K     ./.git/logs/refs/remotes
+8.0K    ./.git/logs/refs/heads
+28K     ./.git/logs/refs
+36K     ./.git/logs
+42M     ./.git
+115M    .
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11$ cd ..
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ h|grep rror
+ 1313  https://www.digitalocean.com/community/questions/mysql-installation-error-dpkg-error-processing-package-mysql-server-5-5-configure
+ 1890  git clone --mirror  https://github.com/hirono2011/aaaa.git
+ 1983  git clone --mirror  https://github.com/hirono2011/kk2020_11.git
+ 2014  h|grep rror
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ git clone --mirror  https://github.com/hirono2011/kk2020_11.git
+Cloning into bare repository 'kk2020_11.git'...
+remote: Enumerating objects: 23, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 23 (delta 3), reused 22 (delta 2), pack-reused 0
+Unpacking objects: 100% (23/23), 40.68 MiB | 7.59 MiB/s, done.
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ du -h kk2020_11.git
+4.0K    kk2020_11.git/branches
+56K     kk2020_11.git/hooks
+8.0K    kk2020_11.git/objects/7d
+8.0K    kk2020_11.git/objects/7c
+12K     kk2020_11.git/objects/44
+8.0K    kk2020_11.git/objects/5b
+8.0K    kk2020_11.git/objects/48
+8.0K    kk2020_11.git/objects/df
+8.0K    kk2020_11.git/objects/07
+4.0K    kk2020_11.git/objects/pack
+8.0K    kk2020_11.git/objects/2a
+8.0K    kk2020_11.git/objects/ce
+96K     kk2020_11.git/objects/02
+592K    kk2020_11.git/objects/3c
+4.3M    kk2020_11.git/objects/9b
+8.0K    kk2020_11.git/objects/4e
+8.0K    kk2020_11.git/objects/60
+8.0K    kk2020_11.git/objects/80
+8.0K    kk2020_11.git/objects/a7
+4.0K    kk2020_11.git/objects/info
+36M     kk2020_11.git/objects/e8
+156K    kk2020_11.git/objects/eb
+12K     kk2020_11.git/objects/e6
+8.0K    kk2020_11.git/objects/83
+41M     kk2020_11.git/objects
+8.0K    kk2020_11.git/info
+4.0K    kk2020_11.git/refs/tags
+4.0K    kk2020_11.git/refs/heads
+12K     kk2020_11.git/refs
+42M     kk2020_11.git
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ h|grep delete-files
+ 1841  bfg  --delete-files package-lock.json 
+ 1845  bfg  --delete-files package-lock.json 
+ 1849  bfg  --delete-files 参考資料/弁護士/package-lock.json 
+ 1852  java -jar bfg.jar --delete-files 参考資料/弁護士/package-lock.json
+ 1853  java -jar bfg.jar --delete-files 参考資料/弁護士/package-lock.json*
+ 1857  java -jar bfg.jar --delete-files package-lock.json gh2020kk
+ 1858  java -jar gh2020kk/bfg.jar --delete-files package-lock.json gh2020kk
+ 1881  java -jar gh2020kk/bfg.jar --delete-files *.txt aaaa
+ 1892  java -jar gh2020kk/bfg.jar --delete-files *.txt aaaa.git
+ 1901  java -jar bfg.jar --delete-files *.txt aaaa.git
+ 1902  java -jar bfg.jar --delete-files *motoken* aaaa.git
+ 1915  java -jar bfg.jar --delete-files *motoken* aaaa
+ 1930  java -jar bfg.jar --delete-files *.txt kk2020_11
+ 1940  java -jar bfg.jar --delete-files *motoken* kk2020_11
+ 2017  h|grep delete-files
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ java -jar bfg.jar --delete-files "*.MOV"  --no-blob-protection kk2020_11.git
+
+Using repo : /home/a66/git/kk2020_11.git
+
+Found 0 objects to protect
+Found 2 commit-pointing refs : HEAD, refs/heads/main
+
+Protected commits
+-----------------
+
+You're not protecting any commits, which means the BFG will modify the contents of even *current* commits.
+
+This isn't recommended - ideally, if your current commits are dirty, you should fix up your working copy and commit that, check that your build still works, and only then run the BFG to clean up your history.
+
+Cleaning
+--------
+
+Found 3 commits
+Cleaning commits:       100% (3/3)
+Cleaning commits completed in 85 ms.
+
+Updating 1 Ref
+--------------
+
+        Ref               Before     After   
+        -------------------------------------
+        refs/heads/main | df72e287 | c74ff178
+
+Updating references:    100% (1/1)
+...Ref update completed in 13 ms.
+
+Commit Tree-Dirt History
+------------------------
+
+        Earliest      Latest
+        |                  |
+           .     .      D   
+
+        D = dirty commits (file tree fixed)
+        m = modified commits (commit message or parents changed)
+        . = clean commits (no changes to file tree)
+
+                                Before     After   
+        -------------------------------------------
+        First modified commit | df72e287 | c74ff178
+        Last dirty commit     | df72e287 | c74ff178
+
+Deleted files
+-------------
+
+        Filename        Git id             
+        -----------------------------------
+        IMG_6023.MOV  | 3c60ca47 (588.9 KB)
+        IMG_6827.MOV  | e847dd30 (68.0 MB) 
+        ZIMG_6259.MOV | 9baa8666 (4.2 MB)  
+
+
+In total, 2 object ids were changed. Full details are logged here:
+
+        /home/a66/git/kk2020_11.git.bfg-report/2020-11-01/00-02-14
+
+BFG run is complete! When ready, run: git reflog expire --expire=now --all && git gc --prune=now --aggressive
+
+
+--
+You can rewrite history in Git - don't let Trump do it for real!
+Trump's administration has lied consistently, to make people give up on ever
+being told the truth. Don't give up: https://www.rescue.org/topic/refugees-america
+--
+
+
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ cd kk2020_11.git
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11.git$ git reflog expire --expire=now --all && git gc --prune=now --aggressive
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (19/19), done.
+Building bitmaps: 100% (3/3), done.
+Total 19 (delta 2), reused 0 (delta 0)
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11.git$ du -h
+4.0K    ./branches
+56K     ./hooks
+220K    ./objects/pack
+12K     ./objects/info
+236K    ./objects
+12K     ./info
+4.0K    ./refs/tags
+4.0K    ./refs/heads
+12K     ./refs
+340K    .
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11.git$ git push
+Username for 'https://github.com': hirono2011
+Password for 'https://hirono2011@github.com': 
+Enumerating objects: 19, done.
+Writing objects: 100% (19/19), 204.58 KiB | 204.58 MiB/s, done.
+Total 19 (delta 0), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/hirono2011/kk2020_11.git
+ + df72e28...c74ff17 main -> main (forced update)
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11.git$ cd ..
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ rm -rf kk2020_11
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ git clone https://github.com/hirono2011/kk2020_11.git          
+Cloning into 'kk2020_11'...
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 19 (delta 2), reused 19 (delta 2), pack-reused 0
+Unpacking objects: 100% (19/19), 204.56 KiB | 385.00 KiB/s, done.
+(py37_env) a66@DESKTOP-1ASSOGN:~/git$ cd kk2020_11
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11$ du -h
+4.0K    ./弁護士/佐々木亮弁護士（東京弁護士会）
+4.0K    ./弁護士/中村元弥弁護士（旭川弁護士会）
+4.0K    ./弁護士/小倉秀夫弁護士（東京弁護士会）
+4.0K    ./弁護士/モトケンこと矢部善朗弁護士（京都弁護士会）
+788K    ./弁護士/深澤諭史弁護士（第二東京弁護士会）
+8.0K    ./弁護士/高橋雄一郎弁護士（東京弁護士会）
+32K     ./弁護士/櫻井光政弁護士（第二東京弁護士会）
+4.0K    ./弁護士/平裕介弁護士（東京弁護士会）
+4.0K    ./弁護士/村松謙弁護士（神奈川県弁護士会）
+4.0K    ./弁護士/北周士弁護士（東京弁護士会）
+4.0K    ./弁護士/野田隼人弁護士（滋賀弁護士会）
+4.0K    ./弁護士/渡辺輝人弁護士（京都弁護士会）
+4.0K    ./弁護士/市川寛弁護士（第二東京弁護士会）
+4.0K    ./弁護士/向原栄大朗弁護士（福岡県弁護士会）
+4.0K    ./弁護士/秋重実弁護士（京都弁護士会）
+4.0K    ./弁護士/嶋﨑量（神奈川県弁護士会）
+884K    ./弁護士
+4.0K    ./.git/branches
+56K     ./.git/hooks
+8.0K    ./.git/objects/7d
+8.0K    ./.git/objects/7c
+12K     ./.git/objects/44
+8.0K    ./.git/objects/5b
+8.0K    ./.git/objects/48
+8.0K    ./.git/objects/07
+4.0K    ./.git/objects/pack
+8.0K    ./.git/objects/2a
+8.0K    ./.git/objects/ce
+92K     ./.git/objects/02
+8.0K    ./.git/objects/4e
+8.0K    ./.git/objects/60
+8.0K    ./.git/objects/80
+8.0K    ./.git/objects/a7
+4.0K    ./.git/objects/info
+8.0K    ./.git/objects/c7
+156K    ./.git/objects/eb
+12K     ./.git/objects/e6
+8.0K    ./.git/objects/83
+388K    ./.git/objects
+8.0K    ./.git/info
+4.0K    ./.git/refs/tags
+8.0K    ./.git/refs/remotes/origin
+12K     ./.git/refs/remotes
+8.0K    ./.git/refs/heads
+28K     ./.git/refs
+8.0K    ./.git/logs/refs/remotes/origin
+12K     ./.git/logs/refs/remotes
+8.0K    ./.git/logs/refs/heads
+24K     ./.git/logs/refs
+32K     ./.git/logs
+544K    ./.git
+1.5M    .
+(py37_env) a66@DESKTOP-1ASSOGN:~/git/kk2020_11$ git log
+commit c74ff178297d2d837433c3fafd005275d2252219 (HEAD -> main, origin/main, origin/HEAD)
+Author: WSL2 <hirono2013k@gmail.com>
+Date:   Sat Oct 31 23:58:02 2020 +0900
+
+            new file:   IMG_6827.MOV
+            new file:   ZIMG_6259.MOV
+    
+    update 2020-10-31_2358 DESKTOP-1ASSOGN
+
+commit 48854bdc0d3604e6dfc8e3b02e20794c5952ee90
+Author: WSL2 <hirono2013k@gmail.com>
+Date:   Sat Oct 31 21:32:55 2020 +0900
+
+            new file:   弁護士/node_modules/.bin/mkdirp
+            new file:   弁護士/node_modules/.bin/pwsh
+            new file:   弁護士/node_modules/chownr/LICENSE
+            new file:   弁護士/node_modules/chownr/README.md
+            new file:   弁護士/node_modules/chownr/chownr.js
+            new file:   弁護士/node_modules/chownr/package.json
+            new file:   弁護士/node_modules/fs-minipass/LICENSE
+            new file:   弁護士/node_modules/fs-minipass/README.md
+            new file:   弁護士/node_modules/fs-minipass/index.js
+            new file:   弁護士/node_modules/fs-minipass/package.json
+            new file:   弁護士/node_modules/minimist/.travis.yml
+            new file:   弁護士/node_modules/minimist/LICENSE
+            new file:   弁護士/node_modules/minimist/example/parse.js
+            new file:   弁護士/node_modules/minimist/index.js
+            new file:   弁護士/node_modules/minimist/package.json
+            new file:   弁護士/node_modules/minimist/readme.markdown
+            new file:   弁護士/node_modules/minimist/test/all_bool.js
+            new file:   弁護士/node_modules/minimist/test/bool.js
+            new file:   弁護士/node_modules/minimist/test/dash.js
+            new file:   弁護士/node_modules/minimist/test/default_bool.js
+            new file:   弁護士/node_modules/minimist/test/dotted.js
+            new file:   弁護士/node_modules/minimist/test/kv_short.js
+            new file:   弁護士/node_modules/minimist/test/long.js
+            new file:   弁護士/node_modules/minimist/test/num.js
+            new file:   弁護士/node_modules/minimist/test/parse.js
+            new file:   弁護士/node_modules/minimist/test/parse_modified.js
+            new file:   弁護士/node_modules/minimist/test/proto.js
+            new file:   弁護士/node_modules/minimist/test/short.js
+            new file:   弁護士/node_modules/minimist/test/stop_early.js
+            new file:   弁護士/node_modules/minimist/test/unknown.js
+            new file:   弁護士/node_modules/minimist/test/whitespace.js
+            new file:   弁護士/node_modules/minipass/LICENSE
+            new file:   弁護士/node_modules/minipass/README.md
+            new file:   弁護士/node_modules/minipass/index.js
+            new file:   弁護士/node_modules/minipass/package.json
+            new file:   弁護士/node_modules/minizlib/LICENSE
+            new file:   弁護士/node_modules/minizlib/README.md
+            new file:   弁護士/node_modules/minizlib/constants.js
+            new file:   弁護士/node_modules/minizlib/index.js
+            new file:   弁護士/node_modules/minizlib/package.json
+            new file:   弁護士/node_modules/mkdirp/LICENSE
+            new file:   弁護士/node_modules/mkdirp/bin/cmd.js
+            new file:   弁護士/node_modules/mkdirp/bin/usage.txt
+            new file:   弁護士/node_modules/mkdirp/index.js
+            new file:   弁護士/node_modules/mkdirp/package.json
+            new file:   弁護士/node_modules/mkdirp/readme.markdown
+            new file:   弁護士/node_modules/pwsh/CHANGELOG.md
+            new file:   弁護士/node_modules/pwsh/README.md
+            new file:   弁護士/node_modules/pwsh/bin/pwsh
+            new file:   弁護士/node_modules/pwsh/bin/pwsh.cmd
+            new file:   弁護士/node_modules/pwsh/dist/__root.js
+            new file:   弁護士/node_modules/pwsh/dist/buildTags.json
+            new file:   弁護士/node_modules/pwsh/dist/npm_lifecycle_postinstall.js
+            new file:   弁護士/node_modules/pwsh/dist/npm_lifecycle_postinstall.js.map
+            new file:   弁護士/node_modules/pwsh/npm_lifecycle_postinstall.js
+            new file:   弁護士/node_modules/pwsh/package.json
+            new file:   弁護士/node_modules/safe-buffer/LICENSE
+            new file:   弁護士/node_modules/safe-buffer/README.md
+            new file:   弁護士/node_modules/safe-buffer/index.d.ts
+            new file:   弁護士/node_modules/safe-buffer/index.js
+            new file:   弁護士/node_modules/safe-buffer/package.json
+            new file:   弁護士/node_modules/tar/LICENSE
+            new file:   弁護士/node_modules/tar/README.md
+            new file:   弁護士/node_modules/tar/index.js
+            new file:   弁護士/node_modules/tar/lib/buffer.js
+            new file:   弁護士/node_modules/tar/lib/create.js
+            new file:   弁護士/node_modules/tar/lib/extract.js
+            new file:   弁護士/node_modules/tar/lib/header.js
+            new file:   弁護士/node_modules/tar/lib/high-level-opt.js
+            new file:   弁護士/node_modules/tar/lib/large-numbers.js
+            new file:   弁護士/node_modules/tar/lib/list.js
+            new file:   弁護士/node_modules/tar/lib/mkdir.js
+            new file:   弁護士/node_modules/tar/lib/mode-fix.js
+            new file:   弁護士/node_modules/tar/lib/pack.js
+            new file:   弁護士/node_modules/tar/lib/parse.js
+            new file:   弁護士/node_modules/tar/lib/pax.js
+            new file:   弁護士/node_modules/tar/lib/read-entry.js
+            new file:   弁護士/node_modules/tar/lib/replace.js
+            new file:   弁護士/node_modules/tar/lib/types.js
+            new file:   弁護士/node_modules/tar/lib/unpack.js
+            new file:   弁護士/node_modules/tar/lib/update.js
+            new file:   弁護士/node_modules/tar/lib/warn-mixin.js
+            new file:   弁護士/node_modules/tar/lib/winchars.js
+            new file:   弁護士/node_modules/tar/lib/write-entry.js
+            new file:   弁護士/node_modules/tar/package.json
+            new file:   弁護士/node_modules/yallist/LICENSE
+            new file:   弁護士/node_modules/yallist/README.md
+            new file:   弁護士/node_modules/yallist/iterator.js
+            new file:   弁護士/node_modules/yallist/package.json
+            new file:   弁護士/node_modules/yallist/yallist.js
+            new file:   弁護士/package-lock.json
+            new file:   弁護士/モトケンこと矢部善朗弁護士（京都弁護士会）/あ.md
+            new file:   弁護士/モトケンこと矢部善朗弁護士（京都弁護士会）/／／　モトケンこと矢部善朗弁護士（京都弁護士会）@motoken_twのTwitterタイムライ　ン：2020／10／27　9：26：57～2020／10.txt
+            new file:   弁護士/モトケンこと矢部善朗弁護士（京都弁護士会）/／／　モトケンこと矢部善朗弁護士（京都弁護士会）@motoken_twのTwitterタイムライン：2020／10／28　9：06：58　～2020／10／30　13：23：09　.txt
+            new file:   弁護士/三浦義隆弁護士（千葉県弁護士会）/／／　ystk（@lawkus）のTwitterタイムライン：2020／10／22　22：09：52～2020／10／31　8：36：23　.txt
+            new file:   弁護士/中村元弥弁護士（旭川弁護士会）/あ.md
+            new file:   弁護士/佐々木亮弁護士（東京弁護士会）/あ.md
+            new file:   弁護士/刑裁サイ太/／／　サイ太（uwaaaa）のTwitterタイムライン：～2020／10／29　14：08：51.txt
+            new file:   弁護士/北周士弁護士（東京弁護士会）/あ.md
+            new file:   弁護士/北周士弁護士（東京弁護士会）/／／　『信仰の』ノースライム（noooooooorth）のTwitterタイムライン：2020／10／23　18：18：23～2020／10／29　14：27：59／2020／10／29　14：27：27.txt
+            new file:   弁護士/北白川/／／　北白川（@GUv4i6）のTwitterタイムライン：2020／10／18　12：13：37～2020／10／29　19：49：38.txt
+            new file:   弁護士/向原栄大朗弁護士（福岡県弁護士会）/あ.md
+            new file:   弁護士/坂本正幸弁護士（東京弁護士会）/／／　坂本正幸（@sakamotomasayuk）のTwitterタイムライン：2020／10／25　19：03：34～2020／10／29　13：33：45／2020／10／29　12：14：32.txt
+            new file:   弁護士/小倉秀夫弁護士（東京弁護士会）/あ.md
+            new file:   弁護士/小倉秀夫弁護士（東京弁護士会）/／／　小倉秀夫弁護士（第一東京弁護士会）@chosakukenhoのTwitterタイムライン：2020／10／25　21：37：42～2020／10／29
+　13：37：42.txt
+            new file:   弁護士/岩田圭只弁護士（釧路弁護士会）/／／　いわぽん（@yiwapon）のTwitterタイムライン：2020／10／15　21：00：53～2020／10／29　19：02：16.txt
+            new file:   弁護士/嶋﨑量（神奈川県弁護士会）/あ.md
+            new file:   弁護士/嶋﨑量（神奈川県弁護士会）/／／　嶋﨑量（弁護士）（@shima_chikara）のTwitterタイムライン：2020／10／12　22：48：18　～2020／10／29　19：46：26　.txt
+            new file:   弁護士/市川寛弁護士（第二東京弁護士会）/あ.md
+            new file:   弁護士/平裕介弁護士（東京弁護士会）/.md
+            new file:   弁護士/平裕介弁護士（東京弁護士会）/あ.md
+            new file:   弁護士/平裕介弁護士（東京弁護士会）/／／　平　裕介（YusukeTaira）のTwitterタイムライン：2020／10／12　2：11：01～2020／10／12　2：11：01.txt
+            new file:   弁護士/廣野秀樹/／／　刑事告発・非常上告＿金沢地方検察庁御中（@kk_hirono）のTwitterタイムライン：2020／10／26　10：39：45　～2020／10／27　11：07：59　.txt
+            new file:   弁護士/廣野秀樹/／／　奉納＼さらば弁護士鉄道・泥棒神社の物語（@hirono_hideki）のTwitterタイムライン：2020／10／28　13：40：40　～2020／10／30　9：08：55.txt
+            new file:   弁護士/廣野秀樹/／／　非常上告-最高検察庁御中_ツイッター（@s_hirono）のTwitterタイムライン：2020／10／17　21：39：55　～2020／10／29　23：05：33　.txt
+            new file:   弁護士/村松謙弁護士（神奈川県弁護士会）/あ.md
+            new file:   弁護士/櫻井光政弁護士（第二東京弁護士会）/#「野心に燃える弁護士たちに、私は地蔵の話をすることにしています。地蔵菩薩。・・・苦しみ喘ぐ衆生を救済するために・・」という桜丘法律事務所の櫻井光政弁護士.md#
+            new file:   弁護士/櫻井光政弁護士（第二東京弁護士会）/「野心に燃える弁護士たちに、私は地蔵の話をすることにしています。地蔵菩薩。・・・苦しみ喘ぐ衆生を救済するために
+・・」という桜丘法律事務所の櫻井光政弁護士.md
+            new file:   弁護士/浜木綿弁右衛門（@leplusallez）/／／　浜木綿弁右衛門（@leplusallez）のTwitterタイムライン：2020／10／19　13：24：35　～2020／10／30　8：57：06　.txt
+            new file:   弁護士/深澤諭史弁護士（第二東京弁護士会）/2020年04月，その時の法クラ，弁護士らの動静と反応の記録：深澤諭史弁護士（第二東京弁護士会）.md
+            new file:   弁護士/深澤諭史弁護士（第二東京弁護士会）/深澤諭史弁護士（第二東京弁護士会）@fukazawasのTwitterタイムライン：２０２０年０４月０９日.md
+            new file:   弁護士/深澤諭史弁護士（第二東京弁護士会）/／／　深澤諭史弁護士（第二東京弁護士会）@fukazawasのTwitterタイムライン：～2020／10／29　12：16：48.txt
+            new file:   弁護士/渡辺輝人弁護士（京都弁護士会）/あ.md
+            new file:   弁護士/秋重実弁護士（京都弁護士会）/あ.md
+            new file:   弁護士/芝原章吾（鹿児島県弁護士会）/／／　のTwitterタイムライン：～.txt
+            new file:   弁護士/芝原章吾（鹿児島県弁護士会）/／／　芝原章吾（@shogoshibahara）のTwitterタイムライン：2020／10／11　18：21：02　～2020／10／29　22：37：28　.txt
+            new file:   弁護士/野田隼人弁護士（滋賀弁護士会）/あ.md
+            new file:   弁護士/野田隼人弁護士（滋賀弁護士会）/／／　野田隼人（@nodahayato）のTwitterタイムライン：2020／10／22　9：54：19　～2020／10／29　21：18：54　.txt
+            new file:   弁護士/高橋雄一郎弁護士（東京弁護士会）/「さすが櫻井先生の事務所は安定感があるね。ただし、全ての法律事務所がこの神対応を真似することもできないだろうし、
+」という高橋雄一郎弁護士のツイート.md
+            new file:   弁護士/高橋雄一郎弁護士（東京弁護士会）/あ.md
+            new file:   弁護士/高橋雄一郎弁護士（東京弁護士会）/／／　高橋雄一郎（@kamatatylaw）のTwitterタイムライン：2020／10／02　18：45：55～2020／10／29　13：36：09.txt
+    
+    update 2020-10-31_2132 DESKTOP-1ASSOGN
+
+commit 079c14dc468226ffec72f39e6ade81c573712e9a
+Author: WSL2 <hirono2013k@gmail.com>
+Date:   Sat Oct 31 21:31:49 2020 +0900
+
+    first commit
+(END)
+||<
+
+* PowerShell Coreを使って，現時点で62,171件のデータベースのブログ記事データを連番付きでファイルに保存
+
+:CATEGORIES: PowerShell Core
+
+
+>|ps1|
+$n = 1; $list = $(dp -l); $list | % { '{0:d5} {1}' -f $n, $_; $n++} > l.txt
+||<
+
+
+実行結果：
+```
+PS /home/a66> $n = 1; $list = $(dp -l); $list | % { '{0:d5} {1}' -f $n, $_; $n++} > l.txt
+PS /home/a66> head ./l.txt
+00001 2014年01月01日10時05分の登録： 人権救済申立事件｜東京弁護士会 http://hirono2014sk.blogspot.com/2014/01/blog-post.html
+00002 2014年01月01日11時26分の登録： 飛ばしというより、思い込みと決めつけに基づくいつものパターン／ジャーナリ\nスト江川紹子 http://hirono2014sk.blogspot.com/2014/01/blog-post_1.html
+00003 2014年01月01日11時45分の登録： 警察の違法な取り調べにはほんとにあきれる。弁護人についてのでたらめや誹謗\n中傷のたぐいを被疑者にぶつけて，弁護人と被疑者の信頼関係を壊そうとする。 http://hirono2014sk.blogspot.com/2014/01/blog-post_345.html
+00004 2014年01月01日11時54分の登録： 私も経験しましたね。そんな手法で取調べをしてるから取調べのレベルが上がら\nないのに。／矢部善朗弁護士 http://hirono2014sk.blogspot.com/2014/01/blog-post_7077.html
+00005 2014年01月01日18時34分の登録： 知能犯捜査のレベルが落ちている、というのは、社会内で腐敗が進むことにつな\nがり、問題だと思う。／落合洋司弁護士 http://hirono2014sk.blogspot.com/2014/01/blog-post_3633.html
+00006 2014年01月01日18時35分の登録： 日本も、こうして歩道上に座っている自分も、どちらも寒い。／落合洋司弁護士 http://hirono2014sk.blogspot.com/2014/01/blog-post_5034.html
+00007 2014年01月01日18時36分の登録： これって、かなり深刻だと思う。→警察、捜査の仕方忘れた？ 贈収賄摘発２５件\nだけ - 朝日新聞デジタル／落合洋司弁護士 http://hirono2014sk.blogspot.com/2014/01/blog-post_577.html
+00008 2014年01月01日18時49分の登録： 私は無期禁固刑と呼ぶ http://hirono2014sk.blogspot.com/2014/01/blog-post_8485.html
+00009 2014年01月01日18時53分の登録： そうですね。ただ、警察にあまりプレッシャーをかけすぎても、問題が出て来か\nねないので、そこは難しいところですにゃ／ジャーナリスト江川紹子 http://hirono2014sk.blogspot.com/2014/01/blog-post_7667.html
+00010 2014年01月01日18時53分の登録： 中国の毒入り餃子事件みたくなってきた…。発生場所は国内。 →マルハ、出荷前\nに農薬混入か 苦情13都府県から／ジャーナリスト江川紹子 http://hirono2014sk.blogspot.com/2014/01/13.html
+PS /home/a66> tail ./l.txt
+62162  - 2020年10月31日15時29分の登録： ＼モトケン　@motoken_tw＼華麗に仮差し押さえを決めたら低評価がつきました。　＼n　弁護士は，裁判等に勝てば勝つほど，低評価がつく傾向にありますね。　＼n　（・∀ http://kk2020-09.blogspot.com/2020/10/motokentwnn.html
+62163  - 2020年10月31日19時35分の登録： ＼小倉秀夫　@chosakukenho＼華麗に仮差し押さえを決めたら低評価がつきました。　＼n　弁護士は，裁判等に勝てば勝つほど，低評価がつく傾向にありますね。　＼n　（ http://kk2020-09.blogspot.com/2020/10/chosakukenhonn.html
+62164  - 2020年10月31日19時55分の登録： ＼Shoko Egawa　@amneris84＼鬼退治と敵討ちは、日本人の心を動かす基本鴨ですね。→【毎日新聞】＜映画＞「鬼滅の刃」映画界を救え　「無限列車編」興収最速１ http://kk2020-09.blogspot.com/2020/10/shoko-egawaamneris84_31.html
+62165  - 2020年10月31日20時02分の登録： ＼ystk　@lawkus＼憲法に限らず、馬鹿にも誤読の余地がないような法律（ここでは憲法を含む。）を定めるというのはそもそも無理なんじゃないですかね。無理だから法解釈学 http://kk2020-09.blogspot.com/2020/10/ystklawkus_31.html
+62166  - 2020年10月31日20時06分の登録： ／／　ystk（@lawkus）のTwitterタイムライン：2020／10／22　22：09：52～2020／10／31　8：36：23　 http://kk2020-09.blogspot.com/2020/10/ystklawkustwitter2020102222095220201031.html
+62167  - 2020年11月01日01時45分の登録： ＼やすみん　@yasumuaruku＼「弁護士の仕事を分かってから言え」みたいな意見に接するけど，私は逆も思うんだ。「あなたは裁判官になって常に全員を満足させられるんです http://kk2020-09.blogspot.com/2020/11/yasumuaruku.html
+62168  - 2020年11月01日01時53分の登録： ツイートの記録資料：＼法務検察・石川県警察宛＼／モトケン（@motoken_tw）／”2020年10月31日”：115件 http://kk2020-09.blogspot.com/2020/11/motokentw20201031115.html
+62169  - 2020年11月01日01時54分の登録： ツイートの記録資料：＼法務検察・石川県警察宛＼／小倉秀夫（@chosakukenho）／”2020年10月31日”：38件 http://kk2020-09.blogspot.com/2020/11/chosakukenho2020103138.html
+62170  - 2020年11月01日01時54分の登録： ツイートの記録資料：＼法務検察・石川県警察宛＼／深澤諭史（@fukazawas）／”2020年10月31日”：32件 http://kk2020-09.blogspot.com/2020/11/fukazawas2020103132.html
+62171  - 2020年11月01日01時54分の登録： 2020-10-31の投稿一覧＼検察・石川県警察宛記録資料＼奉納＼危険生物・弁護士脳汚染除去装置＼金沢地方検察庁御中：13件 http://kk2020-09.blogspot.com/2020/11/2020-10-3113.html
+PS /home/a66> 
+```
+
+* WSL2で，日本語変換にfcitx-mozcをインストールしたことで起こったX-Serverの一連のトラブルと解決
+
+:CATEGORIES: WSL2
+
+　結論から言って，snapでインストールしたchromiumが起動できなくなり，aptでFirefoxをインストールしました。一連のトラブルは，GPUに関わる問題で，両立が難しそうでした。3時間ぐらい掛かったのか，色々とありました。
+
+　決め手となった解決は，VcXsrvの起動オプションです。ネットの情報では，「Additional parameter for VcXsrv」に，-nowglや-acを付けるというものが多いのですが，どちらもうまく行きませんでした。
+
+ -  【LinuxアプリをWindowsで動かそう】WSLでLinuxのGUIアプリを起動する話 - べれすく！ https://veresk.hatenablog.com/entry/2020/02/26/190000
+
+　その前に次のページを参考にNVIDIAのドライバーをインストールしました。自分のパソコンにはこのGPUが搭載されています。普通のUbuntuでは標準でインストールされていたと思います。WSL2だと自前でのインストールや設定が格段に多くなります。
+
+ -  WSL 2 で GPU を使う（WSL 2 の Ubuntu で，CUDA や PyTorch や TensorFlow 2.2 GPU 版を動かす．Docker は使わない，Windows 10 Insider Program，WSL 2 上 の Ubuntu を使用） https://www.kkaneko.jp/tools/wsl/wsl_tensorflow2.html
+
+　ブラウザの履歴から探し出したのですが，たぶん，次のページの方法でうまく行ったように思います。
+
+ -  VcXsrvのインストールと設定 | demura.net https://demura.net/misc/16325.html
+
+　ページの説明には「Clipboard、Primary Selection、Disable　access controlにチェックを入れ、Native openglのチェックを外して」とあります。
+
+　それでもchromiumの起動では，「called with multiple threads in process gpu-process.」というエラーが出ていました。chromium  --disable-gpuというGPUを無効にするらしい方法も見かけたのですが，これを実行すると即座にコアダンプが起きました。
+
+　Google Chromeは使える見込みがなさそうだったので，先にFirefoxをインストールして試してみることにしました。デュアルブートで起動しているGoogle Chromeもサスペンドから復帰後に，画面の表示がおかしくなり，たびたび再起動をしていました。GPUの相性が悪そうです。
+
+　そのFirefoxも最初，snapでインストールしたのですが，起動時にダイアログのウィンドウが出て，フォントが全て四角い豆腐になっていました。aptでインストールしたものは，今回も日本語化の設定が必要でした。
+
+　mozcの設定もずいぶん面倒だったのですが，次のページにまとまった情報があったので助かりました。日本語変換が出来るようになりましたが，アイコンが出ないので状態が分かりづらいです。
+
+ - WSL2にFcitx＋Mozcを入れて日本語入力する | AsTechLog https://astherier.com/blog/2020/08/install-fcitx-mozc-on-wsl2-ubuntu2004/
+
+　先にEmacsでmozcを使うemacs-mozc-binをインストールしていたのですが，このときは問題が起きませんでした。しかし，他に妙な問題が発生していて，解決が出来ずにいます。今になって，少し心当たりが出てきましたが，余り期待はできません。
+
+　ずっと前からEmacsでの日本語変換にはmozcを使い，日本語入力の切り替えを，キーボードのスペースキーの２つ右隣になる「カタカナひらがなローマ字」とあるキーに割り当てていました。
+
+　このキーでmozcをオンにすると，ミニバッファでメッセージが激しく点滅し，暴走状態となります。他のキーを押すとおさまって日本語変換ができるようになるのですが，次にキーを押しても永遠にオフにならないのです。
+
+　平成15年当時のEmacsは，Ctrl+\で日本語の切り替えをするのが一般的になっていたので，試したところそれだと問題なくmozcの切り替えが出来るようになりました。キーバインドされた関数は同じものです。心当たりは，キーの名称の違いにあります。
+
+* 
