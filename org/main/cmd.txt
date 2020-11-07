@@ -1,4 +1,0 @@
-pandoc 2020-09-05_main.org --from=org --to=docx --standalone --reference-doc=reference.docx --output=sample.docx
-pandoc 2020-09-05_main.org --from=org --to=docx --standalone --output=sample.docx
-
-
